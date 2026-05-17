@@ -156,7 +156,7 @@ export default function PopupForm() {
                   required
                 />
                 <textarea
-                  placeholder="Your Requirement (Optional)"
+                  placeholder="Your Requirement"
                   value={form.requirement}
                   onChange={(e) =>
                     setForm({ ...form, requirement: e.target.value })
