@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Pages -->
+  <url><loc>https://ekosys.in/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://ekosys.in/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ekosys.in/products</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ekosys.in/subsidy</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ekosys.in/installation</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ekosys.in/contact</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
-  <url>
-    <loc>https://ekosys.in/</loc>
-    <priority>1.0</priority>
-  </url>
+  <!-- Blog Pages -->
+  <url><loc>https://ekosys.in/blog</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ekosys.in/blog/benefits-of-solar-energy</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ekosys.in/blog/solar-subsidy-in-bihar</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ekosys.in/blog/how-solar-reduces-electricity-bill</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ekosys.in/blog/best-solar-company-in-bihar</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ekosys.in/blog/rooftop-solar-guide</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ekosys.in/blog/solar-panel-maintenance-tips</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ekosys.in/blog/solar-for-farmers-bihar</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ekosys.in/blog/commercial-solar-bihar</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ekosys.in/blog/net-metering-guide-bihar</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ekosys.in/blog/on-grid-vs-off-grid-solar</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
+  <!-- SEO Landing Pages -->
+  <url><loc>https://ekosys.in/solar-installation-bihar</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ekosys.in/rooftop-solar-bihar</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ekosys.in/residential-solar-bihar</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ekosys.in/industrial-solar-bihar</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ekosys.in/solar-maintenance</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ekosys.in/solar-subsidy-bihar</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

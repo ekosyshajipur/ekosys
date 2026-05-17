@@ -10,6 +10,7 @@ export default function Navbar() {
     { to: "/products", label: "Products" },
     { to: "/subsidy", label: "Govt Subsidy" },
     { to: "/installation", label: "Installation" },
+    { to: "/blog", label: "Blog" },
     { to: "/contact", label: "Contact Us" },
   ];
 

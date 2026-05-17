@@ -21,6 +21,21 @@ import IndustrialSolarBihar from "./pages/IndustrialSolarBihar";
 import SolarMaintenance from "./pages/SolarMaintenance";
 import SolarSubsidyBihar from "./pages/SolarSubsidyBihar";
 
+/* Blog Pages */
+import Blog from "./pages/Blog";
+import BenefitsOfSolarEnergy from "./pages/blog/BenefitsOfSolarEnergy";
+import SolarSubsidyInBihar from "./pages/blog/SolarSubsidyInBihar";
+import HowSolarReducesElectricityBill from "./pages/blog/HowSolarReducesElectricityBill";
+import BestSolarCompanyInBihar from "./pages/blog/BestSolarCompanyInBihar";
+import RooftopSolarGuide from "./pages/blog/RooftopSolarGuide";
+import SolarPanelMaintenanceTips from "./pages/blog/SolarPanelMaintenanceTips";
+import SolarForFarmersBihar from "./pages/blog/SolarForFarmersBihar";
+import CommercialSolarBihar from "./pages/blog/CommercialSolarBihar";
+import NetMeteringGuideBihar from "./pages/blog/NetMeteringGuideBihar";
+import OnGridVsOffGridSolar from "./pages/blog/OnGridVsOffGridSolar";
+
+import "./blog.css";
+
 function App() {
   return (
     <Router>
@@ -163,6 +178,19 @@ function App() {
             path="/solar-subsidy-bihar"
             element={<SolarSubsidyBihar />}
           />
+
+          {/* Blog Pages */}
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/benefits-of-solar-energy" element={<BenefitsOfSolarEnergy />} />
+          <Route path="/blog/solar-subsidy-in-bihar" element={<SolarSubsidyInBihar />} />
+          <Route path="/blog/how-solar-reduces-electricity-bill" element={<HowSolarReducesElectricityBill />} />
+          <Route path="/blog/best-solar-company-in-bihar" element={<BestSolarCompanyInBihar />} />
+          <Route path="/blog/rooftop-solar-guide" element={<RooftopSolarGuide />} />
+          <Route path="/blog/solar-panel-maintenance-tips" element={<SolarPanelMaintenanceTips />} />
+          <Route path="/blog/solar-for-farmers-bihar" element={<SolarForFarmersBihar />} />
+          <Route path="/blog/commercial-solar-bihar" element={<CommercialSolarBihar />} />
+          <Route path="/blog/net-metering-guide-bihar" element={<NetMeteringGuideBihar />} />
+          <Route path="/blog/on-grid-vs-off-grid-solar" element={<OnGridVsOffGridSolar />} />
 
         </Routes>
 
