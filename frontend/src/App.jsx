@@ -13,11 +13,19 @@ import Subsidy from "./pages/Subsidy";
 import Installation from "./pages/Installation";
 import Contact from "./pages/Contact";
 
+/* SEO Landing Pages */
+import SolarInstallationBihar from "./pages/SolarInstallationBihar";
+import RooftopSolarBihar from "./pages/RooftopSolarBihar";
+import ResidentialSolarBihar from "./pages/ResidentialSolarBihar";
+import IndustrialSolarBihar from "./pages/IndustrialSolarBihar";
+import SolarMaintenance from "./pages/SolarMaintenance";
+import SolarSubsidyBihar from "./pages/SolarSubsidyBihar";
+
 function App() {
   return (
     <Router>
 
-      {/* SEO META TAGS */}
+      {/* GLOBAL SEO META TAGS */}
       <Helmet>
 
         {/* Primary SEO Title */}
@@ -63,7 +71,7 @@ function App() {
         {/* Canonical URL */}
         <link rel="canonical" href="https://ekosys.in/" />
 
-        {/* Open Graph Tags */}
+        {/* Open Graph SEO */}
         <meta
           property="og:title"
           content="Best Solar Installation in Bihar | Ekosys"
@@ -114,14 +122,50 @@ function App() {
       <ScrollToTop />
 
       <main className="app-content">
+
         <Routes>
+
+          {/* Main Website Pages */}
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
           <Route path="/subsidy" element={<Subsidy />} />
           <Route path="/installation" element={<Installation />} />
           <Route path="/contact" element={<Contact />} />
+
+          {/* SEO Landing Pages */}
+          <Route
+            path="/solar-installation-bihar"
+            element={<SolarInstallationBihar />}
+          />
+
+          <Route
+            path="/rooftop-solar-bihar"
+            element={<RooftopSolarBihar />}
+          />
+
+          <Route
+            path="/residential-solar-bihar"
+            element={<ResidentialSolarBihar />}
+          />
+
+          <Route
+            path="/industrial-solar-bihar"
+            element={<IndustrialSolarBihar />}
+          />
+
+          <Route
+            path="/solar-maintenance"
+            element={<SolarMaintenance />}
+          />
+
+          <Route
+            path="/solar-subsidy-bihar"
+            element={<SolarSubsidyBihar />}
+          />
+
         </Routes>
+
       </main>
 
       <Footer />
