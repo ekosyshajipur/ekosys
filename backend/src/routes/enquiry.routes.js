@@ -1,12 +1,146 @@
 const express = require('express');
 const router = express.Router();
 const Enquiry = require('../models/Enquiry');
+const nodemailer = require('nodemailer');
+const { sendToCRM } = require('../utils/crm');
+
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.SMTP_USER || 'reyesraghav@gmail.com',
+    pass: process.env.SMTP_PASS || 'your_app_password_here'
+  }
+});
 
 // POST - Submit enquiry
 router.post('/', async (req, res) => {
   try {
-    const enquiry = new Enquiry(req.body);
-    await enquiry.save();
+    const { name, email, phone, subject, message } = req.body;
+    
+    // Try to save to database, but don't fail if MongoDB is down
+    try {
+      const enquiry = new Enquiry({ name, email, phone, subject, message });
+      await enquiry.save();
+      console.log('✅ Enquiry saved to database');
+      
+      // Also save to CRM (Non-blocking)
+      sendToCRM({ name, email, phone, subject, message }, 'Enquiry Form');
+    } catch (dbError) {
+      console.log('⚠️ Database save failed, but proceeding with email:', dbError.message);
+    }
+    
+    // Email to Admin
+    const adminMailOptions = {
+      from: process.env.SMTP_USER || 'reyesraghav@gmail.com',
+      to: 'reyesraghav@gmail.com',
+      subject: `📋 New General Enquiry: ${subject || 'General Inquiry'}`,
+      html: `
+        <div style="font-family: 'Segoe UI', Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e2e8f0; border-radius: 16px; overflow: hidden;">
+          <div style="background: linear-gradient(135deg, #0ea5e9, #6366f1); padding: 24px; text-align: center;">
+            <h2 style="color: #fff; margin: 0; font-size: 1.5rem;">📋 New Enquiry Received</h2>
+          </div>
+          <div style="padding: 30px; background: #fff;">
+            <table style="width: 100%; border-collapse: collapse;">
+              <tr><td style="padding: 10px; font-weight: 600; color: #334155;">Name:</td><td style="padding: 10px; color: #475569;">${name}</td></tr>
+              <tr style="background: #f8fafc;"><td style="padding: 10px; font-weight: 600; color: #334155;">Email:</td><td style="padding: 10px; color: #475569;">${email}</td></tr>
+              <tr><td style="padding: 10px; font-weight: 600; color: #334155;">Phone:</td><td style="padding: 10px; color: #475569;">${phone}</td></tr>
+              <tr style="background: #f8fafc;"><td style="padding: 10px; font-weight: 600; color: #334155;">Subject:</td><td style="padding: 10px; color: #475569;">${subject || 'General Enquiry'}</td></tr>
+              <tr><td colspan="2" style="padding: 16px 10px; border-top: 1px solid #e2e8f0;"><strong style="color: #334155;">Message:</strong><p style="color: #475569; margin: 8px 0 0; line-height: 1.6; white-space: pre-wrap;">${message || 'No message provided'}</p></td></tr>
+            </table>
+          </div>
+          <div style="background: #0f172a; padding: 16px; text-align: center;">
+            <p style="color: #94a3b8; margin: 0; font-size: 0.85rem;">EKOSYS Solar — Think | Innovate</p>
+          </div>
+        </div>
+      `
+    };
+
+    // Email to Customer
+    const customerMailOptions = {
+      from: `"EKOSYS Solar" <${process.env.SMTP_USER || 'reyesraghav@gmail.com'}>`,
+      to: email,
+      subject: '🌞 Thank You for Your Enquiry — EKOSYS Solar',
+      html: `
+        <div style="font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 650px; margin: 0 auto; border: 1px solid #e2e8f0; border-radius: 16px; overflow: hidden; background-color: #f8fafc; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+          <!-- Header -->
+          <div style="background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%); padding: 40px 30px; text-align: center;">
+            <h1 style="color: #ffffff; margin: 0 0 10px; font-size: 2.2rem; font-weight: 800; letter-spacing: 1px;">EKOSYS</h1>
+            <p style="color: #d1fae5; margin: 0; font-size: 1.05rem; font-weight: 500;">Powering a Greener, Brighter Tomorrow ☀️</p>
+          </div>
+          
+          <!-- Body -->
+          <div style="padding: 40px 30px; background: #ffffff;">
+            <h2 style="color: #f97316; margin-top: 0; margin-bottom: 20px; font-size: 1.6rem; border-bottom: 2px solid #a7f3d0; padding-bottom: 12px;">Warm Greetings, ${name}! 🙏</h2>
+            
+            <p style="color: #334155; line-height: 1.8; font-size: 1.05rem; margin-bottom: 24px;">
+              Thank you for choosing <strong>EKOSYS Solar</strong>! We have received your enquiry and our dedicated team of solar experts is thrilled to assist you with your transition to clean energy.
+            </p>
+            
+            <p style="color: #334155; line-height: 1.8; font-size: 1.05rem; margin-bottom: 24px;">
+              We have noted your interest in <strong>"${subject || 'General Enquiry'}"</strong>. One of our senior engineers will reach out to you within <strong>24 hours</strong> to provide personalized recommendations and answer any questions you might have.
+            </p>
+
+            <!-- Summary Box -->
+            <div style="background: #f0fdf4; border-radius: 12px; padding: 24px; margin: 30px 0; border-left: 5px solid #f59e0b; box-shadow: inset 0 0 10px rgba(245,158,11,0.05);">
+              <h3 style="margin: 0 0 16px; color: #065f46; font-size: 1.15rem;">📋 Your Enquiry Details</h3>
+              <table style="width: 100%; border-collapse: collapse;">
+                <tr>
+                  <td style="padding: 8px 0; color: #475569; width: 30%; font-weight: 600;">Subject:</td>
+                  <td style="padding: 8px 0; color: #1e293b;">${subject || 'General Enquiry'}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0; color: #475569; font-weight: 600;">Contact Number:</td>
+                  <td style="padding: 8px 0; color: #1e293b;">${phone}</td>
+                </tr>
+              </table>
+            </div>
+
+            <!-- What to Expect -->
+            <div style="margin-top: 36px;">
+              <h3 style="color: #0f172a; font-size: 1.2rem; margin-bottom: 16px;">What Happens Next? 🚀</h3>
+              <ul style="padding-left: 20px; color: #334155; line-height: 1.8; font-size: 1.05rem;">
+                <li style="margin-bottom: 10px;"><strong>Consultation:</strong> A thorough discussion of your energy needs and site feasibility.</li>
+                <li style="margin-bottom: 10px;"><strong>Subsidy Processing:</strong> Guidance on claiming your PM Surya Ghar Yojana subsidy.</li>
+                <li style="margin-bottom: 10px;"><strong>Custom Quote:</strong> A detailed, transparent quotation with ROI (Return on Investment) analysis.</li>
+                <li style="margin-bottom: 10px;"><strong>Professional Installation:</strong> Swift and seamless execution by our certified teams.</li>
+              </ul>
+            </div>
+
+            <!-- Call to Action Banner -->
+            <div style="background: linear-gradient(to right, #fffbeb, #fef3c7); border: 1px solid #fde68a; border-radius: 12px; padding: 24px; margin: 36px 0; text-align: center;">
+              <h3 style="color: #d97706; margin: 0 0 10px; font-size: 1.25rem;">⚡ Ready for Solar? ⚡</h3>
+              <p style="color: #92400e; margin: 0; line-height: 1.6; font-size: 1rem;">
+                Check your eligibility for PM सूर्य घर योजना subsidy today and join hundreds of happy families saving on electricity!
+              </p>
+            </div>
+          </div>
+          
+          <!-- Footer -->
+          <div style="background: #0f172a; padding: 30px; text-align: center;">
+            <h2 style="color: #f59e0b; margin: 0 0 12px; font-size: 1.4rem; letter-spacing: 1px;">EKOSYS Solar</h2>
+            <p style="color: #cbd5e1; margin: 0 0 16px; font-size: 1rem; font-style: italic;">Think | Innovate | Sustain</p>
+            
+            <div style="margin-top: 20px; border-top: 1px solid #334155; padding-top: 20px;">
+              <p style="color: #94a3b8; margin: 6px 0; font-size: 0.95rem;">📞 +91 8757686826</p>
+              <p style="color: #94a3b8; margin: 6px 0; font-size: 0.95rem;">✉️ corp.ekosys@gmail.com</p>
+              <p style="color: #94a3b8; margin: 6px 0; font-size: 0.95rem;">📍 Hajipur, Vaishali, Bihar - 844101</p>
+            </div>
+            
+            <p style="color: #475569; margin: 24px 0 0; font-size: 0.8rem;">
+              This is an automated response. Please do not reply directly to this email.
+            </p>
+          </div>
+        </div>
+      `
+    };
+
+    try {
+      await transporter.sendMail(adminMailOptions);
+      await transporter.sendMail(customerMailOptions);
+    } catch (mailError) {
+      console.log('Mail sending failed:', mailError.message);
+    }
+
     res.status(201).json({ success: true, message: 'Enquiry submitted successfully! Our solar expert will reach out within 24 hours.' });
   } catch (error) {
     res.status(500).json({ success: false, message: 'Failed to submit enquiry', error: error.message });

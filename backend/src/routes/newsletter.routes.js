@@ -2,19 +2,20 @@ const express = require('express');
 const router = express.Router();
 const Newsletter = require('../models/Newsletter');
 const nodemailer = require('nodemailer');
+const { sendToCRM } = require('../utils/crm');
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.SMTP_USER || 'reyesraghav@gmail.com',
-    pass: process.env.SMTP_PASS || 'your_app_password_here'
+    user: process.env.SMTP_USER || 'corp.ekosys@gmail.com',
+    pass: process.env.SMTP_PASS || 'vgrw kbgg qtxf bcgj'
   }
 });
 
 // Welcome email when someone subscribes
 const sendWelcomeEmail = async (email) => {
   const mailOptions = {
-    from: `"EKOSYS Solar" <${process.env.SMTP_USER || 'reyesraghav@gmail.com'}>`,
+    from: `"EKOSYS Solar" <${process.env.SMTP_USER || 'corp.ekosys@gmail.com'}>`,
     to: email,
     subject: '🌞 Welcome to EKOSYS Solar Newsletter!',
     html: `
@@ -63,19 +64,28 @@ const sendWelcomeEmail = async (email) => {
 router.post('/', async (req, res) => {
   try {
     const { email } = req.body;
+    
     const existing = await Newsletter.findOne({ email });
     if (existing) {
       return res.status(400).json({ success: false, message: 'This email is already subscribed!' });
     }
-    const subscriber = new Newsletter({ email });
-    await subscriber.save();
+
+    const newSubscriber = new Newsletter({ email });
+    await newSubscriber.save();
+    console.log('✅ Newsletter saved to database');
     
+    // Save to CRM (Non-blocking)
+    sendToCRM({ email }, 'Newsletter Subscription');
+
     // Send welcome email
     sendWelcomeEmail(email);
-    
+
     res.status(201).json({ success: true, message: 'Successfully subscribed! Check your email for a welcome message.' });
-  } catch (error) {
-    res.status(500).json({ success: false, message: 'Subscription failed', error: error.message });
+  } catch (dbError) {
+    if (dbError.code === 11000) {
+      return res.status(400).json({ success: false, message: 'This email is already subscribed!' });
+    }
+    res.status(500).json({ success: false, message: 'Subscription failed', error: dbError.message });
   }
 });
 

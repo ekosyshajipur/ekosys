@@ -45,16 +45,22 @@ export default function SolarSystems() {
               </Link>
             </div>
             <img
-              src="/images/ongrid.png"
+              src="/images/ongrid.webp"
               alt="On Grid Solar"
+              loading="lazy"
+              width="600"
+              height="600"
               style={{ borderRadius: 16, width: "100%" }}
             />
           </div>
 
           <div className="content-grid" style={{ marginBottom: 60 }}>
             <img
-              src="/images/offgrid.png"
+              src="/images/offgrid.webp"
               alt="Off Grid Solar"
+              loading="lazy"
+              width="600"
+              height="600"
               style={{ borderRadius: 16, width: "100%" }}
             />
             <div>
@@ -115,8 +121,11 @@ export default function SolarSystems() {
               </Link>
             </div>
             <img
-              src="/images/hybrid.png"
+              src="/images/hybrid.webp"
               alt="Hybrid Solar"
+              loading="lazy"
+              width="600"
+              height="600"
               style={{ borderRadius: 16, width: "100%" }}
             />
           </div>

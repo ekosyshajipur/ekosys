@@ -29,7 +29,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Montserrat', sans-serif; }
 
 a { text-decoration:none; color:inherit; }
 ul { list-style:none; }
-img { max-width:100%; display:block; }
+img { max-width:100%; height:auto; display:block; }
 
 .container { max-width:1200px; margin:0 auto; padding:0 20px; }
 
@@ -179,6 +179,10 @@ img { max-width:100%; display:block; }
 .card p { color:var(--gray); line-height:1.7; font-size:.95rem; }
 
 @media (max-width:992px) { .cards-grid { grid-template-columns:1fr; } }
+
+/* Content Grid */
+.content-grid { display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center; }
+@media (max-width:992px) { .content-grid { grid-template-columns:1fr; } }
 
 /* Systems Section */
 .systems-tabs { display:flex; justify-content:center; gap:12px; margin-bottom:40px; flex-wrap:wrap; }
@@ -442,13 +446,16 @@ img { max-width:100%; display:block; }
   position: relative;
   border-radius: 20px;
   overflow: hidden;
-  max-height: 340px;
-  min-height: 280px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .solar-system-img-wrapper img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
   box-shadow: 0 8px 30px rgba(0,0,0,.12);
   transition: transform .4s;
 }
@@ -564,7 +571,7 @@ img { max-width:100%; display:block; }
   transform: translateY(-8px);
   box-shadow: 0 16px 48px rgba(0,0,0,.12);
 }
-.enhanced-product-img { height: 280px; overflow: hidden; background: #f8fafc; display: flex; align-items: center; justify-content: center; padding: 20px; }
+.enhanced-product-img { height: 280px; overflow: hidden; background: #f8fafc; padding: 15px; }
 .enhanced-product-img img {
   width: 100%;
   height: 100%;
@@ -851,7 +858,7 @@ img { max-width:100%; display:block; }
 
   /* Product cards */
   .products-cards-grid { grid-template-columns:1fr; gap:20px; }
-  .enhanced-product-img { height:220px; padding:16px; }
+  .enhanced-product-img { height:220px; }
   .enhanced-product-info { padding:20px; }
   .enhanced-product-info h3 { font-size:1.15rem; }
   .enhanced-desc { font-size:.85rem !important; }

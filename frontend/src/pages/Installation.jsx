@@ -17,19 +17,27 @@ export default function Installation() {
 
       <section className="section">
         <div className="container">
+          <div style={{ textAlign: "center", marginBottom: 40 }}>
+            <h2 style={{ fontSize: "2.5rem", marginBottom: 16 }}>
+              Professional <span className="highlight">Installation</span>
+            </h2>
+          </div>
           <div className="content-grid" style={{ marginBottom: 50 }}>
             <img
-              src="/images/installation.png"
+              src="/images/installation.webp"
               alt="Solar Installation"
+              loading="lazy"
+              width="600"
+              height="600"
               style={{
                 borderRadius: 16,
                 boxShadow: "0 20px 60px rgba(0,0,0,.15)",
+                width: "100%",
+                height: "auto",
+                objectFit: "cover"
               }}
             />
             <div>
-              <h2 style={{ fontSize: "2rem", marginBottom: 16 }}>
-                Professional <span className="highlight">Installation</span>
-              </h2>
               <p style={{ color: "#94a3b8", lineHeight: 1.8 }}>
                 Our expert team guarantees strict compliance and on-time
                 delivery for all industrial, commercial, and residential

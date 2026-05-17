@@ -109,11 +109,13 @@ export default function PopupForm() {
         </button>
         <div className="popup-header">
           <img
-            src="/images/logo.png"
+            src="/images/logo.webp"
             alt="EKOSYS"
             className="popup-logo"
             loading="lazy"
             decoding="async"
+            width="32"
+            height="32"
           />
         </div>
         <div className="popup-content">

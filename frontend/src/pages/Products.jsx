@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 
 const categoryBanners = {
   solarSystems: {
-    img: "/images/solar-systems-banner.png",
+    img: "/images/solar-systems-banner.webp",
     title: "☀ Solar Systems",
     subtitle: "On-Grid, Off-Grid & Hybrid Solutions for Every Need",
   },
   specialty: {
-    img: "/images/specialty-solar-banner.png",
+    img: "/images/specialty-solar-banner.webp",
     title: "🌟 Specialty Solar Products",
     subtitle: "Street Lights, Water Heaters, Pumps & More",
   },
   powerUnits: {
-    img: "/images/power-units-banner.png",
+    img: "/images/power-units-banner.webp",
     title: "⚡ Power & Voltage Units",
     subtitle: "UPS, Stabilizers, Inverters & Batteries",
   },
@@ -22,7 +22,7 @@ const categoryBanners = {
 const solarSystemsDetailed = [
   {
     name: "On-Grid Solar System",
-    img: "/images/ongrid.png",
+    img: "/images/ongrid.webp",
     desc: "An On-Grid Solar System is directly connected to the utility power grid. It is the most popular and cost-effective solar setup for homes and businesses. Solar panels generate DC electricity, which an inverter converts to AC. The system feeds excess power back to the grid through net metering, earning you credits and dramatically reducing your electricity bills.",
     extraDesc:
       "On-Grid systems are ideal for urban and semi-urban areas where consistent grid power is available. With government subsidies under PM Surya Ghar Yojana, homeowners can save up to ₹78,000. These systems require minimal maintenance, have a lifespan of 25+ years, and offer the highest return on investment among all solar types.",
@@ -40,7 +40,7 @@ const solarSystemsDetailed = [
   },
   {
     name: "Off-Grid Solar System",
-    img: "/images/offgrid.png",
+    img: "/images/offgrid.webp",
     desc: "An Off-Grid Solar System operates completely independently from the utility grid. It uses solar panels to charge a battery bank during daylight hours, and the stored energy powers your home or business around the clock. This system is the perfect solution for remote locations, farms, and areas with frequent or prolonged power cuts.",
     extraDesc:
       "Off-Grid systems provide true energy independence. They are engineered with high-capacity lithium or tubular batteries that store surplus solar energy for nighttime use. With advanced charge controllers and pure sine wave inverters, these systems deliver stable, clean power to all your appliances—even in the most remote corners of Bihar and beyond.",
@@ -59,7 +59,7 @@ const solarSystemsDetailed = [
   },
   {
     name: "Hybrid Solar System",
-    img: "/images/hybrid.png",
+    img: "/images/hybrid.webp",
     desc: "A Hybrid Solar System combines the best of On-Grid and Off-Grid technologies. It is connected to the utility grid AND has battery backup, ensuring uninterrupted power supply regardless of grid availability. The intelligent hybrid inverter automatically switches between solar, battery, and grid power for maximum efficiency.",
     extraDesc:
       "Hybrid systems are the most versatile and future-ready solar solution. During the day, solar panels power your home while simultaneously charging batteries and feeding excess to the grid. At night or during power cuts, the battery seamlessly takes over. You enjoy net metering benefits while staying protected from outages—the ultimate peace of mind.",
@@ -80,7 +80,7 @@ const solarSystemsDetailed = [
 const specialtyProducts = [
   {
     name: "Solar Street Lights",
-    img: "/images/street-light.png",
+    img: "/images/street-light.webp",
     desc: "High-performance solar LED street lights for roads, highways, parks, campuses, and rural areas. Fully automatic with dusk-to-dawn operation, motion sensors, and weather-resistant construction. These self-sufficient lights require zero electricity from the grid.",
     features: [
       "LED technology – 50,000 hours lifespan",
@@ -93,7 +93,7 @@ const specialtyProducts = [
   },
   {
     name: "Solar Water Heaters",
-    img: "/images/water-heater.png",
+    img: "/images/water-heater.webp",
     desc: "Energy-efficient solar water heating systems for homes, hotels, hospitals, and industries. Available in Evacuated Tube Collector (ETC) and Flat Plate Collector (FPC) variants. Cuts water heating costs by up to 80% with zero running costs after installation.",
     features: [
       "ETC & FPC technology available",
@@ -106,7 +106,7 @@ const specialtyProducts = [
   },
   {
     name: "Solar Water Pumps",
-    img: "/images/solar-water-pump.png",
+    img: "/images/solar-water-pump.webp",
     desc: "Solar-powered water pumping systems for agriculture, irrigation, and drinking water supply. These DC and AC submersible pumps run directly on solar energy, eliminating diesel and electricity costs. Ideal for farmers under the PM-KUSUM scheme with up to 90% government subsidy.",
     features: [
       "DC & AC submersible models available",
@@ -119,7 +119,7 @@ const specialtyProducts = [
   },
   {
     name: "Solar Atta Chakki",
-    img: "/images/atta-chakki.png",
+    img: "/images/atta-chakki.webp",
     desc: "Clean, solar-powered flour mill grinding units designed for rural and small-scale applications. These heavy-duty machines run entirely on solar power, providing self-sustaining flour grinding for households and small businesses with zero operational cost.",
     features: [
       "100% solar-powered grinding",
@@ -135,7 +135,7 @@ const specialtyProducts = [
 const powerProducts = [
   {
     name: "Online UPS Systems",
-    img: "/images/online-ups.png",
+    img: "/images/online-ups.webp",
     desc: "Enterprise-grade Online UPS systems providing zero transfer time and pure sine wave output. Protect your critical IT infrastructure, medical equipment, and sensitive machinery from voltage fluctuations, surges, and power outages with our reliable double-conversion UPS solutions.",
     features: [
       "Zero transfer time",
@@ -148,7 +148,7 @@ const powerProducts = [
   },
   {
     name: "Servo Stabilizers",
-    img: "/images/servo-stabilizer.png",
+    img: "/images/servo-stabilizer.webp",
     desc: "High-precision servo voltage stabilizers for industrial, commercial, and residential applications. With ultra-fast correction speed and wide input voltage range, our stabilizers protect your expensive equipment from erratic voltage fluctuations common in Indian power grid conditions.",
     features: [
       "99% efficiency rating",
@@ -161,7 +161,7 @@ const powerProducts = [
   },
   {
     name: "Solar Inverters",
-    img: "/images/inverter.png",
+    img: "/images/inverter.webp",
     desc: "High-efficiency solar inverters for On-Grid, Off-Grid, and Hybrid solar systems. Our range includes string inverters, micro-inverters, and hybrid inverters from leading brands. Designed for Indian conditions with wide MPPT range and built-in Wi-Fi monitoring.",
     features: [
       "MPPT tracking for max efficiency",
@@ -174,7 +174,7 @@ const powerProducts = [
   },
   {
     name: "Solar Batteries",
-    img: "/images/battery.png",
+    img: "/images/battery.webp",
     desc: "Premium quality solar batteries including Lithium-ion, Tubular Lead Acid, and Gel batteries. Designed for deep cycle applications with high charge-discharge efficiency, longer lifespan, and maintenance-free operation. Essential for Off-Grid and Hybrid solar systems.",
     features: [
       "Lithium-ion & Tubular options",
@@ -228,10 +228,12 @@ export default function Products() {
         <div className="container">
           <div className="products-hero-banner">
             <img
-              src="/images/products.png"
+              src="/images/products.webp"
               alt="EKOSYS Product Range"
               decoding="async"
               fetchPriority="high"
+              width="800"
+              height="400"
             />
             <div className="products-hero-overlay">
               <h2>Complete Solar & Power Solutions</h2>
@@ -308,10 +310,12 @@ export default function Products() {
                 {/* Bihar Home Showcase */}
                 <div className="bihar-showcase">
                   <img
-                    src="/images/bihar-home.png"
+                    src="/images/bihar-home.webp"
                     alt="Solar Installation Bihar"
                     loading="lazy"
                     decoding="async"
+                    width="600"
+                    height="400"
                   />
                   <div className="bihar-showcase-content">
                     <h3>🏠 Powering Homes Across Bihar</h3>
@@ -381,11 +385,13 @@ export default function Products() {
                 {/* Hero Banner - Solar Energy Benefits */}
                 <div className="solar-benefits-section">
                   <img
-                    src="/images/hero-banner.png"
+                    src="/images/hero-banner.webp"
                     alt="Solar Energy Benefits"
                     className="solar-benefits-img"
                     loading="lazy"
                     decoding="async"
+                    width="800"
+                    height="600"
                   />
                   <div className="solar-benefits-grid">
                     <div className="solar-benefit-card">

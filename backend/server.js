@@ -9,7 +9,14 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: "https://ekosys.onrender.com",
+  origin: function (origin, callback) {
+    // Allow any origin that is related to the project (localhost, devtunnels, vercel, ekosys)
+    if (!origin || /localhost/.test(origin) || /devtunnels\.ms/.test(origin) || /vercel\.app/.test(origin) || /northflank\.app/.test(origin) || /ekosys\.in/.test(origin) || /onrender\.com/.test(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true
 }));
 app.use(express.json());
@@ -19,8 +26,9 @@ const helmet = require('helmet');
 app.use(helmet());
 
 // MongoDB Connection
+mongoose.set('bufferCommands', false);
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/solarDB';
-mongoose.connect(MONGO_URI)
+mongoose.connect(MONGO_URI, { serverSelectionTimeoutMS: 5000 })
   .then(() => console.log('✅ MongoDB Connected Successfully'))
   .catch((err) => console.log('❌ MongoDB Connection Error:', err.message));
 

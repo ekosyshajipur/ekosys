@@ -18,9 +18,11 @@ export default function Navbar() {
       <div className="nav-container">
         <Link to="/" className="nav-logo">
           <img
-            src="/images/logo.png"
+            src="/images/logo.webp"
             alt="EKOSYS Logo"
             className="nav-logo-img"
+            width="38"
+            height="38"
           />
         </Link>
         <div className="nav-links">
@@ -36,14 +38,12 @@ export default function Navbar() {
         </div>
         <div className="nav-cta">
           <a
-            href="#"
+            href="https://console.ultraviewer.net/login.aspx?afterLogin=https%3a%2f%2fconsole.ultraviewer.net%2f%3flang%3den"
             className="btn btn-primary"
-            onClick={(e) => {
-              e.preventDefault();
-              window.dispatchEvent(new Event("openPopup"));
-            }}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Get Free Quote
+            Login
           </a>
         </div>
         <button
@@ -68,17 +68,14 @@ export default function Navbar() {
             {l.label}
           </Link>
         ))}
-        <button
-          type="button"
+        <a
+          href="https://console.ultraviewer.net/login.aspx?afterLogin=https%3a%2f%2fconsole.ultraviewer.net%2f%3flang%3den"
           className="btn btn-primary mobile-cta-btn"
-          onClick={(e) => {
-            e.preventDefault();
-            setOpen(false);
-            window.dispatchEvent(new Event("openPopup"));
-          }}
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Get Free Quote →
-        </button>
+          Login →
+        </a>
       </div>
     </nav>
   );

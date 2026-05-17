@@ -17,9 +17,12 @@ export default function Subsidy() {
         <div className="container">
           <div className="content-grid">
             <img
-              src="/images/subsidy.png"
+              src="/images/subsidy.webp"
               alt="PM Surya Ghar Subsidy"
-              style={{ borderRadius: 16, width: "100%" }}
+              loading="lazy"
+              width="600"
+              height="600"
+              style={{ borderRadius: 16, width: "100%", maxHeight: "400px", objectFit: "contain" }}
             />
             <div>
               <h2 style={{ fontSize: "2rem", marginBottom: 16 }}>

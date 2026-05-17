@@ -48,10 +48,12 @@ export default function Footer() {
           <div className="footer-grid">
             <div className="footer-about">
               <img
-                src="/images/logo.png"
+                src="/images/logo.webp"
                 alt="EKOSYS"
                 loading="lazy"
                 decoding="async"
+                width="45"
+                height="45"
                 style={{
                   height: "45px",
                   marginBottom: "16px",

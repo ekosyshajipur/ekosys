@@ -36,7 +36,7 @@ const systemsData = {
   ongrid: {
     title: "On-Grid Solar System",
     subtitle: "Connected to the main grid",
-    img: "/images/ongrid.png",
+    img: "/images/ongrid.webp",
     desc: "Connected to the main grid, ideal for reducing electricity bills with net metering benefits. Generates power during the day and exports excess energy to the grid.",
     features: [
       "No batteries required",
@@ -49,7 +49,7 @@ const systemsData = {
   offgrid: {
     title: "Off-Grid Solar System",
     subtitle: "Battery-based system",
-    img: "/images/offgrid.png",
+    img: "/images/offgrid.webp",
     desc: "Battery-based system for areas with limited or no grid access—ensuring complete energy independence. Stores energy during the day for use at night or during power cuts.",
     features: [
       "Complete energy independence",
@@ -62,7 +62,7 @@ const systemsData = {
   hybrid: {
     title: "Hybrid Solar System",
     subtitle: "Grid + Battery Backup",
-    img: "/images/hybrid.png",
+    img: "/images/hybrid.webp",
     desc: "A smart mix of grid and battery backup for uninterrupted power and maximum reliability. Enjoy net metering benefits while staying protected from power cuts.",
     features: [
       "Grid connection + Battery",
@@ -149,13 +149,36 @@ export default function Home() {
             </div>
             <div className="hero-image">
               <img
-                src="/images/hero-banner.png"
+                src="/images/hero-banner.webp"
                 alt="EKOSYS Solar Solutions"
                 decoding="async"
                 fetchPriority="high"
+                width="800"
+                height="800"
               />
               <div className="hero-float f1">⚡ High Performance</div>
               <div className="hero-float f2">🌞 Green Energy</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section greeting-section" style={{ background: "linear-gradient(135deg, #f0fdf4 0%, #d1fae5 100%)", borderBottom: "1px solid #a7f3d0" }}>
+        <div className="container">
+          <div style={{ textAlign: "center", maxWidth: "900px", margin: "0 auto", padding: "40px 20px", background: "#fff", borderRadius: "24px", boxShadow: "0 20px 50px rgba(245,158,11,0.15)", position: "relative", overflow: "hidden" }}>
+            <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "8px", background: "linear-gradient(90deg, #f59e0b, #f97316)" }}></div>
+            <h2 style={{ fontSize: "2.5rem", fontWeight: "800", color: "#064e3b", marginBottom: "16px", letterSpacing: "-0.5px" }}>
+              Welcome to <span style={{ color: "#f59e0b" }}>EKOSYS Solar</span>
+            </h2>
+            <h3 style={{ fontSize: "1.3rem", fontWeight: "600", color: "#f97316", marginBottom: "24px" }}>
+              Your Trusted Partner for a Sustainable & Brighter Future! 🌞
+            </h3>
+            <p style={{ fontSize: "1.1rem", color: "#475569", lineHeight: "1.8", marginBottom: "20px" }}>
+              We are thrilled to have you here! Whether you're looking to power your home, business, or industry, EKOSYS provides state-of-the-art solar solutions designed to reduce your electricity bills to <strong style={{ color: "#f59e0b" }}>ZERO</strong>. 
+            </p>
+            <div style={{ display: "flex", justifyContent: "center", gap: "16px", flexWrap: "wrap", marginTop: "30px" }}>
+              <span style={{ background: "#ecfdf5", color: "#d97706", padding: "8px 16px", borderRadius: "50px", fontSize: "0.95rem", fontWeight: "600", border: "1px solid #a7f3d0" }}>✅ PM Surya Ghar Subsidy</span>
+              <span style={{ background: "#ecfdf5", color: "#d97706", padding: "8px 16px", borderRadius: "50px", fontSize: "0.95rem", fontWeight: "600", border: "1px solid #a7f3d0" }}>✅ 25-Year Warranty</span>
+              <span style={{ background: "#ecfdf5", color: "#d97706", padding: "8px 16px", borderRadius: "50px", fontSize: "0.95rem", fontWeight: "600", border: "1px solid #a7f3d0" }}>✅ 100% Free Consultation</span>
             </div>
           </div>
         </div>
