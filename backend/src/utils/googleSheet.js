@@ -1,5 +1,4 @@
 const axios = require('axios');
-const qs = require('qs');
 
 /**
  * Sends lead data to the configured Google Sheet Web App.
@@ -24,7 +23,7 @@ const sendToGoogleSheet = async (data, source) => {
     // Google Apps Script is extremely unreliable with POST bodies. 
     // The most bulletproof way to guarantee e.parameter receives the data 
     // is to send it directly in the URL query string.
-    const urlWithParams = `${sheetUrl}?${qs.stringify(payload)}`;
+    const urlWithParams = `${sheetUrl}?${new URLSearchParams(payload).toString()}`;
     await axios.post(urlWithParams, {});
 
     // Alternatively, sending as form-urlencoded which is ultra-compatible with basic Apps Scripts:
