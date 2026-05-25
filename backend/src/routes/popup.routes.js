@@ -2,52 +2,30 @@ const express = require('express');
 const router = express.Router();
 const nodemailer = require('nodemailer');
 const { sendToCRM } = require('../utils/crm');
+const { sendToGoogleSheet } = require('../utils/googleSheet');
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.SMTP_USER || 'reyesraghav@gmail.com',
-    pass: process.env.SMTP_PASS || 'your_app_password_here'
+    user: process.env.SMTP_USER || 'corp.ekosys@gmail.com',
+    pass: process.env.SMTP_PASS || 'vgrw kbgg qtxf bcgj'
   }
 });
 
 // POST - Submit popup form
 router.post('/', async (req, res) => {
   try {
-    const { name, email, phone, city, requirement } = req.body;
+    const { name, email, phone, city, enquiryType, requirement } = req.body;
     
     // Save to CRM (Non-blocking)
-    sendToCRM({ name, email, phone, city, requirement }, 'Popup Form');
+    sendToCRM({ name, email, phone, city, enquiryType, requirement }, 'Popup Form');
     
-    // Email to Admin
-    const adminMailOptions = {
-      from: process.env.SMTP_USER || 'reyesraghav@gmail.com',
-      to: 'reyesraghav@gmail.com',
-      subject: '🌞 New Solar Quote Request — EKOSYS',
-      html: `
-        <div style="font-family: 'Segoe UI', Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e2e8f0; border-radius: 16px; overflow: hidden;">
-          <div style="background: linear-gradient(135deg, #f59e0b, #f97316); padding: 24px; text-align: center;">
-            <h2 style="color: #fff; margin: 0; font-size: 1.5rem;">🌞 New Quote Request</h2>
-          </div>
-          <div style="padding: 30px; background: #fff;">
-            <table style="width: 100%; border-collapse: collapse;">
-              <tr><td style="padding: 10px; font-weight: 600; color: #334155;">Name:</td><td style="padding: 10px; color: #475569;">${name}</td></tr>
-              <tr style="background: #f8fafc;"><td style="padding: 10px; font-weight: 600; color: #334155;">Email:</td><td style="padding: 10px; color: #475569;">${email}</td></tr>
-              <tr><td style="padding: 10px; font-weight: 600; color: #334155;">Phone:</td><td style="padding: 10px; color: #475569;">${phone}</td></tr>
-              <tr style="background: #f8fafc;"><td style="padding: 10px; font-weight: 600; color: #334155;">City:</td><td style="padding: 10px; color: #475569;">${city}</td></tr>
-              <tr><td style="padding: 10px; font-weight: 600; color: #334155;">Requirement:</td><td style="padding: 10px; color: #475569;">${requirement || 'General Enquiry'}</td></tr>
-            </table>
-          </div>
-          <div style="background: #0f172a; padding: 16px; text-align: center;">
-            <p style="color: #94a3b8; margin: 0; font-size: 0.85rem;">EKOSYS Solar — Think | Innovate</p>
-          </div>
-        </div>
-      `
-    };
-
+    // Save to Google Sheet (Non-blocking)
+    sendToGoogleSheet({ name, email, phone, city, enquiryType, requirement }, 'Popup Form');
+    
     // Email to Customer
     const customerMailOptions = {
-      from: `"EKOSYS Solar" <${process.env.SMTP_USER || 'reyesraghav@gmail.com'}>`,
+      from: `"EKOSYS Solar" <${process.env.SMTP_USER || 'corp.ekosys@gmail.com'}>`,
       to: email,
       subject: '🌞 Thank You for Choosing EKOSYS Solar!',
       html: `
@@ -67,7 +45,7 @@ router.post('/', async (req, res) => {
             </p>
             
             <p style="color: #334155; line-height: 1.8; font-size: 1.05rem; margin-bottom: 24px;">
-              Your request has been prioritized in our system. One of our senior solar consultants will reach out to you within <strong>24 hours</strong> to discuss your exact requirements and provide a tailored, transparent quotation.
+              Your request for <strong>"${enquiryType}"</strong> has been prioritized in our system. One of our senior solar consultants will reach out to you within <strong>24 hours</strong> to discuss your exact requirements and provide a tailored, transparent quotation for your location in <strong>${city}</strong>.
             </p>
 
             <!-- Summary Box -->
@@ -75,7 +53,11 @@ router.post('/', async (req, res) => {
               <h3 style="margin: 0 0 16px; color: #065f46; font-size: 1.15rem;">📋 Your Request Summary</h3>
               <table style="width: 100%; border-collapse: collapse;">
                 <tr>
-                  <td style="padding: 8px 0; color: #475569; width: 30%; font-weight: 600;">Contact Number:</td>
+                  <td style="padding: 8px 0; color: #475569; width: 30%; font-weight: 600;">Enquiry Type:</td>
+                  <td style="padding: 8px 0; color: #1e293b;">${enquiryType}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0; color: #475569; font-weight: 600;">Contact Number:</td>
                   <td style="padding: 8px 0; color: #1e293b;">${phone}</td>
                 </tr>
                 <tr>
@@ -83,8 +65,9 @@ router.post('/', async (req, res) => {
                   <td style="padding: 8px 0; color: #1e293b;">${city}</td>
                 </tr>
                 <tr>
-                  <td style="padding: 8px 0; color: #475569; font-weight: 600;">Requirement:</td>
-                  <td style="padding: 8px 0; color: #1e293b;">${requirement || 'General Enquiry'}</td>
+                  <td colspan="2" style="padding: 16px 0 0; color: #475569; border-top: 1px dashed #a7f3d0;">
+                    <p style="margin: 0; font-style: italic; line-height: 1.6;">"${requirement}"</p>
+                  </td>
                 </tr>
               </table>
             </div>
@@ -128,14 +111,13 @@ router.post('/', async (req, res) => {
       `
     };
 
-    try {
-      await transporter.sendMail(adminMailOptions);
-      await transporter.sendMail(customerMailOptions);
-    } catch (mailError) {
+    // Send email asynchronously (non-blocking)
+    transporter.sendMail(customerMailOptions).catch((mailError) => {
       console.log('Mail sending failed:', mailError.message);
-    }
+    });
 
-    res.status(201).json({ success: true, message: 'Request submitted successfully!' });
+    // Respond immediately to the frontend
+    res.status(201).json({ success: true, message: 'Details submitted successfully! We will contact you within 24 hours.' });
   } catch (error) {
     res.status(500).json({ success: false, message: 'Failed to submit request', error: error.message });
   }

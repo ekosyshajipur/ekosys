@@ -1,7 +1,60 @@
+# ═══════════════════════════════════════════════════════════════
+# EKOSYS Solar — robots.txt
+# https://ekosys.in
+# ═══════════════════════════════════════════════════════════════
+
+# Default: Allow all crawlers
 User-agent: *
 Allow: /
-
-Sitemap: https://ekosys.in/sitemap.xml
-
-# Block admin/api paths
 Disallow: /api/
+Disallow: /_assets/
+Disallow: /node_modules/
+
+# Google — full access
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Google Image Bot
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /assets/
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# Yandex
+User-agent: Yandex
+Allow: /
+Crawl-delay: 5
+
+# AI Crawlers (Perplexity, ChatGPT, Gemini)
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Sitemap
+Sitemap: https://ekosys.in/sitemap.xml

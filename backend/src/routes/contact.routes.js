@@ -1,63 +1,31 @@
 const express = require('express');
 const router = express.Router();
-const Contact = require('../models/Contact');
 const nodemailer = require('nodemailer');
 const { sendToCRM } = require('../utils/crm');
+const { sendToGoogleSheet } = require('../utils/googleSheet');
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.SMTP_USER || 'reyesraghav@gmail.com',
-    pass: process.env.SMTP_PASS || 'your_app_password_here'
+    user: process.env.SMTP_USER || 'corp.ekosys@gmail.com',
+    pass: process.env.SMTP_PASS || 'vgrw kbgg qtxf bcgj'
   }
 });
 
 // POST - Submit contact form
 router.post('/', async (req, res) => {
   try {
-    const { name, email, phone, subject, message } = req.body;
+    const { name, email, phone, city, enquiryType, requirement } = req.body;
     
-    // Try to save to database, but don't fail if MongoDB is down
-    try {
-      const contact = new Contact({ name, email, phone, subject, message });
-      await contact.save();
-      console.log('✅ Contact saved to database');
-      
-      // Also save to CRM (Non-blocking)
-      sendToCRM({ name, email, phone, subject, message }, 'Contact Form');
-    } catch (dbError) {
-      console.log('⚠️ Database save failed, but proceeding with email:', dbError.message);
-    }
+    // Save to CRM (Non-blocking)
+    sendToCRM({ name, email, phone, city, enquiryType, requirement }, 'Contact Form');
     
-    // Email to Admin
-    const adminMailOptions = {
-      from: process.env.SMTP_USER || 'reyesraghav@gmail.com',
-      to: 'reyesraghav@gmail.com',
-      subject: `📧 New Contact Form Submission: ${subject}`,
-      html: `
-        <div style="font-family: 'Segoe UI', Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e2e8f0; border-radius: 16px; overflow: hidden;">
-          <div style="background: linear-gradient(135deg, #f59e0b, #f97316); padding: 24px; text-align: center;">
-            <h2 style="color: #fff; margin: 0; font-size: 1.5rem;">📧 New Contact Message</h2>
-          </div>
-          <div style="padding: 30px; background: #fff;">
-            <table style="width: 100%; border-collapse: collapse;">
-              <tr><td style="padding: 10px; font-weight: 600; color: #334155;">Name:</td><td style="padding: 10px; color: #475569;">${name}</td></tr>
-              <tr style="background: #f8fafc;"><td style="padding: 10px; font-weight: 600; color: #334155;">Email:</td><td style="padding: 10px; color: #475569;">${email}</td></tr>
-              <tr><td style="padding: 10px; font-weight: 600; color: #334155;">Phone:</td><td style="padding: 10px; color: #475569;">${phone}</td></tr>
-              <tr style="background: #f8fafc;"><td style="padding: 10px; font-weight: 600; color: #334155;">Subject:</td><td style="padding: 10px; color: #475569;">${subject}</td></tr>
-              <tr><td colspan="2" style="padding: 16px 10px; border-top: 1px solid #e2e8f0;"><strong style="color: #334155;">Message:</strong><p style="color: #475569; margin: 8px 0 0; line-height: 1.6; white-space: pre-wrap;">${message}</p></td></tr>
-            </table>
-          </div>
-          <div style="background: #0f172a; padding: 16px; text-align: center;">
-            <p style="color: #94a3b8; margin: 0; font-size: 0.85rem;">EKOSYS Solar — Think | Innovate</p>
-          </div>
-        </div>
-      `
-    };
-
+    // Save to Google Sheet (Non-blocking)
+    sendToGoogleSheet({ name, email, phone, city, enquiryType, requirement }, 'Contact Form');
+    
     // Email to Customer
     const customerMailOptions = {
-      from: `"EKOSYS Solar" <${process.env.SMTP_USER || 'reyesraghav@gmail.com'}>`,
+      from: `"EKOSYS Solar" <${process.env.SMTP_USER || 'corp.ekosys@gmail.com'}>`,
       to: email,
       subject: '🌞 We Received Your Message — EKOSYS Solar',
       html: `
@@ -73,11 +41,11 @@ router.post('/', async (req, res) => {
             <h2 style="color: #f97316; margin-top: 0; margin-bottom: 20px; font-size: 1.6rem; border-bottom: 2px solid #a7f3d0; padding-bottom: 12px;">Warm Greetings, ${name}! 🙏</h2>
             
             <p style="color: #334155; line-height: 1.8; font-size: 1.05rem; margin-bottom: 24px;">
-              Thank you for taking the first step towards clean, sustainable, and free energy! We have successfully received your message regarding <strong>"${subject}"</strong>. 
+              Thank you for taking the first step towards clean, sustainable, and free energy! We have successfully received your message regarding <strong>"${enquiryType}"</strong>. 
             </p>
             
             <p style="color: #334155; line-height: 1.8; font-size: 1.05rem; margin-bottom: 24px;">
-              At <strong>EKOSYS Solar</strong>, our mission is to empower homes and businesses across Bihar with top-tier solar solutions. Our expert engineers are currently reviewing your inquiry and will contact you directly within <strong>24 hours</strong> to discuss the best, most cost-effective solution tailored exclusively for you.
+              At <strong>EKOSYS Solar</strong>, our mission is to empower homes and businesses across Bihar with top-tier solar solutions. Our expert engineers are currently reviewing your inquiry and will contact you directly within <strong>24 hours</strong> to discuss the best, most cost-effective solution tailored exclusively for you in <strong>${city}</strong>.
             </p>
 
             <!-- Summary Box -->
@@ -85,16 +53,20 @@ router.post('/', async (req, res) => {
               <h3 style="margin: 0 0 16px; color: #065f46; font-size: 1.15rem;">📝 Your Inquiry Details</h3>
               <table style="width: 100%; border-collapse: collapse;">
                 <tr>
-                  <td style="padding: 8px 0; color: #475569; width: 30%; font-weight: 600;">Subject:</td>
-                  <td style="padding: 8px 0; color: #1e293b;">${subject}</td>
+                  <td style="padding: 8px 0; color: #475569; width: 30%; font-weight: 600;">Enquiry Type:</td>
+                  <td style="padding: 8px 0; color: #1e293b;">${enquiryType}</td>
                 </tr>
                 <tr>
                   <td style="padding: 8px 0; color: #475569; font-weight: 600;">Phone:</td>
                   <td style="padding: 8px 0; color: #1e293b;">${phone}</td>
                 </tr>
+                <tr>
+                  <td style="padding: 8px 0; color: #475569; font-weight: 600;">City:</td>
+                  <td style="padding: 8px 0; color: #1e293b;">${city}</td>
+                </tr>
               </table>
               <div style="margin-top: 16px; padding-top: 16px; border-top: 1px dashed #a7f3d0;">
-                <p style="margin: 0; color: #475569; font-style: italic; line-height: 1.6;">"${message}"</p>
+                <p style="margin: 0; color: #475569; font-style: italic; line-height: 1.6;">"${requirement}"</p>
               </div>
             </div>
 
@@ -137,27 +109,21 @@ router.post('/', async (req, res) => {
       `
     };
 
-    try {
-      await transporter.sendMail(adminMailOptions);
-      await transporter.sendMail(customerMailOptions);
-    } catch (mailError) {
+    // Send email asynchronously (non-blocking)
+    transporter.sendMail(customerMailOptions).catch((mailError) => {
       console.log('Mail sending failed:', mailError.message);
-    }
+    });
 
+    // Respond immediately to the frontend
     res.status(201).json({ success: true, message: 'Message sent successfully! We will contact you soon.' });
   } catch (error) {
     res.status(500).json({ success: false, message: 'Failed to send message', error: error.message });
   }
 });
 
-// GET - Get all contacts (admin)
+// GET - Return empty since MongoDB is removed
 router.get('/', async (req, res) => {
-  try {
-    const contacts = await Contact.find().sort({ createdAt: -1 });
-    res.json({ success: true, data: contacts });
-  } catch (error) {
-    res.status(500).json({ success: false, message: error.message });
-  }
+  res.json({ success: true, data: [] });
 });
 
 module.exports = router;

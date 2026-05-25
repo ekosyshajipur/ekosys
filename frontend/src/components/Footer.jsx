@@ -1,48 +1,9 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import axios from "axios";
-
 const API = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
-  const [msg, setMsg] = useState("");
-
-  const subscribe = async (e) => {
-    e.preventDefault();
-    try {
-      const { data } = await axios.post(`${API}/newsletter`, { email });
-      setMsg(data.message);
-      setEmail("");
-      setTimeout(() => setMsg(""), 3000);
-    } catch (err) {
-      setMsg(err.response?.data?.message || "Subscription failed");
-    }
-  };
-
   return (
     <>
-      <section className="newsletter">
-        <div className="container">
-          <h2>Stay Updated with Solar News</h2>
-          <p>
-            Get the latest updates on PM Surya Ghar Subsidy, new products, and
-            solar tips.
-          </p>
-          <form className="newsletter-form" onSubmit={subscribe}>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <button type="submit">Subscribe</button>
-          </form>
-          {msg && <p style={{ color: "#fff", marginTop: 12 }}>{msg}</p>}
-        </div>
-      </section>
-
       <footer className="footer">
         <div className="container">
           <div className="footer-grid">
@@ -52,11 +13,11 @@ export default function Footer() {
                 alt="EKOSYS"
                 loading="lazy"
                 decoding="async"
-                width="45"
-                height="45"
+                width="240"
+                height="75"
                 style={{
-                  height: "45px",
-                  marginBottom: "16px",
+                  height: "75px",
+                  marginBottom: "20px",
                   objectFit: "contain",
                 }}
               />
@@ -107,6 +68,14 @@ export default function Footer() {
                 "PM सूर्य घर योजना के तहत ₹78,000 तक की सब्सिडी प्राप्त करें -
                 भारत सरकार"
               </p>
+              <a
+                href="https://biziverse.com/Index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-login-btn"
+              >
+                Login
+              </a>
             </div>
           </div>
           <div className="footer-bottom">

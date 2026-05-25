@@ -1,265 +1,81 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import SeoPageLayout from "../components/SeoPageLayout";
+
+const highlights = [
+  { title: "Home energy savings", text: "Reduce household electricity expenses with a rooftop solar system optimized for your family." },
+  { title: "Subsidy assistance", text: "We guide homeowners through PM Surya Ghar subsidy eligibility and claim processing." },
+  { title: "Fast installation", text: "Professional teams install your residential solar system quickly and cleanly." },
+  { title: "24/7 support", text: "Local maintenance and service support keeps your home solar system running reliably." },
+];
+
+const benefits = [
+  "Reduce monthly electricity bills",
+  "Generate clean renewable energy",
+  "Increase property value",
+  "Low maintenance requirements",
+  "Enhanced home energy independence",
+  "Government subsidy support available",
+  "Ideal for homes and apartments",
+  "Clean power with minimal environmental impact",
+];
+
+const reasons = [
+  "Experienced residential solar installation team",
+  "Personalized solar design for homes",
+  "Transparent pricing and quality products",
+  "Government subsidy and net metering guidance",
+  "Prompt installation and after-sales service",
+  "Reliable cleaning and maintenance support",
+  "Modern inverter and panel technology",
+];
+
+const processSteps = [
+  "Home energy requirement assessment",
+  "Roof condition and sunlight analysis",
+  "Customized residential solar system design",
+  "Selection of rooftop solar panels and inverter",
+  "Professional mounting structure installation",
+  "Panel installation and electrical setup",
+  "System testing and safety certification",
+  "Final activation and handover with support",
+];
+
+const moreLinks = [
+  { label: "Rooftop Solar Solutions in Bihar", to: "/rooftop-solar-bihar" },
+  { label: "Best Solar Installation Services in Bihar", to: "/solar-installation-bihar" },
+  { label: "Learn About Solar Subsidy in Bihar", to: "/solar-subsidy-bihar" },
+  { label: "Industrial Solar Installation Services", to: "/industrial-solar-bihar" },
+  { label: "Solar Maintenance Services", to: "/solar-maintenance" },
+];
+
+const faqs = [
+  { q: "What is a residential solar system?", a: "A residential solar system is a rooftop solar setup installed on homes or apartments to generate electricity from sunlight." },
+  { q: "Is residential solar suitable for Bihar homes?", a: "Yes, Bihar receives ample sunlight most of the year, making residential solar highly effective and reliable." },
+  { q: "How much can I save with home solar?", a: "Savings depend on home energy use and system size, but residential solar can reduce electricity bills significantly." },
+  { q: "Can I get subsidy for home solar through Ekosys?", a: "Yes, Ekosys assists homeowners with government subsidy applications and claims for solar installations." },
+  { q: "How often does a home solar system need maintenance?", a: "Residential solar systems require minimal maintenance, with periodic cleaning and checks for peak performance." },
+  { q: "Can residential solar work during power cuts?", a: "Standard on-grid systems shut off during power cuts. We also offer hybrid and battery-backed options for backup power." },
+  { q: "Does Ekosys provide after-sales support?", a: "Yes, we provide local maintenance, monitoring and service support for residential solar customers across Bihar." },
+];
 
 function ResidentialSolarBihar() {
   return (
-    <div className="container py-5">
-
-      <Helmet>
-        <title>
-          Residential Solar Installation in Bihar | Home Solar Systems | Ekosys
-        </title>
-
-        <meta
-          name="description"
-          content="Ekosys provides residential solar installation services in Bihar for homes and apartments. Get affordable rooftop solar systems, subsidy support and reliable renewable energy solutions."
-        />
-
-        <meta
-          name="keywords"
-          content="
-            residential solar Bihar,
-            home solar installation Bihar,
-            rooftop solar for home Bihar,
-            solar panels for home Bihar,
-            residential rooftop solar,
-            solar company Bihar,
-            solar installation Vaishali,
-            solar company Hajipur,
-            home solar systems,
-            solar subsidy Bihar,
-            renewable energy Bihar,
-            Ekosys solar solutions
-          "
-        />
-      </Helmet>
-
-      <h1 className="mb-4">
-        Residential Solar Installation in Bihar
-      </h1>
-
-      <p>
-        Ekosys provides professional residential solar installation services
-        in Bihar for homes, apartments and residential buildings. Our home
-        solar systems help families reduce electricity bills and switch to
-        clean renewable energy solutions.
-      </p>
-
-      <p>
-        Residential rooftop solar systems are becoming increasingly popular
-        because they provide long-term savings and environmentally friendly
-        electricity generation. With rising electricity costs, solar energy
-        is one of the smartest investments for homeowners in Bihar.
-      </p>
-
-      <p>
-        Our expert solar installation team provides complete residential
-        solar solutions including site inspection, rooftop analysis, solar
-        panel installation, inverter setup, testing and maintenance support.
-        We use high-quality solar panels and modern technology to ensure
-        maximum efficiency and reliable performance.
-      </p>
-
-      <p>
-        Ekosys helps customers choose the best solar system according to
-        their electricity consumption and budget. We also assist customers
-        with government solar subsidy guidance to reduce installation costs.
-      </p>
-
-      {/* Benefits Section */}
-
-      <h2 className="mt-5">
-        Benefits of Residential Solar Systems
-      </h2>
-
-      <p>
-        Residential solar systems provide many financial and environmental
-        benefits for homeowners. Solar energy helps reduce dependency on
-        traditional electricity sources and offers long-term savings.
-      </p>
-
-      <ul>
-        <li>Reduce monthly electricity bills</li>
-        <li>Generate clean renewable energy</li>
-        <li>Increase property value</li>
-        <li>Low maintenance requirements</li>
-        <li>Government subsidy support available</li>
-        <li>Long-lasting solar panel systems</li>
-        <li>Suitable for homes and apartments</li>
-        <li>Reliable electricity generation during daytime</li>
-      </ul>
-
-      {/* Why Choose Us */}
-
-      <h2 className="mt-5">
-        Why Choose Ekosys
-      </h2>
-
-      <p>
-        Ekosys is one of the trusted residential solar installation
-        companies in Bihar. We provide customized home solar solutions with
-        professional support and affordable pricing.
-      </p>
-
-      <ul>
-        <li>Experienced residential solar installation team</li>
-        <li>Affordable pricing and quality products</li>
-        <li>Government subsidy assistance</li>
-        <li>Customized rooftop solar systems</li>
-        <li>Fast installation and technical support</li>
-        <li>Reliable maintenance services</li>
-        <li>Modern solar technology and efficient systems</li>
-      </ul>
-
-      {/* Installation Process */}
-
-      <h2 className="mt-5">
-        Our Residential Solar Installation Process
-      </h2>
-
-      <p>
-        We follow a professional installation process to ensure maximum
-        efficiency, safety and long-term performance for every residential
-        solar project.
-      </p>
-
-      <ol>
-        <li>Site inspection and roof analysis</li>
-        <li>Electricity usage and energy requirement analysis</li>
-        <li>Customized solar system design</li>
-        <li>Selection of solar panels and inverter</li>
-        <li>Installation of mounting structure</li>
-        <li>Solar panel and inverter setup</li>
-        <li>Testing and safety verification</li>
-        <li>Final activation and maintenance support</li>
-      </ol>
-
-      {/* Internal Links */}
-
-      <h2 className="mt-5">
-        Explore More Solar Services
-      </h2>
-
-      <ul>
-        <li>
-          <Link to="/solar-installation-bihar">
-            Best Solar Installation Services in Bihar
-          </Link>
-        </li>
-
-        <li>
-          <Link to="/rooftop-solar-bihar">
-            Rooftop Solar Solutions in Bihar
-          </Link>
-        </li>
-
-        <li>
-          <Link to="/solar-subsidy-bihar">
-            Learn About Solar Subsidy in Bihar
-          </Link>
-        </li>
-
-        <li>
-          <Link to="/industrial-solar-bihar">
-            Industrial Solar Installation Services
-          </Link>
-        </li>
-
-        <li>
-          <Link to="/solar-maintenance">
-            Solar Maintenance Services
-          </Link>
-        </li>
-      </ul>
-
-      {/* FAQ Section */}
-
-      <h2 className="mt-5">
-        Frequently Asked Questions
-      </h2>
-
-      <h3>
-        What is a residential solar system?
-      </h3>
-
-      <p>
-        A residential solar system is a rooftop solar setup installed on
-        homes and apartments to generate electricity using sunlight.
-      </p>
-
-      <h3>
-        Is residential solar suitable for homes in Bihar?
-      </h3>
-
-      <p>
-        Yes, Bihar receives good sunlight throughout the year making
-        residential rooftop solar systems highly effective and beneficial.
-      </p>
-
-      <h3>
-        How much can I save with residential solar?
-      </h3>
-
-      <p>
-        Savings depend on electricity usage and system size, but residential
-        solar systems can significantly reduce monthly electricity bills.
-      </p>
-
-      <h3>
-        Can I get subsidy for home solar installation?
-      </h3>
-
-      <p>
-        Yes, eligible homeowners can receive government subsidy support for
-        rooftop solar systems under approved solar schemes.
-      </p>
-
-      <h3>
-        How long do residential solar panels last?
-      </h3>
-
-      <p>
-        High-quality residential solar panels generally last for 20 to 25
-        years with proper maintenance and cleaning.
-      </p>
-
-      <h3>
-        Does residential solar require maintenance?
-      </h3>
-
-      <p>
-        Residential solar systems require minimal maintenance. Regular panel
-        cleaning and periodic inspections help maintain performance.
-      </p>
-
-      <h3>
-        Can residential solar work during power cuts?
-      </h3>
-
-      <p>
-        Standard on-grid systems shut down during power cuts while hybrid
-        and off-grid systems can provide backup power using batteries.
-      </p>
-
-      <h3>
-        Does Ekosys provide installation and maintenance services?
-      </h3>
-
-      <p>
-        Yes, Ekosys provides complete residential solar installation,
-        maintenance, cleaning and technical support services across Bihar.
-      </p>
-
-      <h3>
-        Which areas does Ekosys serve?
-      </h3>
-
-      <p>
-        Ekosys provides residential solar installation services across Bihar
-        including Vaishali, Hajipur and nearby regions.
-      </p>
-
-    </div>
+    <SeoPageLayout
+      metaTitle="Residential Solar Installation in Bihar | Home Solar Systems | Ekosys"
+      metaDescription="Ekosys provides residential solar installation services in Bihar for homes and apartments. Get affordable rooftop solar systems, subsidy support and reliable renewable energy solutions."
+      metaKeywords="residential solar Bihar, home solar installation Bihar, rooftop solar for home Bihar, solar panels for home Bihar, residential rooftop solar, solar company Bihar, solar installation Vaishali, solar company Hajipur, home solar systems, solar subsidy Bihar, renewable energy Bihar, Ekosys solar solutions"
+      pageTitle="Residential Solar Installation in Bihar"
+      descriptionParagraphs={[
+        "Ekosys provides professional residential solar installation services in Bihar for homes, apartments and residential buildings. Our home solar systems help families reduce electricity bills and switch to clean renewable energy solutions.",
+        "We design residential solar systems that fit your budget and roof type, while maximizing energy generation and long-term savings."
+      ]}
+      heroImage="/images/services/residential.png"
+      highlights={highlights}
+      benefits={benefits}
+      reasons={reasons}
+      processSteps={processSteps}
+      faqs={faqs}
+      moreLinks={moreLinks}
+    />
   );
 }
 

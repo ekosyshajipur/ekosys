@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(15, 23, 42, 0.85);
+  background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(6px);
   display: flex;
   justify-content: center;
@@ -15,14 +15,14 @@
 }
 
 .popup-container {
-  background: #1e293b;
+  background: #ffffff;
   width: 100%;
   max-width: 420px;
   border-radius: 20px;
   padding: 28px 24px;
   position: relative;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(245, 158, 11, 0.2);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   animation: slideUp 0.4s ease;
   max-height: 90vh;
   overflow-y: auto;
@@ -30,22 +30,25 @@
 
 .popup-header {
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .popup-logo {
-  height: 40px;
+  height: 80px;
+  width: auto;
+  max-width: 240px;
   object-fit: contain;
   margin: 0 auto;
+  display: block;
 }
 
 .popup-close {
   position: absolute;
   top: 12px;
   right: 12px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.05);
   border: none;
-  color: #fff;
+  color: #333;
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -59,18 +62,19 @@
 }
 
 .popup-close:hover {
-  background: #ef4444;
+  background: #021a03;
+  color: #fff;
 }
 
 .popup-content h3 {
-  color: #fff;
+  color: #1e293b;
   font-size: 1.4rem;
   margin-bottom: 8px;
   text-align: center;
 }
 
 .popup-content p {
-  color: #94a3b8;
+  color: #475569;
   margin-bottom: 18px;
   font-size: 0.9rem;
   text-align: center;
@@ -83,25 +87,25 @@
   gap: 12px;
 }
 
-.popup-form input, .popup-form textarea {
+.popup-form input, .popup-form textarea, .popup-form select {
   width: 100%;
   padding: 12px 16px;
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
   border-radius: 10px;
-  color: #fff;
+  color: #1e293b;
   font-family: inherit;
   font-size: 0.95rem;
   transition: border-color 0.3s;
 }
 
 .popup-form input::placeholder, .popup-form textarea::placeholder {
-  color: rgba(255, 255, 255, 0.4);
+  color: #94a3b8;
 }
 
-.popup-form input:focus, .popup-form textarea:focus {
+.popup-form input:focus, .popup-form textarea:focus, .popup-form select:focus {
   outline: none;
-  border-color: #f59e0b;
+  border-color: #033107;
 }
 
 .popup-form textarea {

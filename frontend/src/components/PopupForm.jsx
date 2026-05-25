@@ -8,9 +8,10 @@ export default function PopupForm() {
   const [show, setShow] = useState(false);
   const [form, setForm] = useState({
     name: "",
-    email: "",
     phone: "",
+    email: "",
     city: "",
+    enquiryType: "General Enquiry",
     requirement: "",
   });
   const [submitted, setSubmitted] = useState(false);
@@ -28,36 +29,36 @@ export default function PopupForm() {
     const alreadyFilled = sessionStorage.getItem("ekosys_popup_filled");
     if (alreadyFilled) {
       setFilled(true);
-      return;
-    }
-
-    // First popup after 1 minute
-    const firstTimer = setTimeout(() => {
-      if (!sessionStorage.getItem("ekosys_popup_filled")) {
-        setShow(true);
-      }
-    }, 60000);
-    timersRef.current.push(firstTimer);
-
-    // Subsequent popups every 5 minutes starting 6 minutes after page load
-    const startRecurring = setTimeout(() => {
-      const recurring = setInterval(() => {
-        if (sessionStorage.getItem("ekosys_popup_filled")) {
-          clearInterval(recurring);
-          return;
+      // We DO NOT return here! We must register the "openPopup" listener below
+      // so the "Get Free Quote" button always works manually.
+    } else {
+      // First popup after 1 minute (60000ms)
+      const firstTimer = setTimeout(() => {
+        if (!sessionStorage.getItem("ekosys_popup_filled")) {
+          setShow(true);
         }
-        setShow(true);
-      }, 300000); // every 5 minutes
-      timersRef.current.push(recurring);
-    }, 360000); // 6 min = 1 min first + 5 min gap
-    timersRef.current.push(startRecurring);
+      }, 60000);
+      timersRef.current.push(firstTimer);
+
+      // Subsequent popups every 10 minutes (600000ms)
+      const startRecurring = setTimeout(() => {
+        const recurring = setInterval(() => {
+          if (sessionStorage.getItem("ekosys_popup_filled")) {
+            clearInterval(recurring);
+            return;
+          }
+          setShow(true);
+        }, 600000); // every 10 minutes
+        timersRef.current.push(recurring);
+      }, 60000); // Start the interval after the first 1 minute
+      timersRef.current.push(startRecurring);
+    }
 
     // Also listen for manual open events (from "Get Free Quote" buttons)
     const handleOpenPopup = () => {
-      // Only show popup if user hasn't already submitted in this session
-      if (!sessionStorage.getItem("ekosys_popup_filled")) {
-        setShow(true);
-      }
+      // Always show on manual trigger and reset submitted state so they can submit again if they want
+      setSubmitted(false);
+      setShow(true);
     };
     window.addEventListener("openPopup", handleOpenPopup);
 
@@ -114,8 +115,8 @@ export default function PopupForm() {
             className="popup-logo"
             loading="lazy"
             decoding="async"
-            width="32"
-            height="32"
+            width="240"
+            height="75"
           />
         </div>
         <div className="popup-content">
@@ -135,17 +136,20 @@ export default function PopupForm() {
                   required
                 />
                 <input
+                  type="tel"
+                  placeholder="Your Phone (10 digits)"
+                  pattern="[0-9]{10}"
+                  maxLength="10"
+                  value={form.phone}
+                  onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                  title="Please enter a valid 10-digit phone number"
+                  required
+                />
+                <input
                   type="email"
                   placeholder="Your Email"
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  required
-                />
-                <input
-                  type="tel"
-                  placeholder="Your Phone"
-                  value={form.phone}
-                  onChange={(e) => setForm({ ...form, phone: e.target.value })}
                   required
                 />
                 <input
@@ -155,6 +159,18 @@ export default function PopupForm() {
                   onChange={(e) => setForm({ ...form, city: e.target.value })}
                   required
                 />
+                <select
+                  value={form.enquiryType}
+                  onChange={(e) => setForm({ ...form, enquiryType: e.target.value })}
+                  required
+                >
+                  <option value="General Enquiry">General Enquiry</option>
+                  <option value="Solar Quote">Solar Quote</option>
+                  <option value="Subsidy Help">Subsidy Help</option>
+                  <option value="Maintenance">Maintenance</option>
+                  <option value="Complaint">Complaint</option>
+                  <option value="Partnership">Partnership</option>
+                </select>
                 <textarea
                   placeholder="Your Requirement"
                   value={form.requirement}

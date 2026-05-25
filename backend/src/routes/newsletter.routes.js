@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const Newsletter = require('../models/Newsletter');
 const nodemailer = require('nodemailer');
 const { sendToCRM } = require('../utils/crm');
 
@@ -65,15 +64,6 @@ router.post('/', async (req, res) => {
   try {
     const { email } = req.body;
     
-    const existing = await Newsletter.findOne({ email });
-    if (existing) {
-      return res.status(400).json({ success: false, message: 'This email is already subscribed!' });
-    }
-
-    const newSubscriber = new Newsletter({ email });
-    await newSubscriber.save();
-    console.log('✅ Newsletter saved to database');
-    
     // Save to CRM (Non-blocking)
     sendToCRM({ email }, 'Newsletter Subscription');
 
@@ -81,20 +71,17 @@ router.post('/', async (req, res) => {
     sendWelcomeEmail(email);
 
     res.status(201).json({ success: true, message: 'Successfully subscribed! Check your email for a welcome message.' });
-  } catch (dbError) {
-    if (dbError.code === 11000) {
-      return res.status(400).json({ success: false, message: 'This email is already subscribed!' });
-    }
-    res.status(500).json({ success: false, message: 'Subscription failed', error: dbError.message });
+  } catch (error) {
+    res.status(500).json({ success: false, message: 'Subscription failed', error: error.message });
   }
 });
 
-// GET - Send weekly newsletter to all subscribers (call this via cron job or admin)
+// GET - Send weekly newsletter to all subscribers (Removed DB dependency, currently disabled)
 router.get('/send-weekly', async (req, res) => {
   try {
-    const subscribers = await Newsletter.find({});
+    const subscribers = []; // No DB to fetch from
     if (subscribers.length === 0) {
-      return res.json({ success: true, message: 'No subscribers found' });
+      return res.json({ success: true, message: 'No subscribers found (DB removed)' });
     }
 
     const weeklyHtml = `

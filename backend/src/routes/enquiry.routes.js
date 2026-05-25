@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const Enquiry = require('../models/Enquiry');
 const nodemailer = require('nodemailer');
 const { sendToCRM } = require('../utils/crm');
+const { sendToGoogleSheet } = require('../utils/googleSheet');
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -17,44 +17,12 @@ router.post('/', async (req, res) => {
   try {
     const { name, email, phone, subject, message } = req.body;
     
-    // Try to save to database, but don't fail if MongoDB is down
-    try {
-      const enquiry = new Enquiry({ name, email, phone, subject, message });
-      await enquiry.save();
-      console.log('✅ Enquiry saved to database');
-      
-      // Also save to CRM (Non-blocking)
-      sendToCRM({ name, email, phone, subject, message }, 'Enquiry Form');
-    } catch (dbError) {
-      console.log('⚠️ Database save failed, but proceeding with email:', dbError.message);
-    }
+    // Save to CRM (Non-blocking)
+    sendToCRM({ name, email, phone, subject, message }, 'Enquiry Form');
     
-    // Email to Admin
-    const adminMailOptions = {
-      from: process.env.SMTP_USER || 'reyesraghav@gmail.com',
-      to: 'reyesraghav@gmail.com',
-      subject: `📋 New General Enquiry: ${subject || 'General Inquiry'}`,
-      html: `
-        <div style="font-family: 'Segoe UI', Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e2e8f0; border-radius: 16px; overflow: hidden;">
-          <div style="background: linear-gradient(135deg, #0ea5e9, #6366f1); padding: 24px; text-align: center;">
-            <h2 style="color: #fff; margin: 0; font-size: 1.5rem;">📋 New Enquiry Received</h2>
-          </div>
-          <div style="padding: 30px; background: #fff;">
-            <table style="width: 100%; border-collapse: collapse;">
-              <tr><td style="padding: 10px; font-weight: 600; color: #334155;">Name:</td><td style="padding: 10px; color: #475569;">${name}</td></tr>
-              <tr style="background: #f8fafc;"><td style="padding: 10px; font-weight: 600; color: #334155;">Email:</td><td style="padding: 10px; color: #475569;">${email}</td></tr>
-              <tr><td style="padding: 10px; font-weight: 600; color: #334155;">Phone:</td><td style="padding: 10px; color: #475569;">${phone}</td></tr>
-              <tr style="background: #f8fafc;"><td style="padding: 10px; font-weight: 600; color: #334155;">Subject:</td><td style="padding: 10px; color: #475569;">${subject || 'General Enquiry'}</td></tr>
-              <tr><td colspan="2" style="padding: 16px 10px; border-top: 1px solid #e2e8f0;"><strong style="color: #334155;">Message:</strong><p style="color: #475569; margin: 8px 0 0; line-height: 1.6; white-space: pre-wrap;">${message || 'No message provided'}</p></td></tr>
-            </table>
-          </div>
-          <div style="background: #0f172a; padding: 16px; text-align: center;">
-            <p style="color: #94a3b8; margin: 0; font-size: 0.85rem;">EKOSYS Solar — Think | Innovate</p>
-          </div>
-        </div>
-      `
-    };
-
+    // Save to Google Sheet (Non-blocking)
+    sendToGoogleSheet({ name, email, phone, subject, message }, 'Enquiry Form');
+    
     // Email to Customer
     const customerMailOptions = {
       from: `"EKOSYS Solar" <${process.env.SMTP_USER || 'reyesraghav@gmail.com'}>`,
@@ -134,27 +102,21 @@ router.post('/', async (req, res) => {
       `
     };
 
-    try {
-      await transporter.sendMail(adminMailOptions);
-      await transporter.sendMail(customerMailOptions);
-    } catch (mailError) {
+    // Send email asynchronously (non-blocking)
+    transporter.sendMail(customerMailOptions).catch((mailError) => {
       console.log('Mail sending failed:', mailError.message);
-    }
+    });
 
+    // Respond immediately to the frontend
     res.status(201).json({ success: true, message: 'Enquiry submitted successfully! Our solar expert will reach out within 24 hours.' });
   } catch (error) {
     res.status(500).json({ success: false, message: 'Failed to submit enquiry', error: error.message });
   }
 });
 
-// GET - Get all enquiries
+// GET - Get all enquiries (Removed DB)
 router.get('/', async (req, res) => {
-  try {
-    const enquiries = await Enquiry.find().sort({ createdAt: -1 });
-    res.json({ success: true, data: enquiries });
-  } catch (error) {
-    res.status(500).json({ success: false, message: error.message });
-  }
+  res.json({ success: true, data: [] });
 });
 
 module.exports = router;
