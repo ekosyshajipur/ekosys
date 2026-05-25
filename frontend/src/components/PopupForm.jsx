@@ -2,7 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import "./Popup.css";
 
-const API = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+let API = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+if (API && !API.endsWith('/api')) API += '/api';
 
 export default function PopupForm() {
   const [show, setShow] = useState(false);

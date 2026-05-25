@@ -4,7 +4,8 @@ import { Helmet } from 'react-helmet-async';
 import { BreadcrumbSchema } from '../components/SchemaMarkup';
 import { businessInfo } from '../data/seoData';
 
-const API = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+let API = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+if (API && !API.endsWith('/api')) API += '/api';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', phone: '', email: '', city: '', enquiryType: 'General Enquiry', requirement: '' });
