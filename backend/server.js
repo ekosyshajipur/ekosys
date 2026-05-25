@@ -70,6 +70,12 @@ app.use('/api/enquiry', formLimiter, enquiryRoutes);
 app.use('/api/newsletter', formLimiter, newsletterRoutes);
 app.use('/api/popup', formLimiter, popupRoutes);
 
+// Fallback routes for frontend hitting without /api
+app.use('/contact', formLimiter, contactRoutes);
+app.use('/enquiry', formLimiter, enquiryRoutes);
+app.use('/newsletter', formLimiter, newsletterRoutes);
+app.use('/popup', formLimiter, popupRoutes);
+
 // Health check
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'EKOSYS Solar API is running' });
