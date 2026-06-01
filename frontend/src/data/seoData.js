@@ -9,7 +9,7 @@ export const businessInfo = {
   name: "EKOSYS",
   legalName: "Ekosys Solar Energy Solutions",
   url: "https://ekosys.in",
-  logo: "https://ekosys.in/images/logo.webp",
+  logo: "https://ekosys.in/images/ekosys-logo.webp",
   image: "https://ekosys.in/images/hero-banner.webp",
   description:
     "EKOSYS is Bihar's leading solar installation company providing rooftop solar systems, industrial solar solutions, residential solar panels, solar batteries, inverters, and government subsidy assistance across Vaishali, Hajipur, Patna, and all of Bihar.",

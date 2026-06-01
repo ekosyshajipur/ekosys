@@ -33,12 +33,12 @@ export default function PopupForm() {
       // We DO NOT return here! We must register the "openPopup" listener below
       // so the "Get Free Quote" button always works manually.
     } else {
-      // First popup after 1 minute (60000ms)
+      // First popup after 10 minutes (600000ms)
       const firstTimer = setTimeout(() => {
         if (!sessionStorage.getItem("ekosys_popup_filled")) {
           setShow(true);
         }
-      }, 60000);
+      }, 600000);
       timersRef.current.push(firstTimer);
 
       // Subsequent popups every 10 minutes (600000ms)
@@ -51,7 +51,7 @@ export default function PopupForm() {
           setShow(true);
         }, 600000); // every 10 minutes
         timersRef.current.push(recurring);
-      }, 60000); // Start the interval after the first 1 minute
+      }, 600000); // Start the interval after the first 10 minutes
       timersRef.current.push(startRecurring);
     }
 
@@ -111,7 +111,7 @@ export default function PopupForm() {
         </button>
         <div className="popup-header">
           <img
-            src="/images/logo.webp"
+            src="/images/ekosys-logo.webp"
             alt="EKOSYS"
             className="popup-logo"
             loading="lazy"

@@ -20,7 +20,7 @@ export default function HowSolarReducesElectricityBill() {
             "@type": "Article",
             "headline": "How Solar Energy Reduces Your Electricity Bill by 90% — Complete Savings Guide",
             "author": { "@type": "Organization", "name": "EKOSYS Solar" },
-            "publisher": { "@type": "Organization", "name": "EKOSYS Solar", "logo": { "@type": "ImageObject", "url": "https://ekosys.in/images/logo.webp" } },
+            "publisher": { "@type": "Organization", "name": "EKOSYS Solar", "logo": { "@type": "ImageObject", "url": "https://ekosys.in/images/ekosys-logo.webp" } },
             "datePublished": "2025-05-14",
             "dateModified": "2025-05-18",
             "image": "https://ekosys.in/images/ongrid.webp",

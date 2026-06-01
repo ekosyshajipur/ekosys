@@ -20,7 +20,7 @@ export default function BestSolarCompanyInBihar() {
             "@type": "Article",
             "headline": "Best Solar Company in Bihar 2025 — Why EKOSYS Leads Solar Installation",
             "author": { "@type": "Organization", "name": "EKOSYS Solar" },
-            "publisher": { "@type": "Organization", "name": "EKOSYS Solar", "logo": { "@type": "ImageObject", "url": "https://ekosys.in/images/logo.webp" } },
+            "publisher": { "@type": "Organization", "name": "EKOSYS Solar", "logo": { "@type": "ImageObject", "url": "https://ekosys.in/images/ekosys-logo.webp" } },
             "datePublished": "2025-05-12",
             "dateModified": "2025-05-18",
             "image": "https://ekosys.in/images/installation.webp",

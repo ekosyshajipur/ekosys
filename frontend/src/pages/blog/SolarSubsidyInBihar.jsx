@@ -21,7 +21,7 @@ export default function SolarSubsidyInBihar() {
             "headline": "Complete Guide to Solar Subsidy in Bihar 2025 — PM Surya Ghar Yojana Explained",
             "description": "Everything you need to know about government solar subsidies in Bihar.",
             "author": { "@type": "Organization", "name": "EKOSYS Solar" },
-            "publisher": { "@type": "Organization", "name": "EKOSYS Solar", "logo": { "@type": "ImageObject", "url": "https://ekosys.in/images/logo.webp" } },
+            "publisher": { "@type": "Organization", "name": "EKOSYS Solar", "logo": { "@type": "ImageObject", "url": "https://ekosys.in/images/ekosys-logo.webp" } },
             "datePublished": "2025-05-16",
             "dateModified": "2025-05-18",
             "image": "https://ekosys.in/images/subsidy.webp",

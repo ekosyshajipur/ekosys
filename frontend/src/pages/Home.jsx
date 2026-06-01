@@ -100,12 +100,16 @@ const faqs = [
 ];
 
 const blogs = [
-  { title: "Benefits of Solar Energy in Bihar", slug: "benefits-of-solar-energy", tag: "Solar Guide", img: "/images/hero-banner.webp" },
-  { title: "Solar Subsidy Guide: PM Surya Ghar Yojana", slug: "solar-subsidy-in-bihar", tag: "Subsidy", img: "/images/subsidy.webp" },
-  { title: "How Solar Reduces Your Electricity Bill", slug: "how-solar-reduces-electricity-bill", tag: "Savings", img: "/images/ongrid.webp" },
-  { title: "Best Solar Company in Bihar 2026", slug: "best-solar-company-in-bihar", tag: "Reviews", img: "/images/about.webp" },
-  { title: "Rooftop Solar Installation Guide", slug: "rooftop-solar-guide", tag: "Installation", img: "/images/installation.webp" },
+  { title: "बिहार में सोलर क्रांति की तैयारी", slug: "bihar-solar-revolution", tag: "News", img: "/images/blog/jeevika-solar-bihar.png", date: "June 1, 2026" },
+  { title: "बिजली विभाग घर की छत पर फ्री में लगाएंगे सोलर पैनल", slug: "free-solar-panel-scheme", tag: "News", img: "/images/blog/free-solar-scheme.png", date: "May 31, 2026" },
+  { title: "Benefits of Solar Energy in Bihar", slug: "benefits-of-solar-energy", tag: "Solar Guide", img: "/images/hero-banner.webp", date: "May 18, 2025" },
+  { title: "Solar Subsidy Guide: PM Surya Ghar Yojana", slug: "solar-subsidy-in-bihar", tag: "Subsidy", img: "/images/subsidy.webp", date: "May 16, 2025" },
+  { title: "How Solar Reduces Your Electricity Bill", slug: "how-solar-reduces-electricity-bill", tag: "Savings", img: "/images/ongrid.webp", date: "May 14, 2025" },
+  { title: "Best Solar Company in Bihar 2026", slug: "best-solar-company-in-bihar", tag: "Reviews", img: "/images/about.webp", date: "May 12, 2025" },
+  { title: "Rooftop Solar Installation Guide", slug: "rooftop-solar-guide", tag: "Installation", img: "/images/installation.webp", date: "May 10, 2025" },
 ];
+
+const sortedBlogs = [...blogs].sort((a, b) => new Date(b.date) - new Date(a.date));
 
 /* ── Component ── */
 export default function Home() {
@@ -398,7 +402,7 @@ export default function Home() {
             <p className="section-subtitle">Stay updated with solar energy news, tips, and guides.</p>
           </AnimSection>
           <div className="blog-grid-v2">
-            {blogs.map((b, i) => (
+            {sortedBlogs.map((b, i) => (
               <AnimSection key={i} delay={i * 0.1}>
                 <Link to={`/blog/${b.slug}`} className="blog-card-v2">
                   <div className="blog-img-v2"><img src={b.img} alt={b.title} loading="lazy" /></div>

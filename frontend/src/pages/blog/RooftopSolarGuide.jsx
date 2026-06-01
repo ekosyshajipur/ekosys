@@ -20,7 +20,7 @@ export default function RooftopSolarGuide() {
             "@type": "Article",
             "headline": "Complete Rooftop Solar Guide 2025 — Installation, Cost, Subsidy & Everything You Need to Know",
             "author": { "@type": "Organization", "name": "EKOSYS Solar" },
-            "publisher": { "@type": "Organization", "name": "EKOSYS Solar", "logo": { "@type": "ImageObject", "url": "https://ekosys.in/images/logo.webp" } },
+            "publisher": { "@type": "Organization", "name": "EKOSYS Solar", "logo": { "@type": "ImageObject", "url": "https://ekosys.in/images/ekosys-logo.webp" } },
             "datePublished": "2025-05-10",
             "dateModified": "2025-05-18",
             "image": "https://ekosys.in/images/hero-solar.webp",

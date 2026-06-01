@@ -57,7 +57,7 @@ export default function Navbar() {
             {/* Logo */}
             <Link to="/" className="nav-logo-v2">
               <img
-                src="/images/logo.webp"
+                src="/images/ekosys-logo.webp"
                 alt="EKOSYS Solar"
                 className="nav-logo-img-v2"
                 width="180"
@@ -158,7 +158,7 @@ export default function Navbar() {
             transition={{ type: "tween", duration: 0.3 }}
           >
             <div className="mobile-menu-header">
-              <img src="/images/logo.webp" alt="EKOSYS" className="mobile-menu-logo" style={{ height: "45px", width: "auto", objectFit: "contain" }} />
+              <img src="/images/ekosys-logo.webp" alt="EKOSYS" className="mobile-menu-logo" style={{ height: "45px", width: "auto", objectFit: "contain" }} />
               <div className="mobile-header-actions">
                 <a href="tel:+918757686826" className="mobile-icon-btn" aria-label="Call EKOSYS">
                   <FiPhone />

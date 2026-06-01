@@ -3,6 +3,26 @@ import { Helmet } from "react-helmet-async";
 
 const blogPosts = [
   {
+    slug: "free-solar-panel-scheme",
+    title: "बिजली विभाग : घर की छत पर फ्री में लगाएंगे सोलर पैनल: पूरी जानकारी",
+    excerpt: "बिजली विभाग और सरकार की इस नई योजना के तहत घर की छतों पर फ्री में सोलर पैनल लगाए जा रहे हैं। जानें कैसे आप भी इसका लाभ उठा सकते हैं।",
+    date: "May 31, 2026",
+    readTime: "5 min read",
+    category: "सरकारी योजना",
+    image: "/images/blog/free-solar-scheme.png",
+    keywords: ["free solar panel", "बिजली विभाग", "bihar solar panel"]
+  },
+  {
+    slug: "bihar-solar-revolution",
+    title: "बिहार में सोलर क्रांति की तैयारी — जीविका दीदियों को मिलेगी बड़ी जिम्मेदारी",
+    excerpt: "बिहार सरकार कुटीर ज्योति योजना के तहत 10 लाख घरों में सौर संयंत्र लगाने की तैयारी में है। गांवों में जीविका दीदियों को इस अभियान को आगे बढ़ाने का जिम्मा मिलेगा।",
+    date: "June 1, 2026",
+    readTime: "6 min read",
+    category: "सरकारी योजना",
+    image: "/images/blog/jeevika-solar-bihar.png",
+    keywords: ["बिहार सोलर क्रांति", "कुटीर ज्योति योजना", "जीवика दीदियाँ"]
+  },
+  {
     slug: "benefits-of-solar-energy",
     title: "Top 10 Benefits of Solar Energy in 2025 — Why Every Home & Business Should Go Solar",
     excerpt: "Discover how solar energy can save money, reduce carbon footprint, and increase property value. A complete guide to solar energy benefits in Bihar and India.",
@@ -104,6 +124,8 @@ const blogPosts = [
   }
 ];
 
+const sortedBlogPosts = [...blogPosts].sort((a, b) => new Date(b.date) - new Date(a.date));
+
 export { blogPosts };
 
 export default function Blog() {
@@ -130,31 +152,9 @@ export default function Blog() {
       <section className="section">
         <div className="container">
 
-          {/* Featured Post */}
-          <div className="blog-featured">
-            <Link to={`/blog/${blogPosts[0].slug}`} className="blog-featured-link">
-              <div className="blog-featured-img">
-                <img src={blogPosts[0].image} alt={blogPosts[0].title} loading="lazy" />
-                <span className="blog-category-badge">{blogPosts[0].category}</span>
-              </div>
-              <div className="blog-featured-content">
-                <div className="blog-meta">
-                  <span>📅 {blogPosts[0].date}</span>
-                  <span>⏱️ {blogPosts[0].readTime}</span>
-                </div>
-                <h2>{blogPosts[0].title}</h2>
-                <p>{blogPosts[0].excerpt}</p>
-                <span className="blog-read-more">Read Full Article →</span>
-              </div>
-            </Link>
-          </div>
-
           {/* All Posts Grid */}
-          <h2 className="section-title" style={{ marginTop: 60 }}>
-            All <span className="highlight">Articles</span>
-          </h2>
-          <div className="blog-grid">
-            {blogPosts.map((post) => (
+          <div className="blog-grid" style={{ marginTop: 40 }}>
+            {sortedBlogPosts.map((post) => (
               <Link to={`/blog/${post.slug}`} key={post.slug} className="blog-card-link">
                 <article className="blog-card">
                   <div className="blog-card-img-wrapper">

@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="footer-grid">
             <div className="footer-about">
               <img
-                src="/images/logo.webp"
+                src="/images/ekosys-logo.webp"
                 alt="EKOSYS"
                 loading="lazy"
                 decoding="async"

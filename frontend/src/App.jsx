@@ -41,6 +41,8 @@ const BenefitsOfSolarEnergy = lazy(() => import("./pages/blog/BenefitsOfSolarEne
 const SolarSubsidyInBihar = lazy(() => import("./pages/blog/SolarSubsidyInBihar"));
 const HowSolarReducesElectricityBill = lazy(() => import("./pages/blog/HowSolarReducesElectricityBill"));
 const BestSolarCompanyInBihar = lazy(() => import("./pages/blog/BestSolarCompanyInBihar"));
+const BiharSolarRevolution = lazy(() => import("./pages/blog/BiharSolarRevolution"));
+const FreeSolarPanelScheme = lazy(() => import("./pages/blog/FreeSolarPanelScheme"));
 const RooftopSolarGuide = lazy(() => import("./pages/blog/RooftopSolarGuide"));
 const SolarPanelMaintenanceTips = lazy(() => import("./pages/blog/SolarPanelMaintenanceTips"));
 const SolarForFarmersBihar = lazy(() => import("./pages/blog/SolarForFarmersBihar"));
@@ -114,6 +116,8 @@ function App() {
             {/* Blog Pages */}
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/benefits-of-solar-energy" element={<BenefitsOfSolarEnergy />} />
+            <Route path="/blog/bihar-solar-revolution" element={<BiharSolarRevolution />} />
+            <Route path="/blog/free-solar-panel-scheme" element={<FreeSolarPanelScheme />} />
             <Route path="/blog/solar-subsidy-in-bihar" element={<SolarSubsidyInBihar />} />
             <Route path="/blog/how-solar-reduces-electricity-bill" element={<HowSolarReducesElectricityBill />} />
             <Route path="/blog/best-solar-company-in-bihar" element={<BestSolarCompanyInBihar />} />

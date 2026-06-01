@@ -18,7 +18,7 @@ export default function SolarPanelMaintenanceTips() {
           "@context":"https://schema.org","@type":"Article",
           "headline":"Solar Panel Maintenance Guide — 10 Expert Tips for Maximum Performance",
           "author":{"@type":"Organization","name":"EKOSYS Solar"},
-          "publisher":{"@type":"Organization","name":"EKOSYS Solar","logo":{"@type":"ImageObject","url":"https://ekosys.in/images/logo.webp"}},
+          "publisher":{"@type":"Organization","name":"EKOSYS Solar","logo":{"@type":"ImageObject","url":"https://ekosys.in/images/ekosys-logo.webp"}},
           "datePublished":"2025-05-08","dateModified":"2025-05-18",
           "image":"https://ekosys.in/images/blog/solar-maintenance-cleaning.webp"
         }`}</script>

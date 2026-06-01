@@ -25,7 +25,7 @@ export default function BenefitsOfSolarEnergy() {
             "headline": "Top 10 Benefits of Solar Energy in 2025 — Why Every Home & Business Should Go Solar",
             "description": "Discover the top 10 benefits of solar energy. Learn how solar panels save money, reduce carbon footprint, and increase property value.",
             "author": { "@type": "Organization", "name": "EKOSYS Solar" },
-            "publisher": { "@type": "Organization", "name": "EKOSYS Solar", "logo": { "@type": "ImageObject", "url": "https://ekosys.in/images/logo.webp" } },
+            "publisher": { "@type": "Organization", "name": "EKOSYS Solar", "logo": { "@type": "ImageObject", "url": "https://ekosys.in/images/ekosys-logo.webp" } },
             "datePublished": "2025-05-18",
             "dateModified": "2025-05-18",
             "image": "https://ekosys.in/images/about.webp",
