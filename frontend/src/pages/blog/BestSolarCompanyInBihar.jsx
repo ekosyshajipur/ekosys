@@ -24,22 +24,13 @@ export default function BestSolarCompanyInBihar() {
             "datePublished": "2025-05-12",
             "dateModified": "2025-05-18",
             "image": "https://ekosys.in/images/installation.webp",
-            "mainEntityOfPage": "https://ekosys.in/blog/best-solar-company-in-bihar"
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://ekosys.in/blog/best-solar-company-in-bihar"
+            },
           }
         `}</script>
-        <script type="application/ld+json">{`
-          {
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "EKOSYS Solar",
-            "description": "Best solar installation company in Bihar, providing residential, commercial and industrial solar solutions.",
-            "address": { "@type": "PostalAddress", "streetAddress": "Hajipur", "addressLocality": "Vaishali", "addressRegion": "Bihar", "postalCode": "844101", "addressCountry": "IN" },
-            "telephone": "+918757686826",
-            "email": "corp.ekosys@gmail.com",
-            "url": "https://ekosys.in",
-            "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "347" }
-          }
-        `}</script>
+        
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
@@ -52,6 +43,33 @@ export default function BestSolarCompanyInBihar() {
             ]
           }
         `}</script>
+        <script type="application/ld+json">{`
+          {
+            "@context":"https://schema.org",
+            "@type":"BreadcrumbList",
+            "itemListElement":[
+              {
+                "@type":"ListItem",
+                "position":1,
+                "name":"Home",
+                "item":"https://ekosys.in"
+              },
+              {
+                "@type":"ListItem",
+                "position":2,
+                "name":"Blog",
+                "item":"https://ekosys.in/blog"
+              },
+              {
+                "@type":"ListItem",
+                "position":3,
+                "name":"Best Solar Company in Bihar",
+                "item":"https://ekosys.in/blog/best-solar-company-in-bihar"
+              }
+            ]
+          }
+        `}</script>  
+
       </Helmet>
 
       <section className="page-header blog-header">

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { FAQSchema, ReviewSchema, BreadcrumbSchema } from "../components/SchemaMarkup";
+import { FAQSchema, BreadcrumbSchema } from "../components/SchemaMarkup";
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { FiArrowRight, FiSun, FiZap, FiShield, FiTool, FiCheckCircle, FiStar, FiMapPin, FiPhone, FiMail } from "react-icons/fi";
@@ -137,7 +137,7 @@ export default function Home() {
         <meta name="geo.placename" content="Hajipur, Bihar" />
       </Helmet>
       <FAQSchema faqs={faqs} />
-      <ReviewSchema />
+      
       <BreadcrumbSchema items={[{ name: 'Home', url: 'https://ekosys.in/' }]} />
 
       {/* ═══════ HERO ═══════ */}

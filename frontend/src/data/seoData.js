@@ -14,7 +14,7 @@ export const businessInfo = {
   description:
     "EKOSYS is Bihar's leading solar installation company providing rooftop solar systems, industrial solar solutions, residential solar panels, solar batteries, inverters, and government subsidy assistance across Vaishali, Hajipur, Patna, and all of Bihar.",
   phone: "+91-8757686826",
-  email: "info@ekosys.in",
+  email: "corp.ekosys@gmail.com",
   address: {
     street: "Main Road, Hajipur",
     city: "Hajipur",

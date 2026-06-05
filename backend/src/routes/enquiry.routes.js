@@ -7,7 +7,7 @@ const { sendToGoogleSheet } = require('../utils/googleSheet');
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.SMTP_USER || 'reyesraghav@gmail.com',
+    user: process.env.SMTP_USER || 'corp.ekosys@gmail.com',
     pass: process.env.SMTP_PASS || 'your_app_password_here'
   }
 });
@@ -25,7 +25,7 @@ router.post('/', async (req, res) => {
     
     // Email to Customer
     const customerMailOptions = {
-      from: `"EKOSYS Solar" <${process.env.SMTP_USER || 'reyesraghav@gmail.com'}>`,
+      from: `"EKOSYS Solar" <${process.env.SMTP_USER || 'corp.ekosys@gmail.com'}>`,
       to: email,
       subject: '🌞 Thank You for Your Enquiry — EKOSYS Solar',
       html: `

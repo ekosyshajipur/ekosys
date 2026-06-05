@@ -33,7 +33,7 @@ function JsonLd({ data }) {
 export function OrganizationSchema() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": ["Organization", "LocalBusiness", "ElectricalContractor"],
+    "@type": "LocalBusiness",
     "@id": `${businessInfo.url}/#organization`,
     name: businessInfo.name,
     legalName: businessInfo.legalName,
@@ -103,13 +103,6 @@ export function OrganizationSchema() {
       },
     })),
 
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: testimonialsSummary.aggregateRating.ratingValue,
-      reviewCount: testimonialsSummary.aggregateRating.reviewCount,
-      bestRating: testimonialsSummary.aggregateRating.bestRating,
-      worstRating: testimonialsSummary.aggregateRating.worstRating,
-    },
 
     sameAs: [
       businessInfo.social.facebook,
@@ -121,11 +114,10 @@ export function OrganizationSchema() {
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Solar Energy Services",
-      itemListElement: serviceTypes.map((service, index) => ({
+      itemListElement: serviceTypes.map((service) => ({
         "@type": "OfferCatalog",
         name: service.name,
         description: service.description,
-        position: index + 1,
         itemListElement: [
           {
             "@type": "Offer",
@@ -256,9 +248,8 @@ export function BreadcrumbSchema({ items }) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: items.map((item, index) => ({
+    itemListElement: items.map((item) => ({
       "@type": "ListItem",
-      position: index + 1,
       name: item.name,
       item: item.url,
     })),
@@ -299,42 +290,7 @@ export function ServiceSchema({ service }) {
   return <JsonLd data={schema} />;
 }
 
-// ===========================================================================
-// 7. ReviewSchema
-// Renders an AggregateRating schema from testimonials / reviews data.
-// Props (optional): reviews — { ratingValue, reviewCount, bestRating, worstRating }
-//   Falls back to testimonialsSummary from seoData if not supplied.
-// ===========================================================================
-export function ReviewSchema({ reviews } = {}) {
-  const rating = reviews || testimonialsSummary.aggregateRating;
 
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": `${businessInfo.url}/#organization`,
-    name: businessInfo.name,
-    url: businessInfo.url,
-    image: businessInfo.image,
-    telephone: businessInfo.phone,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: businessInfo.address.street,
-      addressLocality: businessInfo.address.city,
-      addressRegion: businessInfo.address.state,
-      postalCode: businessInfo.address.postalCode,
-      addressCountry: businessInfo.address.country,
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: rating.ratingValue,
-      reviewCount: rating.reviewCount,
-      bestRating: rating.bestRating || 5,
-      worstRating: rating.worstRating || 1,
-    },
-  };
-
-  return <JsonLd data={schema} />;
-}
 
 // ===========================================================================
 // 8. ArticleSchemaMeta

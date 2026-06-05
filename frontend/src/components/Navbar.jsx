@@ -57,12 +57,14 @@ export default function Navbar() {
             {/* Logo */}
             <Link to="/" className="nav-logo-v2">
               <img
-                src="/images/ekosys-logo.webp"
+                src="/images/navLogo.jpeg"
                 alt="EKOSYS Solar"
                 className="nav-logo-img-v2"
-                width="180"
-                height="55"
               />
+              <div className="nav-logo-text-v2">
+                <span className="logo-title-v2">EKOSYS Solar</span>
+                <span className="logo-subtitle-v2">SOLAR PANELS • SUBSIDY • INSTALLATION • BIHAR</span>
+              </div>
             </Link>
 
             {/* Desktop Navigation */}
@@ -123,12 +125,6 @@ export default function Navbar() {
 
             {/* RHS: Phone + CTA */}
             <div className="nav-cta-v2">
-              <a href="tel:+918757686826" className="nav-phone-btn" aria-label="Call us">
-                <FiPhone />
-              </a>
-              <a href="https://wa.me/918757686826?text=Hello%20EKOSYS%2C%20I%20need%20solar%20help." className="nav-whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp chat">
-                <FaWhatsapp />
-              </a>
               <button className="nav-quote-btn" onClick={openPopup}>
                 Get Free Quote
               </button>
@@ -141,7 +137,7 @@ export default function Navbar() {
               aria-label={open ? "Close menu" : "Open menu"}
               onClick={() => setOpen(!open)}
             >
-              {open ? <FiX size={24} /> : <FiMenu size={24} />}
+              {open ? <FiX size={24} /> : <FiMenu size={22} />}
             </button>
           </div>
         </div>
@@ -158,14 +154,8 @@ export default function Navbar() {
             transition={{ type: "tween", duration: 0.3 }}
           >
             <div className="mobile-menu-header">
-              <img src="/images/ekosys-logo.webp" alt="EKOSYS" className="mobile-menu-logo" style={{ height: "45px", width: "auto", objectFit: "contain" }} />
+              <img src="/images/navLogo.jpeg" alt="EKOSYS" className="mobile-menu-logo" style={{ height: "45px", width: "auto", objectFit: "contain" }} />
               <div className="mobile-header-actions">
-                <a href="tel:+918757686826" className="mobile-icon-btn" aria-label="Call EKOSYS">
-                  <FiPhone />
-                </a>
-                <a href="https://wa.me/918757686826?text=Hello%20EKOSYS%2C%20I%20need%20solar%20help." className="mobile-icon-btn whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp chat">
-                  <FaWhatsapp />
-                </a>
                 <button className="mobile-close-btn" onClick={() => setOpen(false)} aria-label="Close menu">
                   <FiChevronLeft size={22} />
                 </button>
@@ -200,9 +190,6 @@ export default function Navbar() {
             ))}
 
             <div className="mobile-cta-group">
-              <a href="tel:+918757686826" className="mobile-call-btn">
-                <FiPhone /> Call Now
-              </a>
               <button className="nav-quote-btn mobile-quote" onClick={() => { openPopup(); setOpen(false); }}>
                 Get Free Quote
               </button>

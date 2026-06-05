@@ -33,7 +33,7 @@
 .hero-bg-overlay-v3 {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.65) 100%);
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.6) 100%);
   z-index: 2;
   pointer-events: none;
 }
@@ -55,7 +55,8 @@
   margin-bottom: 20px; border: 1px solid rgba(245,158,11,.25);
 }
 .hero-v2-content h1 {
-  font-size: 3.2rem; font-weight: 900; color: #fff; line-height: 1.15; margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem; font-weight: 800; color: #fff; line-height: 1.15; margin-bottom: 20px;
 }
 .hero-highlight {
   background: linear-gradient(135deg, #19c503, #19c503);

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
+import { Turnstile } from '@marsidev/react-turnstile';
 import "./Popup.css";
 
 let API = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
@@ -15,6 +16,7 @@ export default function PopupForm() {
     enquiryType: "General Enquiry",
     requirement: "",
   });
+  const [turnstileToken, setTurnstileToken] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [filled, setFilled] = useState(false);
@@ -76,9 +78,13 @@ export default function PopupForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!turnstileToken) {
+      alert("Please complete the CAPTCHA");
+      return;
+    }
     setLoading(true);
     try {
-      await axios.post(`${API}/popup`, form);
+      await axios.post(`${API}/popup`, { ...form, turnstileToken });
       setSubmitted(true);
       setFilled(true);
       sessionStorage.setItem("ekosys_popup_filled", "true");
@@ -91,7 +97,7 @@ export default function PopupForm() {
         setShow(false);
       }, 3000);
     } catch (err) {
-      alert("Failed to submit. Please try again.");
+      alert(err.response?.data?.message || "Failed to submit. Please try again.");
     }
     setLoading(false);
   };
@@ -179,9 +185,17 @@ export default function PopupForm() {
                     setForm({ ...form, requirement: e.target.value })
                   }
                 ></textarea>
+
+                <div style={{ marginBottom: 15, display: 'flex', justifyContent: 'center' }}>
+                  <Turnstile 
+                    siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY || '0x4AAAAAADfKu-Uj__BLIWkC'} 
+                    onSuccess={(token) => setTurnstileToken(token)} 
+                  />
+                </div>
+
                 <button
                   type="submit"
-                  disabled={loading}
+                  disabled={loading || !turnstileToken}
                   className="btn btn-primary"
                 >
                   {loading ? "Submitting..." : "Get Free Quote →"}

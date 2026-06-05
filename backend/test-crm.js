@@ -9,31 +9,31 @@ const testUrls = async () => {
         {
             Business: "Test Business",
             Name: "Test User",
-            Mobile: "9876543210",
-            Email: "test@ekosys.in"
+            Mobile: "8757686826",
+            Email: "corp.ekosys@gmail.com"
         },
         {
             business: "Test Business",
             name: "Test User",
-            mobile: "9876543210",
-            email: "test@ekosys.in"
+            mobile: "8757686826",
+            email: "corp.ekosys@gmail.com"
         },
         {
             BusinessName: "Test Business",
             ContactPerson: "Test User",
-            MobileNo: "9876543210"
+            MobileNo: "8757686826"
         },
         {
             company_name: "Test Business",
             first_name: "Test",
             last_name: "User",
-            phone: "9876543210"
+            phone: "8757686826"
         },
         {
             "Business": "Test",
             "FirstName": "John",
             "LastName": "Doe",
-            "Mobile": "+919876543210"
+            "Mobile": "+918757686826"
         }
     ];
     

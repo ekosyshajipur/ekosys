@@ -30,7 +30,7 @@ export default function Footer() {
               </p>
               <p>
                 📞 8757686826
-                <br />✉ ekosys.corp@gmail.com
+                <br />✉ corp.ekosys@gmail.com
                 <br />
                 📍Hajipur, Vaishali, Bihar
               </p>

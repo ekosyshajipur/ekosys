@@ -9,7 +9,7 @@ import ScrollToTop from "./components/ScrollToTop";
 
 // Global SEO Schemas & CTAs
 import { OrganizationSchema, WebSiteSchema } from "./components/SchemaMarkup";
-import WhatsAppWidget from "./components/WhatsAppWidget";
+import FloatingContact from "./components/FloatingContact";
 
 /* Lazy Load Pages for Performance (Phase 5) */
 const Home = lazy(() => import("./pages/Home"));
@@ -135,7 +135,7 @@ function App() {
       <PopupForm />
       
       {/* Global CTAs */}
-      <WhatsAppWidget />
+      <FloatingContact />
     </Router>
   );
 }

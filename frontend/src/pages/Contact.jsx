@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { Helmet } from 'react-helmet-async';
+import { Turnstile } from '@marsidev/react-turnstile';
 import { BreadcrumbSchema } from '../components/SchemaMarkup';
 import { businessInfo } from '../data/seoData';
 
@@ -9,15 +10,27 @@ if (API && !API.endsWith('/api')) API += '/api';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', phone: '', email: '', city: '', enquiryType: 'General Enquiry', requirement: '' });
+  const [turnstileToken, setTurnstileToken] = useState('');
   const [toast, setToast] = useState(null);
   const [loading, setLoading] = useState(false);
 
   const showToast = (msg, type = 'success') => { setToast({ msg, type }); setTimeout(() => setToast(null), 4000); };
 
   const submitContact = async (e) => {
-    e.preventDefault(); setLoading(true);
-    try { const { data } = await axios.post(`${API}/contact`, form); showToast(data.message); setForm({ name: '', phone: '', email: '', city: '', enquiryType: 'General Enquiry', requirement: '' });
-    } catch { showToast('Failed to send message. Please try again.', 'error'); }
+    e.preventDefault(); 
+    if (!turnstileToken) {
+      showToast('Please complete the CAPTCHA', 'error');
+      return;
+    }
+    setLoading(true);
+    try { 
+      const { data } = await axios.post(`${API}/contact`, { ...form, turnstileToken }); 
+      showToast(data.message); 
+      setForm({ name: '', phone: '', email: '', city: '', enquiryType: 'General Enquiry', requirement: '' });
+      setTurnstileToken(''); // Reset token
+    } catch (err) { 
+      showToast(err.response?.data?.message || 'Failed to send message. Please try again.', 'error'); 
+    }
     setLoading(false);
   };
 
@@ -76,7 +89,15 @@ export default function Contact() {
                   <option value="General Enquiry">General Enquiry</option><option value="Solar Quote">Solar Quote</option><option value="Subsidy Help">Subsidy Help</option><option value="Maintenance">Maintenance</option><option value="Complaint">Complaint</option><option value="Partnership">Partnership</option>
                 </select>
                 <textarea placeholder="Your Requirement" value={form.requirement} onChange={e => setForm({ ...form, requirement: e.target.value })} required />
-                <button type="submit" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
+                
+                <div style={{ marginBottom: 15, display: 'flex', justifyContent: 'center' }}>
+                  <Turnstile 
+                    siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY || '0x4AAAAAADfKu-Uj__BLIWkC'} 
+                    onSuccess={(token) => setTurnstileToken(token)} 
+                  />
+                </div>
+
+                <button type="submit" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }} disabled={loading || !turnstileToken}>
                   {loading ? <span className="spinner"></span> : 'Send Message →'}
                 </button>
               </form>
@@ -84,7 +105,7 @@ export default function Contact() {
             <div className="contact-info-card">
               <h2 style={{ marginBottom: 24 }}>Get in Touch</h2>
               <div className="contact-info-item"><div className="icon">📞</div><div><h4>Phone</h4><p>8757686826</p></div></div>
-              <div className="contact-info-item"><div className="icon">✉</div><div><h4>Email</h4><p>ekosys.corp@gmail.com</p></div></div>
+              <div className="contact-info-item"><div className="icon">✉</div><div><h4>Email</h4><p>corp.ekosys@gmail.com</p></div></div>
               <div className="contact-info-item"><div className="icon">📍</div><div><h4>Address</h4><p>EKOSYS</p><p>Hajipur, Vaishali, Bihar</p></div></div>
               <div className="contact-info-item"><div className="icon">🕐</div><div><h4>Business Hours</h4><p>Mon - Sat: 9:00 AM - 7:00 PM</p><p>Sunday: Closed</p></div></div>
               <div style={{ background: 'rgba(245,158,11,.1)', borderRadius: 12, padding: 20, marginTop: 16 }}>

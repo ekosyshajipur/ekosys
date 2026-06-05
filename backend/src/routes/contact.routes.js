@@ -3,7 +3,8 @@ const router = express.Router();
 const nodemailer = require('nodemailer');
 const { sendToCRM } = require('../utils/crm');
 const { sendToGoogleSheet } = require('../utils/googleSheet');
-
+const { verifyTurnstileToken } = require('../utils/turnstile');
+const { preventDuplicates } = require('../utils/antiSpam');
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -13,9 +14,15 @@ const transporter = nodemailer.createTransport({
 });
 
 // POST - Submit contact form
-router.post('/', async (req, res) => {
+router.post('/', preventDuplicates, async (req, res) => {
   try {
-    const { name, email, phone, city, enquiryType, requirement } = req.body;
+    const { name, email, phone, city, enquiryType, requirement, turnstileToken } = req.body;
+
+    // Verify Turnstile Token
+    const isHuman = await verifyTurnstileToken(turnstileToken);
+    if (!isHuman) {
+      return res.status(400).json({ success: false, message: 'Bot verification failed. Please try again.' });
+    }
     
     // Save to CRM (Non-blocking)
     sendToCRM({ name, email, phone, city, enquiryType, requirement }, 'Contact Form');
