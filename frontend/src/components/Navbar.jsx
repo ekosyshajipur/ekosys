@@ -63,7 +63,7 @@ export default function Navbar() {
               />
               <div className="nav-logo-text-v2">
                 <span className="logo-title-v2">EKOSYS Solar</span>
-                <span className="logo-subtitle-v2">SOLAR PANELS • SUBSIDY • INSTALLATION • BIHAR</span>
+                <span className="logo-subtitle-v2">SOLAR PANELS • SUBSIDY • INSTALLATION</span>
               </div>
             </Link>
 
