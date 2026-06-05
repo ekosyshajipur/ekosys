@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import axios from 'axios';
 import { Helmet } from 'react-helmet-async';
 import { Turnstile } from '@marsidev/react-turnstile';
@@ -13,6 +13,7 @@ export default function Contact() {
   const [turnstileToken, setTurnstileToken] = useState('');
   const [toast, setToast] = useState(null);
   const [loading, setLoading] = useState(false);
+  const turnstileRef = useRef();
 
   const showToast = (msg, type = 'success') => { setToast({ msg, type }); setTimeout(() => setToast(null), 4000); };
 
@@ -27,7 +28,8 @@ export default function Contact() {
       const { data } = await axios.post(`${API}/contact`, { ...form, turnstileToken }); 
       showToast(data.message); 
       setForm({ name: '', phone: '', email: '', city: '', enquiryType: 'General Enquiry', requirement: '' });
-      setTurnstileToken(''); // Reset token
+      setTurnstileToken(''); // Reset token state
+      turnstileRef.current?.reset(); // Gracefully request a new token
     } catch (err) { 
       showToast(err.response?.data?.message || 'Failed to send message. Please try again.', 'error'); 
     }
@@ -90,12 +92,14 @@ export default function Contact() {
                 </select>
                 <textarea placeholder="Your Requirement" value={form.requirement} onChange={e => setForm({ ...form, requirement: e.target.value })} required />
                 
-                <div style={{ marginBottom: 15, display: 'flex', justifyContent: 'center' }}>
-                  <Turnstile 
-                    siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY || '0x4AAAAAADfKu-Uj__BLIWkC'} 
-                    onSuccess={(token) => setTurnstileToken(token)} 
-                  />
-                </div>
+                <Turnstile 
+                  ref={turnstileRef}
+                  siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY || '0x4AAAAAADfKu-Uj__BLIWkC'} 
+                  options={{ size: 'invisible' }}
+                  onSuccess={(token) => setTurnstileToken(token)} 
+                  onError={() => { console.error('Turnstile Error'); setTurnstileToken(''); }}
+                  onExpire={() => { console.warn('Turnstile Expired'); setTurnstileToken(''); turnstileRef.current?.reset(); }}
+                />
 
                 <button type="submit" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }} disabled={loading || !turnstileToken}>
                   {loading ? <span className="spinner"></span> : 'Send Message →'}

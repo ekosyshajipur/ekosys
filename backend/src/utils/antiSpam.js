@@ -18,10 +18,8 @@ const preventDuplicates = (req, res, next) => {
   const keyStr = `${email || ''}-${phone || ''}-${enquiryType || ''}`.toLowerCase();
   
   if (submissionCache.has(keyStr)) {
-    return res.status(429).json({ 
-      success: false, 
-      message: 'You have already submitted this inquiry. Please wait a few minutes before trying again.' 
-    });
+    // Commented out to allow multiple submissions from the same user for testing/usage
+    // return res.status(429).json({ ... });
   }
 
   // Store the key in cache

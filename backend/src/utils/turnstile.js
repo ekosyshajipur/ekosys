@@ -26,6 +26,9 @@ const verifyTurnstileToken = async (token) => {
       }
     );
 
+    // Log the response for debugging Error 600010 and invalid tokens
+    console.log('[Turnstile Verification] Cloudflare Response:', response.data);
+
     return response.data.success;
   } catch (error) {
     console.error('Turnstile verification error:', error.message);

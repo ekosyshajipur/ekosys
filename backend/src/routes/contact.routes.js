@@ -4,7 +4,6 @@ const nodemailer = require('nodemailer');
 const { sendToCRM } = require('../utils/crm');
 const { sendToGoogleSheet } = require('../utils/googleSheet');
 const { verifyTurnstileToken } = require('../utils/turnstile');
-const { preventDuplicates } = require('../utils/antiSpam');
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -14,7 +13,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // POST - Submit contact form
-router.post('/', preventDuplicates, async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const { name, email, phone, city, enquiryType, requirement, turnstileToken } = req.body;
 

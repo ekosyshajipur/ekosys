@@ -20,6 +20,7 @@ export default function PopupForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [filled, setFilled] = useState(false);
+  const turnstileRef = useRef();
   const timersRef = useRef([]);
 
   useEffect(() => {
@@ -32,29 +33,25 @@ export default function PopupForm() {
     const alreadyFilled = sessionStorage.getItem("ekosys_popup_filled");
     if (alreadyFilled) {
       setFilled(true);
-      // We DO NOT return here! We must register the "openPopup" listener below
-      // so the "Get Free Quote" button always works manually.
     } else {
-      // First popup after 10 minutes (600000ms)
+      // First popup after 1 minute (60000ms)
       const firstTimer = setTimeout(() => {
         if (!sessionStorage.getItem("ekosys_popup_filled")) {
           setShow(true);
         }
-      }, 600000);
-      timersRef.current.push(firstTimer);
 
-      // Subsequent popups every 10 minutes (600000ms)
-      const startRecurring = setTimeout(() => {
+        // Subsequent popups every 10 minutes (600000ms)
         const recurring = setInterval(() => {
           if (sessionStorage.getItem("ekosys_popup_filled")) {
             clearInterval(recurring);
             return;
           }
           setShow(true);
-        }, 600000); // every 10 minutes
+        }, 600000);
         timersRef.current.push(recurring);
-      }, 600000); // Start the interval after the first 10 minutes
-      timersRef.current.push(startRecurring);
+      }, 60000);
+      
+      timersRef.current.push(firstTimer);
     }
 
     // Also listen for manual open events (from "Get Free Quote" buttons)
@@ -62,6 +59,7 @@ export default function PopupForm() {
       // Always show on manual trigger and reset submitted state so they can submit again if they want
       setSubmitted(false);
       setShow(true);
+      turnstileRef.current?.reset(); // Get a fresh token when explicitly reopened
     };
     window.addEventListener("openPopup", handleOpenPopup);
 
@@ -88,13 +86,18 @@ export default function PopupForm() {
       setSubmitted(true);
       setFilled(true);
       sessionStorage.setItem("ekosys_popup_filled", "true");
-      // Clear all timers so no more popups in this session
+      setForm({ name: "", phone: "", email: "", city: "", enquiryType: "General Enquiry", requirement: "" });
+      setTurnstileToken("");
+      turnstileRef.current?.reset();
+      
+      // Stop the recurring popups because they successfully filled the form
       timersRef.current.forEach((t) => {
         clearTimeout(t);
         clearInterval(t);
       });
       setTimeout(() => {
         setShow(false);
+        setSubmitted(false); // Reset to form view for the next time it pops up
       }, 3000);
     } catch (err) {
       alert(err.response?.data?.message || "Failed to submit. Please try again.");
@@ -102,11 +105,10 @@ export default function PopupForm() {
     setLoading(false);
   };
 
-  if (!show) return null;
-
   return (
     <div
       className="popup-overlay"
+      style={{ display: show ? 'flex' : 'none' }}
       onClick={(e) => {
         if (e.target === e.currentTarget) closePopup();
       }}
@@ -186,12 +188,14 @@ export default function PopupForm() {
                   }
                 ></textarea>
 
-                <div style={{ marginBottom: 15, display: 'flex', justifyContent: 'center' }}>
-                  <Turnstile 
-                    siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY || '0x4AAAAAADfKu-Uj__BLIWkC'} 
-                    onSuccess={(token) => setTurnstileToken(token)} 
-                  />
-                </div>
+                <Turnstile 
+                  ref={turnstileRef}
+                  siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY || '0x4AAAAAADfKu-Uj__BLIWkC'} 
+                  options={{ size: 'invisible' }}
+                  onSuccess={(token) => setTurnstileToken(token)} 
+                  onError={() => { console.error('Turnstile Error'); setTurnstileToken(''); }}
+                  onExpire={() => { console.warn('Turnstile Expired'); setTurnstileToken(''); turnstileRef.current?.reset(); }}
+                />
 
                 <button
                   type="submit"
