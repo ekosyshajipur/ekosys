@@ -80,7 +80,7 @@ function AppContent() {
 
   return (
     <>
-      <Navbar />
+      {!isLandingPage && <Navbar />}
       {!isLandingPage && <ScrollToTop />}
 
       <main className={isLandingPage ? "landing-main-wrapper" : "app-content"}>
@@ -134,7 +134,7 @@ function AppContent() {
 
       {!isLandingPage && <Footer />}
       {!isLandingPage && <PopupForm />}
-      <FloatingContact />
+      {!isLandingPage && <FloatingContact />}
     </>
   );
 }

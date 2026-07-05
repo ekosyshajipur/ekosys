@@ -1,41 +1,42 @@
-.landing-portal {
-  width: 100vw;
+.landing-main-wrapper {
   height: 100vh;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #050505;
+  width: 100vw;
+  background-color: #f8fafc; /* Changed to light background */
   display: flex;
   flex-direction: column;
-  color: #fff;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow: hidden; /* Strict no-scroll */
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+}
+
+.landing-portal {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   position: relative;
+  overflow: hidden;
 }
 
 .landing-background {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at center, #1a1a2e 0%, #050505 100%);
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, #ffffff 0%, #f1f5f9 70%);
   z-index: 1;
 }
 
 .landing-background::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 50px 50px;
-  background-position: center center;
+    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center top;
   z-index: 2;
-  opacity: 0.5;
 }
 
 .landing-content {
@@ -47,100 +48,79 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  padding: 2rem;
+  padding: 1.5rem 2rem;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .landing-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
-.landing-logo {
-  height: 80px;
+.landing-title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.landing-logo-inline {
+  height: 60px;
   width: auto;
-  margin-bottom: 1.5rem;
-  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.1));
+  object-fit: contain;
 }
 
 .landing-title {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 800;
-  margin: 0 0 1rem 0;
-  background: linear-gradient(135deg, #ffffff 0%, #a8a8a8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  margin: 0;
+  color: #0f172a; /* Changed to dark text */
   letter-spacing: -1px;
+  line-height: 1.1;
 }
 
 .landing-subtitle {
-  font-size: 1.25rem;
-  color: #a0a0a0;
-  max-width: 600px;
+  font-size: 1.05rem;
+  color: #475569; /* Changed to dark gray text */
+  max-width: 650px;
   margin: 0 auto;
-  line-height: 1.6;
-  font-weight: 300;
+  line-height: 1.5;
 }
 
 .landing-options {
-  display: flex;
-  gap: 3rem;
-  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
   width: 100%;
-  justify-content: center;
 }
 
 .landing-card {
-  flex: 1;
-  max-width: 450px;
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 24px;
+  background: #ffffff; /* Light card background */
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
   overflow: hidden;
   text-decoration: none;
   display: flex;
   flex-direction: column;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   cursor: pointer;
-}
-
-.landing-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  z-index: 1;
-}
-
-.landing-card:hover {
-  transform: translateY(-10px);
-  border-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(255, 255, 255, 0.05);
-}
-
-.landing-card:hover::before {
-  opacity: 1;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
 }
 
 .card-image-container {
-  height: 240px;
+  height: 200px;
   width: 100%;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
 }
 
 .card-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .landing-card:hover .card-image {
@@ -150,41 +130,57 @@
 .card-image-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, rgba(5,5,5,1) 0%, rgba(5,5,5,0) 100%);
+  background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
   z-index: 2;
 }
 
 .card-content {
-  padding: 2.5rem;
+  padding: 1.5rem 2rem;
   position: relative;
   z-index: 3;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  background: #ffffff;
 }
 
 .card-title {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  color: #fff;
-  margin: 0 0 1rem 0;
+  color: #0f172a; /* Dark text */
+  margin: 0 0 0.5rem 0;
 }
 
 .card-description {
-  font-size: 1rem;
-  color: #a0a0a0;
-  line-height: 1.6;
-  margin: 0 0 2rem 0;
+  font-size: 0.95rem;
+  color: #475569; /* Dark gray text */
+  line-height: 1.5;
+  margin: 0 0 1.5rem 0;
   flex-grow: 1;
 }
 
 .card-action {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
+  justify-content: center;
+  gap: 0.5rem;
   font-weight: 600;
-  font-size: 1.1rem;
-  color: #fff;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.card-action::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+  opacity: 0.9;
 }
 
 .card-action svg {
@@ -192,48 +188,91 @@
 }
 
 .landing-card:hover .card-action svg {
-  transform: translateX(8px);
+  transform: translateX(6px);
 }
 
-/* Specific theme colors */
+/* Solar Card Styling */
+.landing-card.solar {
+  border-bottom: 3px solid transparent;
+  transition: all 0.4s ease;
+}
 .landing-card.solar:hover {
-  border-color: rgba(249, 115, 22, 0.4);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(249, 115, 22, 0.15);
+  border-color: #f59e0b;
+  box-shadow: 0 15px 40px rgba(245, 158, 11, 0.15);
+  transform: translateY(-5px);
 }
-
 .landing-card.solar .card-action {
-  color: #f97316;
+  color: #ffffff;
+}
+.landing-card.solar .card-action::before {
+  background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+}
+.landing-card.solar:hover .card-action::before {
+  opacity: 1;
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
 }
 
+/* Facade Card Styling */
+.landing-card.facade {
+  border-bottom: 3px solid transparent;
+  transition: all 0.4s ease;
+}
 .landing-card.facade:hover {
-  border-color: rgba(56, 189, 248, 0.4);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(56, 189, 248, 0.15);
+  border-color: #0ea5e9;
+  box-shadow: 0 15px 40px rgba(14, 165, 233, 0.15);
+  transform: translateY(-5px);
 }
-
 .landing-card.facade .card-action {
-  color: #38bdf8;
+  color: #ffffff;
+}
+.landing-card.facade .card-action::before {
+  background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%);
+}
+.landing-card.facade:hover .card-action::before {
+  opacity: 1;
+  box-shadow: 0 8px 25px rgba(14, 165, 233, 0.4);
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 992px) {
   .landing-options {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-  
-  .landing-card {
-    width: 100%;
+    grid-template-columns: 1fr;
     max-width: 500px;
-  }
-  
-  .landing-portal {
-    height: auto;
-    min-height: 100vh;
-    overflow-y: auto;
+    gap: 1.5rem;
   }
   
   .landing-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+  }
+
+  .card-image-container {
+    height: 140px;
+  }
+
+  .landing-logo-inline {
+    height: 50px;
+  }
+  
+  .landing-content {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .landing-title-wrapper {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .landing-title {
+    font-size: 1.8rem;
+  }
+  
+  .card-image-container {
+    height: 120px;
+  }
+  
+  .card-content {
+    padding: 1rem 1.5rem;
   }
 }

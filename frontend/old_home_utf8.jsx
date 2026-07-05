@@ -1,16 +1,16 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { FAQSchema, BreadcrumbSchema } from "../components/SchemaMarkup";
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { FiArrowRight, FiSun, FiZap, FiShield, FiTool, FiCheckCircle, FiStar, FiMapPin, FiPhone, FiMail, FiLayers, FiHome } from "react-icons/fi";
+import { FiArrowRight, FiSun, FiZap, FiShield, FiTool, FiCheckCircle, FiStar, FiMapPin, FiPhone, FiMail } from "react-icons/fi";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./Home.css";
 
-/* ── Animated Section Wrapper ── */
+/* ÔöÇÔöÇ Animated Section Wrapper ÔöÇÔöÇ */
 function AnimSection({ children, className = "", delay = 0 }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-60px" });
@@ -27,7 +27,7 @@ function AnimSection({ children, className = "", delay = 0 }) {
   );
 }
 
-/* ── Counter ── */
+/* ÔöÇÔöÇ Counter ÔöÇÔöÇ */
 function Counter({ end, suffix = "", prefix = "" }) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
@@ -50,7 +50,7 @@ function Counter({ end, suffix = "", prefix = "" }) {
   return <span ref={ref}>{prefix}{count.toLocaleString("en-IN")}{suffix}</span>;
 }
 
-/* ── Data ── */
+/* ÔöÇÔöÇ Data ÔöÇÔöÇ */
 const services = [
   { img: "/images/services/residential.png", icon: <FiSun />, title: "Residential Solar", desc: "Complete rooftop solar solutions for homes with PM Surya Ghar Yojana subsidy assistance.", link: "/residential-solar-bihar", color: "#f59e0b" },
   { img: "/images/services/commercial.png", icon: <FiZap />, title: "Commercial Solar", desc: "Large-scale solar EPC for offices, factories, and commercial establishments across Bihar.", link: "/industrial-solar-bihar", color: "#0ea5e9" },
@@ -70,8 +70,8 @@ const processSteps = [
 ];
 
 const testimonials = [
-  { name: "Rajesh Kumar", loc: "Hajipur, Bihar", text: "EKOSYS installed a 5kW system on my rooftop. My electricity bill dropped from ₹4,500 to ₹200! The team was very professional and completed installation in just 2 days.", rating: 5 },
-  { name: "Priya Singh", loc: "Patna, Bihar", text: "I was confused about solar subsidy, but EKOSYS guided me through the entire PM Surya Ghar process. Got ₹78,000 subsidy credited to my account within 3 months!", rating: 5 },
+  { name: "Rajesh Kumar", loc: "Hajipur, Bihar", text: "EKOSYS installed a 5kW system on my rooftop. My electricity bill dropped from Ôé╣4,500 to Ôé╣200! The team was very professional and completed installation in just 2 days.", rating: 5 },
+  { name: "Priya Singh", loc: "Patna, Bihar", text: "I was confused about solar subsidy, but EKOSYS guided me through the entire PM Surya Ghar process. Got Ôé╣78,000 subsidy credited to my account within 3 months!", rating: 5 },
   { name: "Ashutosh Mishra", loc: "Muzaffarpur, Bihar", text: "Best solar company in Bihar! Their 3kW system is working perfectly. Very responsive customer support and excellent after-sales service.", rating: 5 },
   { name: "Sunita Devi", loc: "Vaishali, Bihar", text: "EKOSYS solar panels are of premium quality. Our 4kW system generates more power than expected. Very happy with the investment and team support.", rating: 5 },
   { name: "Manish Gupta", loc: "Bhagalpur, Bihar", text: "Got an industrial solar setup for my factory through EKOSYS. The 25kW system has reduced our electricity costs by 80%. Excellent ROI!", rating: 5 },
@@ -91,17 +91,17 @@ const partners = [
 ];
 
 const faqs = [
-  { q: "What is the cost of a solar system in Bihar?", a: "Residential systems cost ₹55,000 to ₹65,000 per kW before subsidy. With PM Surya Ghar Yojana, you can get ₹30,000-₹78,000 subsidy depending on system size." },
-  { q: "How does PM Surya Ghar Yojana work?", a: "Under this scheme, households get up to ₹78,000 subsidy for on-grid rooftop solar, credited directly to their bank account after installation and inspection." },
+  { q: "What is the cost of a solar system in Bihar?", a: "Residential systems cost Ôé╣55,000 to Ôé╣65,000 per kW before subsidy. With PM Surya Ghar Yojana, you can get Ôé╣30,000-Ôé╣78,000 subsidy depending on system size." },
+  { q: "How does PM Surya Ghar Yojana work?", a: "Under this scheme, households get up to Ôé╣78,000 subsidy for on-grid rooftop solar, credited directly to their bank account after installation and inspection." },
   { q: "How long does solar installation take?", a: "Typically 2-5 days for residential systems and 7-15 days for commercial setups, including all approvals and net metering." },
   { q: "What is the lifespan of solar panels?", a: "Our Tier-1 Mono PERC panels come with a 25-year performance warranty and can last 30+ years with proper maintenance." },
   { q: "Do solar panels work during monsoon/cloudy days?", a: "Yes! Modern panels generate 25-40% of their peak output even on cloudy days. Bihar receives excellent sunlight for 300+ days a year." },
-  { q: "What maintenance is required for solar panels?", a: "Minimal — occasional cleaning every 2-3 weeks and an annual inspection. EKOSYS offers AMC plans for hassle-free maintenance." },
+  { q: "What maintenance is required for solar panels?", a: "Minimal ÔÇö occasional cleaning every 2-3 weeks and an annual inspection. EKOSYS offers AMC plans for hassle-free maintenance." },
 ];
 
 const blogs = [
-  { title: "बिहार में सोलर क्रांति की तैयारी", slug: "bihar-solar-revolution", tag: "News", img: "/images/blog/jeevika-solar-bihar.png", date: "June 1, 2026" },
-  { title: "बिजली विभाग घर की छत पर फ्री में लगाएंगे सोलर पैनल", slug: "free-solar-panel-scheme", tag: "News", img: "/images/blog/free-solar-scheme.png", date: "May 31, 2026" },
+  { title: "Óñ¼Óñ┐Óñ╣Óñ¥Óñ░ Óñ«ÓÑçÓñé Óñ©ÓÑïÓñ▓Óñ░ ÓñòÓÑìÓñ░Óñ¥ÓñéÓññÓñ┐ ÓñòÓÑÇ ÓññÓÑêÓñ»Óñ¥Óñ░ÓÑÇ", slug: "bihar-solar-revolution", tag: "News", img: "/images/blog/jeevika-solar-bihar.png", date: "June 1, 2026" },
+  { title: "Óñ¼Óñ┐Óñ£Óñ▓ÓÑÇ ÓñÁÓñ┐Óñ¡Óñ¥Óñù ÓñÿÓñ░ ÓñòÓÑÇ ÓñøÓññ Óñ¬Óñ░ Óñ½ÓÑìÓñ░ÓÑÇ Óñ«ÓÑçÓñé Óñ▓ÓñùÓñ¥ÓñÅÓñéÓñùÓÑç Óñ©ÓÑïÓñ▓Óñ░ Óñ¬ÓÑêÓñ¿Óñ▓", slug: "free-solar-panel-scheme", tag: "News", img: "/images/blog/free-solar-scheme.png", date: "May 31, 2026" },
   { title: "Benefits of Solar Energy in Bihar", slug: "benefits-of-solar-energy", tag: "Solar Guide", img: "/images/hero-banner.webp", date: "May 18, 2025" },
   { title: "Solar Subsidy Guide: PM Surya Ghar Yojana", slug: "solar-subsidy-in-bihar", tag: "Subsidy", img: "/images/subsidy.webp", date: "May 16, 2025" },
   { title: "How Solar Reduces Your Electricity Bill", slug: "how-solar-reduces-electricity-bill", tag: "Savings", img: "/images/ongrid.webp", date: "May 14, 2025" },
@@ -111,7 +111,7 @@ const blogs = [
 
 const sortedBlogs = [...blogs].sort((a, b) => new Date(b.date) - new Date(a.date));
 
-/* ── Component ── */
+/* ÔöÇÔöÇ Component ÔöÇÔöÇ */
 export default function Home() {
   const [openFaq, setOpenFaq] = useState(null);
 
@@ -121,7 +121,7 @@ export default function Home() {
     <>
       <Helmet>
         <title>Best Solar Installation Company in Bihar | EKOSYS Solar</title>
-        <meta name="description" content="EKOSYS is Bihar's #1 solar installation company offering rooftop solar panels, PM Surya Ghar Yojana subsidy assistance, solar EPC services for homes, businesses & industries. Get up to ₹78,000 government subsidy. Call +91-8757686826." />
+        <meta name="description" content="EKOSYS is Bihar's #1 solar installation company offering rooftop solar panels, PM Surya Ghar Yojana subsidy assistance, solar EPC services for homes, businesses & industries. Get up to Ôé╣78,000 government subsidy. Call +91-8757686826." />
         <meta name="keywords" content="solar installation Bihar, solar company Bihar, solar panel Bihar, EKOSYS solar, rooftop solar Hajipur, PM Surya Ghar Yojana Bihar, solar EPC Bihar, best solar company Bihar, solar subsidy Bihar, solar panel installation near me" />
         <link rel="canonical" href="https://ekosys.in/" />
         <meta property="og:title" content="Best Solar Installation Company in Bihar | EKOSYS Solar" />
@@ -140,7 +140,7 @@ export default function Home() {
       
       <BreadcrumbSchema items={[{ name: 'Home', url: 'https://ekosys.in/' }]} />
 
-      {/* ═══════ HERO ═══════ */}
+      {/* ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ HERO ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ */}
       <section className="hero-v2">
         {/* Background Video */}
         <video
@@ -161,9 +161,9 @@ export default function Home() {
 
         <div className="container hero-v2-inner">
           <motion.div className="hero-v2-content" initial={{ opacity: 0, x: -60 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
-            <div className="hero-badge-v2">☀️ Bihar's Most Trusted Solar Company</div>
+            <div className="hero-badge-v2">ÔÿÇ´©Å Bihar's Most Trusted Solar Company</div>
             <h1>Powering Bihar With <span className="hero-highlight">Clean Solar Energy</span></h1>
-            <p>End-to-end solar EPC solutions for homes, businesses & industries. Get up to ₹78,000 government subsidy under PM Surya Ghar Yojana.</p>
+            <p>End-to-end solar EPC solutions for homes, businesses & industries. Get up to Ôé╣78,000 government subsidy under PM Surya Ghar Yojana.</p>
             <div className="hero-stats-row">
               <div className="hero-stat-item"><strong>1000+</strong><span>Projects</span></div>
               <div className="hero-stat-divider" />
@@ -179,37 +179,40 @@ export default function Home() {
           <motion.div className="hero-v2-image" initial={{ opacity: 0, x: 60 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
             <img src="/images/hero-solar.png" alt="EKOSYS Solar Panel Installation" width="700" height="500" />
             <div className="hero-float-card hf1">
-              <span className="hf-icon">⚡</span>
+              <span className="hf-icon">ÔÜí</span>
               <div><strong>90%</strong><small>Bill Reduction</small></div>
             </div>
             <div className="hero-float-card hf2">
-              <span className="hf-icon">🌱</span>
+              <span className="hf-icon">­ƒî▒</span>
               <div><strong>25 Yr</strong><small>Warranty</small></div>
             </div>
           </motion.div>
         </div>
         <div className="hero-scroll-indicator">
-          <motion.div animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 1.5 }}>⬇</motion.div>
+          <motion.div animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 1.5 }}>Ôåô</motion.div>
         </div>
       </section>
+
+      {/* ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ TRUST BAR ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ */}
       <section className="trust-bar">
         <div className="container">
           <div className="trust-items">
-            {["Solar EPC", "Facade Design", "Exterior Execution", "Bihar Service Team", "Project Support"].map((t, i) => (
+            {["Google ÔÿàÔÿàÔÿàÔÿàÔÿà", "500+ Happy Families", "Govt. Approved", "MNRE Certified", "25-Year Warranty"].map((t, i) => (
               <AnimSection key={i} delay={i * 0.1}><div className="trust-item">{t}</div></AnimSection>
             ))}
           </div>
         </div>
       </section>
 
+      {/* ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ STATS ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ */}
       <section className="stats-v2">
         <div className="container">
           <div className="stats-grid-v2">
             {[
-              { end: 1000, suffix: "+", label: "Projects Completed", icon: "🏠" },
-              { end: 10, suffix: "+ MW", label: "Capacity Installed", icon: "⚡" },
-              { end: 15, suffix: "+ Yrs", label: "Industry Experience", icon: "📅" },
-              { end: 100, suffix: "%", label: "Customer Satisfaction", icon: "💯" },
+              { end: 1000, suffix: "+", label: "Projects Completed", icon: "­ƒÅá" },
+              { end: 10, suffix: "+ MW", label: "Capacity Installed", icon: "ÔÜí" },
+              { end: 15, suffix: "+ Yrs", label: "Industry Experience", icon: "­ƒôà" },
+              { end: 100, suffix: "%", label: "Customer Satisfaction", icon: "­ƒÆ»" },
             ].map((s, i) => (
               <AnimSection key={i} delay={i * 0.1}>
                 <div className="stat-card-v2">
@@ -223,11 +226,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="solar-services" className="section services-section" style={{ background: "#fff" }}>
+      {/* ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ SERVICES ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ */}
+      <section id="services" className="section services-section" style={{ background: "#fff" }}>
         <div className="container">
           <AnimSection>
             <h2 className="section-title">Our Solar <span className="highlight">Services</span></h2>
-            <p className="section-subtitle">Comprehensive solar solutions designed to power every need - from small homes to large industries.</p>
+            <p className="section-subtitle">Comprehensive solar solutions designed to power every need ÔÇö from small homes to large industries.</p>
           </AnimSection>
           <div className="services-grid-v2">
             {services.map((s, i) => (
@@ -249,7 +253,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════ WHY CHOOSE US ═══════ */}
+      {/* ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ WHY CHOOSE US ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ */}
       <section className="section" style={{ background: "#ffffff" }}>
         <div className="container">
           <AnimSection>
@@ -258,12 +262,12 @@ export default function Home() {
           </AnimSection>
           <div className="why-grid-v2">
             {[
-              { icon: "💡", title: "End-to-End EPC", desc: "Complete solar lifecycle — from design and engineering to procurement, construction, and commissioning." },
-              { icon: "🏆", title: "Tier-1 Components", desc: "We use only MNRE-approved, top-tier Mono PERC Bifacial panels with 25-year performance warranty." },
-              { icon: "🏛️", title: "Govt. Subsidy Expert", desc: "Full assistance in PM Surya Ghar Yojana — we handle all paperwork from application to disbursement." },
-              { icon: "🔧", title: "Lifetime Support", desc: "Dedicated maintenance, monitoring, and 24/7 customer support throughout the system's lifetime." },
-              { icon: "⚡", title: "Fast Installation", desc: "Professional installation within 3-5 days by certified engineers with zero disruption." },
-              { icon: "💰", title: "Best ROI in Bihar", desc: "Transparent pricing, maximum savings, and fastest payback period with net metering benefits." },
+              { icon: "­ƒÆí", title: "End-to-End EPC", desc: "Complete solar lifecycle ÔÇö from design and engineering to procurement, construction, and commissioning." },
+              { icon: "­ƒÅå", title: "Tier-1 Components", desc: "We use only MNRE-approved, top-tier Mono PERC Bifacial panels with 25-year performance warranty." },
+              { icon: "­ƒÅø´©Å", title: "Govt. Subsidy Expert", desc: "Full assistance in PM Surya Ghar Yojana ÔÇö we handle all paperwork from application to disbursement." },
+              { icon: "­ƒöº", title: "Lifetime Support", desc: "Dedicated maintenance, monitoring, and 24/7 customer support throughout the system's lifetime." },
+              { icon: "ÔÜí", title: "Fast Installation", desc: "Professional installation within 3-5 days by certified engineers with zero disruption." },
+              { icon: "­ƒÆ░", title: "Best ROI in Bihar", desc: "Transparent pricing, maximum savings, and fastest payback period with net metering benefits." },
             ].map((c, i) => (
               <AnimSection key={i} delay={i * 0.08}>
                 <div className="why-card-v2">
@@ -277,7 +281,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════ WHY CHOOSE US ═══════ */}
+      {/* ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ WHY CHOOSE US ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ */}
       <section className="section about-feature-section" style={{ background: "#f8fafc" }}>
         <div className="container about-feature-grid">
           <div className="about-feature-image">
@@ -300,7 +304,7 @@ export default function Home() {
         <div className="container">
           <AnimSection>
             <h2 className="section-title">Our Installation <span className="highlight">Process</span></h2>
-            <p className="section-subtitle">A seamless 6-step journey from consultation to clean energy — we handle everything.</p>
+            <p className="section-subtitle">A seamless 6-step journey from consultation to clean energy ÔÇö we handle everything.</p>
           </AnimSection>
           <div className="process-highlight-grid">
             <div className="process-highlight-image">
@@ -331,7 +335,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════ TESTIMONIALS ═══════ */}
+      {/* ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ TESTIMONIALS ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ */}
       <section className="section" style={{ background: "#ffffff" }}>
         <div className="container">
           <AnimSection>
@@ -351,7 +355,7 @@ export default function Home() {
             {testimonials.map((t, i) => (
               <SwiperSlide key={i}>
                 <div className="testimonial-card-v2">
-                  <div className="stars-v2">{"★".repeat(t.rating)}{"☆".repeat(5 - t.rating)}</div>
+                  <div className="stars-v2">{"Ôÿà".repeat(t.rating)}{"Ôÿå".repeat(5 - t.rating)}</div>
                   <p>"{t.text}"</p>
                   <div className="testimonial-author-v2">
                     <div className="testimonial-avatar-v2">{t.name.charAt(0)}</div>
@@ -367,7 +371,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════ PARTNERS ═══════ */}
+      {/* ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ PARTNERS ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ */}
       <section className="section partners-section" style={{ background: "#fff" }}>
         <div className="container">
           <AnimSection>
@@ -390,7 +394,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════ BLOG PREVIEW ═══════ */}
+      {/* ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ BLOG PREVIEW ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ */}
       <section className="section" style={{ background: "#ffffff" }}>
         <div className="container">
           <AnimSection>
@@ -417,7 +421,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════ FAQ ═══════ */}
+      {/* ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ FAQ ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ */}
       <section className="section" style={{ background: "#fff" }}>
         <div className="container">
           <AnimSection>
@@ -428,7 +432,7 @@ export default function Home() {
               <AnimSection key={i} delay={i * 0.05}>
                 <div className="faq-item-v2">
                   <div className="faq-question-v2" onClick={() => setOpenFaq(openFaq === i ? null : i)}>
-                    {f.q} <span>{openFaq === i ? "−" : "+"}</span>
+                    {f.q} <span>{openFaq === i ? "ÔêÆ" : "+"}</span>
                   </div>
                   <motion.div
                     initial={false}
@@ -445,7 +449,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════ MAP ═══════ */}
+      {/* ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ MAP ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ */}
       <section className="section" style={{ background: "#ffffff" }}>
         <div className="container">
           <AnimSection>
@@ -465,7 +469,7 @@ export default function Home() {
               <p><FiMapPin /> 1st Floor, Tulsi Singh Complex, Marai Road, In Front Of Aakash Ganga TVS, Hajipur - 844101 (Bihar) India</p>
               <p><FiPhone /> <a href="tel:+918757686826">+91 8757686826</a></p>
               <p><FiMail /> <a href="mailto:corp.ekosys@gmail.com">corp.ekosys@gmail.com</a></p>
-              <p>🕐 Mon - Sat: 9:00 AM - 7:00 PM</p>
+              <p>­ƒòÉ Mon - Sat: 9:00 AM - 7:00 PM</p>
               <button className="btn btn-primary" onClick={openPopup} style={{ marginTop: 16 }}>Get Free Consultation <FiArrowRight /></button>
             </div>
           </div>
