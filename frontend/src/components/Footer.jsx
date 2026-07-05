@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="footer-grid">
             <div className="footer-about">
               <img
-                src="/images/ekosys-logo.webp"
+                src="/images/navLogo.png"
                 alt="EKOSYS"
                 loading="lazy"
                 decoding="async"
@@ -23,10 +23,9 @@ export default function Footer() {
                 }}
               />
               <p>
-                Powering a Greener Tomorrow. We deliver end-to-end solar EPC
-                solutions tailored for industrial, commercial, and institutional
-                needs. Cut your energy costs and embrace sustainable power
-                confidently.
+                EKOSYS works across Solar EPC and Architectural Exterior
+                solutions, helping homes, businesses, and institutions build
+                cleaner energy systems and stronger modern facades.
               </p>
               <p>
                 📞 8757686826

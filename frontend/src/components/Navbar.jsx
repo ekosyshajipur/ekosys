@@ -24,7 +24,7 @@ export default function Navbar() {
   }, [pathname]);
 
   const mainLinks = [
-    { to: "/", label: "HOME" },
+    { to: "/home", label: "HOME" },
     { to: "/about", label: "ABOUT" },
   ];
 
@@ -57,13 +57,13 @@ export default function Navbar() {
             {/* Logo */}
             <Link to="/" className="nav-logo-v2">
               <img
-                src="/images/navLogo.jpeg"
-                alt="EKOSYS Solar"
+                src="/images/navLogo.png"
+                alt="EKOSYS"
                 className="nav-logo-img-v2"
               />
               <div className="nav-logo-text-v2">
-                <span className="logo-title-v2">EKOSYS Solar</span>
-                <span className="logo-subtitle-v2">SOLAR PANELS INSTALLATION</span>
+                <span className="logo-title-v2">EKOSYS</span>
+                <span className="logo-subtitle-v2">SOLAR EPC & EXTERIOR WORKS</span>
               </div>
             </Link>
 
@@ -154,7 +154,7 @@ export default function Navbar() {
             transition={{ type: "tween", duration: 0.3 }}
           >
             <div className="mobile-menu-header">
-              <img src="/images/navLogo.jpeg" alt="EKOSYS" className="mobile-menu-logo" style={{ height: "45px", width: "auto", objectFit: "contain" }} />
+              <img src="/images/navLogo.png" alt="EKOSYS" className="mobile-menu-logo" style={{ height: "45px", width: "auto", objectFit: "contain" }} />
               <div className="mobile-header-actions">
                 <button className="mobile-close-btn" onClick={() => setOpen(false)} aria-label="Close menu">
                   <FiChevronLeft size={22} />

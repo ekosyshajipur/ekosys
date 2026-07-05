@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { FAQSchema, BreadcrumbSchema } from "../components/SchemaMarkup";
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { FiArrowRight, FiSun, FiZap, FiShield, FiTool, FiCheckCircle, FiStar, FiMapPin, FiPhone, FiMail } from "react-icons/fi";
+import { FiArrowRight, FiSun, FiZap, FiShield, FiTool, FiCheckCircle, FiStar, FiMapPin, FiPhone, FiMail, FiLayers, FiHome } from "react-icons/fi";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -140,71 +140,74 @@ export default function Home() {
       
       <BreadcrumbSchema items={[{ name: 'Home', url: 'https://ekosys.in/' }]} />
 
-      {/* ═══════ HERO ═══════ */}
+      {/* Main EKOSYS gateway hero */}
       <section className="hero-v2">
-        {/* Background Video */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="hero-video-bg"
-        >
-          <source src="https://assets.mixkit.co/videos/preview/mixkit-solar-panels-on-a-roof-40618-large.mp4" type="video/mp4" />
-        </video>
-
-        {/* Animated WebP Background Image */}
         <div className="hero-animated-bg-img" style={{ backgroundImage: "url('/images/hero-banner.webp')" }} />
-        
-        {/* Dark subtle overlay for text readability */}
         <div className="hero-bg-overlay-v3" />
 
         <div className="container hero-v2-inner">
-          <motion.div className="hero-v2-content" initial={{ opacity: 0, x: -60 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
-            <div className="hero-badge-v2">☀️ Bihar's Most Trusted Solar Company</div>
-            <h1>Powering Bihar With <span className="hero-highlight">Clean Solar Energy</span></h1>
-            <p>End-to-end solar EPC solutions for homes, businesses & industries. Get up to ₹78,000 government subsidy under PM Surya Ghar Yojana.</p>
+          <motion.div className="hero-v2-content" initial={{ opacity: 0, y: 36 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+            <div className="hero-badge-v2">EKOSYS Engineering, Energy & Exterior Solutions</div>
+            <h1>One trusted team for <span className="hero-highlight">Solar EPC</span> and premium architectural exterior work.</h1>
+            <p>From rooftop solar plants to facade design, cladding, elevation, and exterior execution, EKOSYS helps customers build efficient, beautiful, long-lasting spaces with professional project delivery.</p>
             <div className="hero-stats-row">
-              <div className="hero-stat-item"><strong>1000+</strong><span>Projects</span></div>
+              <div className="hero-stat-item"><strong>Solar EPC</strong><span>Design, supply, installation</span></div>
               <div className="hero-stat-divider" />
-              <div className="hero-stat-item"><strong>10+ MW</strong><span>Installed</span></div>
+              <div className="hero-stat-item"><strong>Facade</strong><span>Exterior design and execution</span></div>
               <div className="hero-stat-divider" />
-              <div className="hero-stat-item"><strong>15+ Yrs</strong><span>Experience</span></div>
-            </div>
-            <div className="hero-btns-v2">
-              <button className="btn btn-primary" onClick={openPopup}>Get Free Quote <FiArrowRight /></button>
-              <Link to="/products" className="btn btn-outline">Explore Products</Link>
+              <div className="hero-stat-item"><strong>Bihar</strong><span>Local team, fast support</span></div>
             </div>
           </motion.div>
-          <motion.div className="hero-v2-image" initial={{ opacity: 0, x: 60 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-            <img src="/images/hero-solar.png" alt="EKOSYS Solar Panel Installation" width="700" height="500" />
-            <div className="hero-float-card hf1">
-              <span className="hf-icon">⚡</span>
-              <div><strong>90%</strong><small>Bill Reduction</small></div>
-            </div>
-            <div className="hero-float-card hf2">
-              <span className="hf-icon">🌱</span>
-              <div><strong>25 Yr</strong><small>Warranty</small></div>
-            </div>
+
+          <motion.div className="industry-choice-grid" initial={{ opacity: 0, y: 36 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.15 }}>
+            <a href="#solar-services" className="industry-choice-card solar-choice">
+              <span className="industry-choice-icon"><FiSun /></span>
+              <img src="/images/hero-solar.png" alt="Solar EPC Work" />
+              <div className="industry-choice-copy">
+                <h2>Solar EPC Work</h2>
+                <p>Rooftop, commercial, industrial, subsidy, products, installation, and maintenance support.</p>
+                <span>Go to Solar Services <FiArrowRight /></span>
+              </div>
+            </a>
+
+            <a href="https://facade-ekosys.example.com" target="_blank" rel="noopener noreferrer" className="industry-choice-card facade-choice">
+              <span className="industry-choice-icon"><FiLayers /></span>
+              <img src="/images/service-hero.webp" alt="Architectural design and exterior work" />
+              <div className="industry-choice-copy">
+                <h2>Architectural Design and Exterior Work</h2>
+                <p>Facade planning, building elevation, cladding, exterior finishes, and modern architectural execution.</p>
+                <span>Open Facade Website <FiArrowRight /></span>
+              </div>
+            </a>
           </motion.div>
         </div>
-        <div className="hero-scroll-indicator">
-          <motion.div animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 1.5 }}>↓</motion.div>
+
+        <div className="container hero-capability-strip">
+          {[
+            { icon: <FiHome />, title: "Homes", text: "Solar rooftops and elevation upgrades" },
+            { icon: <FiZap />, title: "Businesses", text: "Lower bills with clean power systems" },
+            { icon: <FiShield />, title: "Projects", text: "Professional exterior execution" },
+          ].map((item) => (
+            <div className="capability-item" key={item.title}>
+              <span>{item.icon}</span>
+              <div>
+                <strong>{item.title}</strong>
+                <small>{item.text}</small>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
-
-      {/* ═══════ TRUST BAR ═══════ */}
       <section className="trust-bar">
         <div className="container">
           <div className="trust-items">
-            {["Google ★★★★★", "500+ Happy Families", "Govt. Approved", "MNRE Certified", "25-Year Warranty"].map((t, i) => (
+            {["Solar EPC", "Facade Design", "Exterior Execution", "Bihar Service Team", "Project Support"].map((t, i) => (
               <AnimSection key={i} delay={i * 0.1}><div className="trust-item">{t}</div></AnimSection>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ═══════ STATS ═══════ */}
       <section className="stats-v2">
         <div className="container">
           <div className="stats-grid-v2">
@@ -226,12 +229,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════ SERVICES ═══════ */}
-      <section id="services" className="section services-section" style={{ background: "#fff" }}>
+      <section id="solar-services" className="section services-section" style={{ background: "#fff" }}>
         <div className="container">
           <AnimSection>
             <h2 className="section-title">Our Solar <span className="highlight">Services</span></h2>
-            <p className="section-subtitle">Comprehensive solar solutions designed to power every need — from small homes to large industries.</p>
+            <p className="section-subtitle">Comprehensive solar solutions designed to power every need - from small homes to large industries.</p>
           </AnimSection>
           <div className="services-grid-v2">
             {services.map((s, i) => (

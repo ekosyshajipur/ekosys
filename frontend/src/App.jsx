@@ -11,7 +11,8 @@ import ScrollToTop from "./components/ScrollToTop";
 import { OrganizationSchema, WebSiteSchema } from "./components/SchemaMarkup";
 import FloatingContact from "./components/FloatingContact";
 
-/* Lazy Load Pages for Performance (Phase 5) */
+/* Lazy Load Pages for Performance */
+const LandingPortal = lazy(() => import("./pages/LandingPortal"));
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Products = lazy(() => import("./pages/Products"));
@@ -73,21 +74,21 @@ function CanonicalHelper() {
   );
 }
 
-function App() {
+function AppContent() {
+  const location = useLocation();
+  const isLandingPage = location.pathname === "/";
+
   return (
-    <Router>
-      <CanonicalHelper />
-      <OrganizationSchema />
-      <WebSiteSchema />
-
+    <>
       <Navbar />
-      <ScrollToTop />
+      {!isLandingPage && <ScrollToTop />}
 
-      <main className="app-content">
+      <main className={isLandingPage ? "landing-main-wrapper" : "app-content"}>
         <Suspense fallback={<PageSkeleton />}>
           <Routes>
             {/* Main Website Pages */}
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<LandingPortal />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
             <Route path="/subsidy" element={<Subsidy />} />
@@ -131,11 +132,20 @@ function App() {
         </Suspense>
       </main>
 
-      <Footer />
-      <PopupForm />
-      
-      {/* Global CTAs */}
+      {!isLandingPage && <Footer />}
+      {!isLandingPage && <PopupForm />}
       <FloatingContact />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <CanonicalHelper />
+      <OrganizationSchema />
+      <WebSiteSchema />
+      <AppContent />
     </Router>
   );
 }
