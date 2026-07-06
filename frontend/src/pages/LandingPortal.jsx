@@ -69,7 +69,7 @@ const LandingPortal = () => {
               whileHover={{ scale: 1.02 }}
               style={{ display: 'flex', width: '100%', perspective: 1000 }}
             >
-              <a href="http://ekosys.facade.in" className="landing-card facade">
+              <a href="https://facade.ekosys.in/" className="landing-card facade" target="_blank" rel="noopener noreferrer">
                 <div className="card-image-container">
                   <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop" alt="Architectural Facade" className="card-image" />
                   <div className="card-image-overlay"></div>
