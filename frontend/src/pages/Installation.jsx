@@ -1,8 +1,45 @@
 import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
+import { BreadcrumbSchema } from '../components/SchemaMarkup';
 
 export default function Installation() {
   return (
     <>
+      <Helmet>
+        <title>Solar Installation Process Bihar | 8-Step Guide | EKOSYS</title>
+        <meta name="description" content="Professional solar installation in 3-5 days across Bihar. Free consultation, site survey, custom design, DISCOM approval, installation & net metering by EKOSYS engineers." />
+        <meta name="keywords" content="solar installation Bihar, solar panel installation process, rooftop solar installation, EKOSYS installation, solar installation steps, solar installation guide Bihar" />
+        <link rel="canonical" href="https://ekosys.in/installation" />
+        <meta property="og:title" content="Solar Installation Process Bihar | 8-Step Guide | EKOSYS" />
+        <meta property="og:description" content="Professional solar installation in 3-5 days across Bihar. Free consultation, site survey, custom design, DISCOM approval, and net metering." />
+        <meta property="og:url" content="https://ekosys.in/installation" />
+        <meta property="og:image" content="https://ekosys.in/images/installation.webp" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Solar Installation Process Bihar | EKOSYS" />
+        <meta name="twitter:description" content="Professional solar installation in 3-5 days across Bihar." />
+        <meta name="twitter:image" content="https://ekosys.in/images/installation.webp" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "HowTo",
+          "name": "How to Install a Solar Power System in Bihar",
+          "description": "The complete 8-step process for residential, commercial, and industrial solar panel installation by EKOSYS.",
+          "step": [
+            { "@type": "HowToStep", "position": 1, "name": "Free Site Survey", "text": "Our engineers visit your site to assess roof space, shadowing, structure, and load requirements." },
+            { "@type": "HowToStep", "position": 2, "name": "Custom System Design", "text": "We design a system tailored to your budget and energy needs." },
+            { "@type": "HowToStep", "position": 3, "name": "Government Approvals", "text": "We handle all DISCOM approvals and PM Surya Ghar subsidy registrations." },
+            { "@type": "HowToStep", "position": 4, "name": "Professional Installation", "text": "Our certified team installs the mounting structures, solar panels, and wiring." },
+            { "@type": "HowToStep", "position": 5, "name": "Net Meter & Commissioning", "text": "DISCOM installs the bi-directional net meter. The system is tested and commissioned." },
+            { "@type": "HowToStep", "position": 6, "name": "Subsidy Disbursement", "text": "We upload all necessary documents to the national portal for your subsidy." },
+            { "@type": "HowToStep", "position": 7, "name": "Monitoring & Maintenance", "text": "We provide comprehensive maintenance and monitoring." },
+            { "@type": "HowToStep", "position": 8, "name": "Long-Term Performance", "text": "Enjoy 25+ years of clean, sustainable power generation." }
+          ]
+        })}</script>
+      </Helmet>
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: 'https://ekosys.in/' },
+        { name: 'Installation Process', url: 'https://ekosys.in/installation' }
+      ]} />
       <section className="page-header">
         <div className="container">
           <h1>

@@ -35,6 +35,7 @@ export default function Navbar() {
     { to: "/industrial-solar-bihar", label: "Industrial Solar" },
     { to: "/solar-maintenance", label: "Solar Maintenance" },
     { to: "/solar-installation-bihar", label: "Installation Services" },
+    { to: "/facade", label: "Facade Engineering" },
   ];
 
   const afterLinks = [
@@ -61,10 +62,7 @@ export default function Navbar() {
                 alt="EKOSYS"
                 className="nav-logo-img-v2"
               />
-              <div className="nav-logo-text-v2">
-                <span className="logo-title-v2">EKOSYS</span>
-                <span className="logo-subtitle-v2">SOLAR EPC & EXTERIOR WORKS</span>
-              </div>
+              
             </Link>
 
             {/* Desktop Navigation */}

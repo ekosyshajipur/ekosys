@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { FAQSchema, BreadcrumbSchema } from "../components/SchemaMarkup";
+import { FAQSchema, BreadcrumbSchema, VideoObjectSchema } from "../components/SchemaMarkup";
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { FiArrowRight, FiSun, FiZap, FiShield, FiTool, FiCheckCircle, FiStar, FiMapPin, FiPhone, FiMail, FiLayers, FiHome } from "react-icons/fi";
@@ -139,6 +139,13 @@ export default function Home() {
       <FAQSchema faqs={faqs} />
       
       <BreadcrumbSchema items={[{ name: 'Home', url: 'https://ekosys.in/' }]} />
+      <VideoObjectSchema
+        name="EKOSYS Solar Panel Installation"
+        description="High-quality solar panel installation services by EKOSYS in Bihar."
+        thumbnailUrl="https://ekosys.in/images/hero-banner.webp"
+        uploadDate="2025-05-01"
+        contentUrl="https://assets.mixkit.co/videos/preview/mixkit-solar-panels-on-a-roof-40618-large.mp4"
+      />
 
       {/* ═══════ HERO ═══════ */}
       <section className="hero-v2">
@@ -149,6 +156,7 @@ export default function Home() {
           muted
           playsInline
           className="hero-video-bg"
+          poster="/images/hero-banner.webp"
         >
           <source src="https://assets.mixkit.co/videos/preview/mixkit-solar-panels-on-a-roof-40618-large.mp4" type="video/mp4" />
         </video>

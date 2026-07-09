@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
+import { BreadcrumbSchema } from '../components/SchemaMarkup';
 
 const categoryBanners = {
   solarSystems: {
@@ -208,11 +210,45 @@ export default function Products() {
 
   return (
     <>
+      <Helmet>
+        <title>Solar Products Bihar | Panels, Inverters, Batteries | EKOSYS</title>
+        <meta name="description" content="Buy premium solar panels, inverters, batteries at best prices in Bihar. Adani, Tata, Waaree, Luminous authorized dealer. Free delivery & installation by EKOSYS." />
+        <meta name="keywords" content="solar products Bihar, solar panels Bihar, solar inverter, solar battery, EKOSYS products, buy solar panel online Bihar" />
+        <link rel="canonical" href="https://ekosys.in/products" />
+        <meta property="og:title" content="Solar Products Bihar | Panels, Inverters, Batteries | EKOSYS" />
+        <meta property="og:description" content="Buy premium solar panels, inverters, batteries at best prices in Bihar. Adani, Tata, Waaree, Luminous authorized dealer." />
+        <meta property="og:url" content="https://ekosys.in/products" />
+        <meta property="og:image" content="https://ekosys.in/images/products.webp" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Solar Products Bihar | EKOSYS" />
+        <meta name="twitter:description" content="Buy premium solar panels, inverters, batteries at best prices in Bihar." />
+        <meta name="twitter:image" content="https://ekosys.in/images/products.webp" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Solar Products Catalog",
+          "description": "Catalog of premium solar panels, inverters, and batteries available from EKOSYS in Bihar.",
+          "url": "https://ekosys.in/products",
+          "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Solar Systems", "url": "https://ekosys.in/products" },
+              { "@type": "ListItem", "position": 2, "name": "Specialty Solar Products", "url": "https://ekosys.in/products" },
+              { "@type": "ListItem", "position": 3, "name": "Power & Voltage Units", "url": "https://ekosys.in/products" }
+            ]
+          }
+        })}</script>
+      </Helmet>
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: 'https://ekosys.in/' },
+        { name: 'Solar Products', url: 'https://ekosys.in/products' }
+      ]} />
       {/* Page Header */}
       <section className="page-header products-hero">
         <div className="container">
           <h1>
-            Our <span className="highlight">Products</span>
+            Premium Solar <span className="highlight">Products & Equipment</span>
           </h1>
           <p>
             EKOSYS offers a comprehensive range of solar energy solutions, power
@@ -231,7 +267,7 @@ export default function Products() {
               src="/images/products.webp"
               alt="EKOSYS Product Range"
               decoding="async"
-              fetchPriority="high"
+              fetchpriority="high"
               width="800"
               height="400"
             />

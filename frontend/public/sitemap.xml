@@ -5,7 +5,7 @@
   <!-- ═══════ Main Pages ═══════ -->
   <url>
     <loc>https://ekosys.in/</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -14,14 +14,24 @@
     </image:image>
   </url>
   <url>
+    <loc>https://ekosys.in/home</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://ekosys.in/images/hero-banner.webp</image:loc>
+      <image:title>EKOSYS Solar EPC Solutions Bihar</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://ekosys.in/about</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ekosys.in/products</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -31,19 +41,19 @@
   </url>
   <url>
     <loc>https://ekosys.in/subsidy</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ekosys.in/installation</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ekosys.in/contact</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -51,13 +61,13 @@
   <!-- ═══════ Solar Comparison & Calculator (AI/Voice SEO) ═══════ -->
   <url>
     <loc>https://ekosys.in/solar-system-comparison</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ekosys.in/solar-calculator</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -65,73 +75,73 @@
   <!-- ═══════ City Landing Pages (Local SEO) ═══════ -->
   <url>
     <loc>https://ekosys.in/solar-company-patna</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ekosys.in/solar-company-vaishali</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ekosys.in/solar-company-hajipur</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ekosys.in/solar-company-muzaffarpur</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ekosys.in/solar-company-samastipur</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ekosys.in/solar-company-begusarai</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ekosys.in/solar-company-darbhanga</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ekosys.in/solar-company-chapra</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ekosys.in/solar-company-gaya</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ekosys.in/solar-company-nalanda</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ekosys.in/solar-company-bhagalpur</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ekosys.in/solar-company-motihari</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -139,67 +149,81 @@
   <!-- ═══════ Blog Pages ═══════ -->
   <url>
     <loc>https://ekosys.in/blog</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ekosys.in/blog/benefits-of-solar-energy</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ekosys.in/blog/solar-subsidy-in-bihar</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ekosys.in/blog/how-solar-reduces-electricity-bill</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ekosys.in/blog/best-solar-company-in-bihar</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ekosys.in/blog/rooftop-solar-guide</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ekosys.in/blog/solar-panel-maintenance-tips</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ekosys.in/blog/solar-for-farmers-bihar</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ekosys.in/blog/commercial-solar-bihar</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ekosys.in/blog/net-metering-guide-bihar</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ekosys.in/blog/on-grid-vs-off-grid-solar</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  
+  <url>
+    <loc>https://ekosys.in/blog/bihar-solar-revolution</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ekosys.in/blog/free-solar-panel-scheme</loc>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -207,37 +231,37 @@
   <!-- ═══════ SEO Landing Pages ═══════ -->
   <url>
     <loc>https://ekosys.in/solar-installation-bihar</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ekosys.in/rooftop-solar-bihar</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ekosys.in/residential-solar-bihar</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ekosys.in/industrial-solar-bihar</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ekosys.in/solar-maintenance</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ekosys.in/solar-subsidy-bihar</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -245,51 +269,97 @@
   <!-- ═══════ Product Pages ═══════ -->
   <url>
     <loc>https://ekosys.in/products/solar-panels/mono-perc-half-cut-solar-panel</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ekosys.in/products/solar-panels/bifacial-solar-panel</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ekosys.in/products/solar-panels/polycrystalline-solar-panel</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ekosys.in/products/solar-inverters/on-grid-solar-inverter</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ekosys.in/products/solar-inverters/hybrid-solar-inverter</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ekosys.in/products/solar-inverters/off-grid-solar-inverter</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ekosys.in/products/solar-batteries/lithium-ion-solar-battery</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ekosys.in/products/solar-batteries/tubular-lead-acid-battery</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
+
+  <!-- ═══════ Architectural Facade Pages ═══════ -->
+  <url>
+    <loc>https://ekosys.in/facade</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ekosys.in/facade/structural-glazing</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ekosys.in/facade/curtain-walls</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ekosys.in/facade/acp-cladding</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ekosys.in/facade/glass-facade</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ekosys.in/facade/aluminium-facade</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ═══════ HTML Sitemap ═══════ -->
+  <url>
+    <loc>https://ekosys.in/sitemap</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>

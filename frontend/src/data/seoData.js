@@ -12,7 +12,7 @@ export const businessInfo = {
   logo: "https://ekosys.in/images/ekosys-logo.webp",
   image: "https://ekosys.in/images/hero-banner.webp",
   description:
-    "EKOSYS is Bihar's leading solar installation company providing rooftop solar systems, industrial solar solutions, residential solar panels, solar batteries, inverters, and government subsidy assistance across Vaishali, Hajipur, Patna, and all of Bihar.",
+    "EKOSYS is Bihar's leading engineering company providing Solar EPC solutions (rooftop systems, industrial solar, subsidies) and premium Architectural Facade Engineering (structural glazing, curtain walls, ACP cladding) across Bihar.",
   phone: "+91-8757686826",
   email: "corp.ekosys@gmail.com",
   address: {
@@ -192,6 +192,30 @@ export const serviceTypes = [
     description:
       "Free expert solar consultation and on-site survey to design the optimal solar system for your needs.",
   },
+  {
+    name: "Architectural Facade Engineering",
+    slug: "architectural-facade-engineering",
+    description:
+      "Premium architectural facade engineering including structural glazing, curtain walls, and ACP cladding.",
+  },
+  {
+    name: "Structural Glazing",
+    slug: "structural-glazing",
+    description:
+      "High-quality structural glazing solutions for commercial and corporate building exteriors.",
+  },
+  {
+    name: "Unitized Curtain Walls",
+    slug: "unitized-curtain-walls",
+    description:
+      "Advanced unitized curtain wall systems for rapid installation and superior weather resistance.",
+  },
+  {
+    name: "ACP Cladding",
+    slug: "acp-cladding",
+    description:
+      "Durable and aesthetically pleasing Aluminum Composite Panel (ACP) cladding for modern building facades.",
+  },
 ];
 
 // ---------------------------------------------------------------------------
@@ -244,3 +268,67 @@ export const testimonialsSummary = {
     },
   ],
 };
+
+// ---------------------------------------------------------------------------
+// Facade Service Types — Architectural Facade Engineering services
+// ---------------------------------------------------------------------------
+export const facadeServiceTypes = [
+  {
+    name: 'Structural Glazing',
+    slug: 'structural-glazing',
+    description: 'High-performance structural glazing solutions using silicone-bonded glass panels for seamless, frameless modern building exteriors.',
+  },
+  {
+    name: 'Unitized Curtain Walls',
+    slug: 'curtain-walls',
+    description: 'Factory-assembled unitized curtain wall systems for rapid on-site installation with superior weather sealing and thermal performance.',
+  },
+  {
+    name: 'ACP Cladding',
+    slug: 'acp-cladding',
+    description: 'Durable Aluminium Composite Panel (ACP) cladding for modern, weather-resistant, and aesthetically striking commercial building exteriors.',
+  },
+  {
+    name: 'Glass Facade',
+    slug: 'glass-facade',
+    description: 'Premium glass facade engineering with double-glazed, laminated, and tinted glass solutions for energy-efficient commercial buildings.',
+  },
+  {
+    name: 'Aluminium Facade',
+    slug: 'aluminium-facade',
+    description: 'Lightweight, corrosion-resistant aluminium facade systems with thermal break profiles for high-rise and commercial structures.',
+  },
+  {
+    name: 'Spider Glazing',
+    slug: 'spider-glazing',
+    description: 'Point-supported spider glazing systems using stainless steel fittings for transparent, minimalist architectural designs.',
+  },
+  {
+    name: 'Building Envelope',
+    slug: 'building-envelope',
+    description: 'Complete building envelope solutions combining facade cladding, waterproofing, insulation, and ventilation systems.',
+  },
+  {
+    name: 'Facade Maintenance',
+    slug: 'facade-maintenance',
+    description: 'Professional facade maintenance, cleaning, and repair services for commercial and high-rise buildings in Bihar.',
+  }
+];
+
+// ---------------------------------------------------------------------------
+// State Service Areas — States where EKOSYS operates
+// ---------------------------------------------------------------------------
+export const stateServiceAreas = [
+  { name: 'Bihar', slug: 'bihar' },
+  { name: 'Jharkhand', slug: 'jharkhand' },
+];
+
+// ---------------------------------------------------------------------------
+// Entity Data — Knowledge graph data for the company
+// ---------------------------------------------------------------------------
+export const entityData = {
+  founders: ['Ranjeet Kumar'],
+  parentOrganization: 'EKOSYS Group',
+  keyPeople: ['Ranjeet Kumar (Founder & CEO)'],
+};
+

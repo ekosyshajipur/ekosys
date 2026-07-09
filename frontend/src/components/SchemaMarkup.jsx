@@ -134,6 +134,35 @@ export function OrganizationSchema() {
         ],
       })),
     },
+    department: [
+      {
+        '@type': 'Organization',
+        name: 'EKOSYS Solar EPC Division',
+        description: 'End-to-end solar energy solutions including rooftop, commercial, and industrial solar installations.',
+        url: `${businessInfo.url}/home`,
+      },
+      {
+        '@type': 'Organization', 
+        name: 'EKOSYS Facade Engineering Division',
+        description: 'Premium architectural facade engineering including structural glazing, curtain walls, and ACP cladding.',
+        url: `${businessInfo.url}/facade`,
+      },
+    ],
+    knowsAbout: [
+      'Solar Energy', 'Photovoltaic Systems', 'Solar EPC', 'Rooftop Solar',
+      'Net Metering', 'PM Surya Ghar Yojana', 'Solar Inverters', 'Solar Batteries',
+      'Architectural Facade', 'Structural Glazing', 'Curtain Wall Systems',
+      'ACP Cladding', 'Glass Facade', 'Aluminium Facade', 'Building Envelope',
+    ],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: testimonialsSummary.aggregateRating.ratingValue,
+      reviewCount: testimonialsSummary.aggregateRating.reviewCount,
+      bestRating: 5,
+      worstRating: 1,
+    },
+    numberOfEmployees: { '@type': 'QuantitativeValue', value: '50+' },
+    slogan: 'Engineering the Future',
   };
 
   return <JsonLd data={schema} />;
@@ -280,8 +309,8 @@ export function ServiceSchema({ service }) {
       url: businessInfo.url,
       logo: businessInfo.logo,
     },
-    areaServed: (service.areaServed || serviceAreas).map((area) => ({
-      "@type": "City",
+    areaServed: (Array.isArray(service.areaServed) ? service.areaServed : (service.areaServed ? [service.areaServed] : serviceAreas)).map((area) => ({
+      "@type": "Place",
       name: typeof area === "string" ? area : area.name,
     })),
     serviceType: service.name,
@@ -369,4 +398,147 @@ export function ArticleSchemaMeta({
       <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
     </Helmet>
   );
+}
+
+// ===========================================================================
+// WebPageSchema
+// Renders a WebPage (or subtype) schema with optional speakable support.
+// Props: { type?, name, description, url, speakableCssSelectors? }
+// ===========================================================================
+export function WebPageSchema({ type = 'WebPage', name, description, url, speakableCssSelectors }) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': type,
+    name,
+    description,
+    url,
+    isPartOf: { '@id': `${businessInfo.url}/#website` },
+    about: { '@id': `${businessInfo.url}/#organization` },
+    ...(speakableCssSelectors && {
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: speakableCssSelectors,
+      },
+    }),
+  };
+  return <JsonLd data={schema} />;
+}
+
+// ===========================================================================
+// HowToSchema
+// Renders a HowTo schema from an array of step objects.
+// Props: { name, description, steps: Array<{ name, text, image? }>, totalTime? }
+// ===========================================================================
+export function HowToSchema({ name, description, steps, totalTime }) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name,
+    description,
+    ...(totalTime && { totalTime }),
+    step: steps.map((step, index) => ({
+      '@type': 'HowToStep',
+      position: index + 1,
+      name: step.name,
+      text: step.text,
+      ...(step.image && { image: step.image }),
+    })),
+  };
+  return <JsonLd data={schema} />;
+}
+
+// ===========================================================================
+// ItemListSchema
+// Renders an ItemList schema for collection/list pages.
+// Props: { name, items: Array<{ name, url, position?, image?, description? }> }
+// ===========================================================================
+export function ItemListSchema({ name, items }) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name,
+    numberOfItems: items.length,
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: item.position || index + 1,
+      name: item.name,
+      url: item.url,
+      ...(item.image && { image: item.image }),
+      ...(item.description && { description: item.description }),
+    })),
+  };
+  return <JsonLd data={schema} />;
+}
+
+// ===========================================================================
+// VideoObjectSchema
+// Renders a VideoObject schema for embedded videos.
+// Props: { name, description, thumbnailUrl, uploadDate, contentUrl?, embedUrl?, duration? }
+// ===========================================================================
+export function VideoObjectSchema({ name, description, thumbnailUrl, uploadDate, contentUrl, embedUrl, duration }) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name,
+    description,
+    thumbnailUrl,
+    uploadDate,
+    ...(contentUrl && { contentUrl }),
+    ...(embedUrl && { embedUrl }),
+    ...(duration && { duration }),
+    publisher: {
+      '@type': 'Organization',
+      name: businessInfo.name,
+      logo: { '@type': 'ImageObject', url: businessInfo.logo },
+    },
+  };
+  return <JsonLd data={schema} />;
+}
+
+// ===========================================================================
+// AggregateRatingSchema
+// Renders an AggregateRating for the organization.
+// ===========================================================================
+export function AggregateRatingSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    '@id': `${businessInfo.url}/#organization`,
+    name: businessInfo.name,
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: testimonialsSummary.aggregateRating.ratingValue,
+      reviewCount: testimonialsSummary.aggregateRating.reviewCount,
+      bestRating: 5,
+      worstRating: 1,
+    },
+  };
+  return <JsonLd data={schema} />;
+}
+
+// ===========================================================================
+// ProfessionalServiceSchema
+// Renders a ProfessionalService schema for facade/engineering service pages.
+// Props: { name, description, url, image?, areaServed? }
+// ===========================================================================
+export function ProfessionalServiceSchema({ name, description, url, image, areaServed }) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name,
+    description,
+    url,
+    ...(image && { image }),
+    provider: {
+      '@type': 'Organization',
+      '@id': `${businessInfo.url}/#organization`,
+      name: businessInfo.name,
+    },
+    areaServed: areaServed || [
+      { '@type': 'State', name: 'Bihar' },
+      { '@type': 'State', name: 'Jharkhand' },
+      { '@type': 'Country', name: 'India' },
+    ],
+  };
+  return <JsonLd data={schema} />;
 }

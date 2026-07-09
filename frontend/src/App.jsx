@@ -19,6 +19,16 @@ const Products = lazy(() => import("./pages/Products"));
 const Subsidy = lazy(() => import("./pages/Subsidy"));
 const Installation = lazy(() => import("./pages/Installation"));
 const Contact = lazy(() => import("./pages/Contact"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const HTMLSitemap = lazy(() => import("./pages/HTMLSitemap"));
+
+/* Facade Pages */
+const FacadeHub = lazy(() => import("./pages/facade/FacadeHub"));
+const StructuralGlazing = lazy(() => import("./pages/facade/StructuralGlazing"));
+const CurtainWalls = lazy(() => import("./pages/facade/CurtainWalls"));
+const AcpCladding = lazy(() => import("./pages/facade/AcpCladding"));
+const GlassFacade = lazy(() => import("./pages/facade/GlassFacade"));
+const AluminiumFacade = lazy(() => import("./pages/facade/AluminiumFacade"));
 
 /* Dynamic City Pages */
 const CityPage = lazy(() => import("./pages/CityPage"));
@@ -114,6 +124,17 @@ function AppContent() {
             <Route path="/solar-maintenance" element={<SolarMaintenance />} />
             <Route path="/solar-subsidy-bihar" element={<SolarSubsidyBihar />} />
 
+            {/* Facade Pages */}
+            <Route path="/facade" element={<FacadeHub />} />
+            <Route path="/facade/structural-glazing" element={<StructuralGlazing />} />
+            <Route path="/facade/curtain-walls" element={<CurtainWalls />} />
+            <Route path="/facade/acp-cladding" element={<AcpCladding />} />
+            <Route path="/facade/glass-facade" element={<GlassFacade />} />
+            <Route path="/facade/aluminium-facade" element={<AluminiumFacade />} />
+
+            {/* HTML Sitemap */}
+            <Route path="/sitemap" element={<HTMLSitemap />} />
+
             {/* Blog Pages */}
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/benefits-of-solar-energy" element={<BenefitsOfSolarEnergy />} />
@@ -128,6 +149,7 @@ function AppContent() {
             <Route path="/blog/commercial-solar-bihar" element={<CommercialSolarBihar />} />
             <Route path="/blog/net-metering-guide-bihar" element={<NetMeteringGuideBihar />} />
             <Route path="/blog/on-grid-vs-off-grid-solar" element={<OnGridVsOffGridSolar />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
       </main>

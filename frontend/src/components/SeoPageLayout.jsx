@@ -47,7 +47,7 @@ export default function SeoPageLayout({
         { name: 'Home', url: 'https://ekosys.in/' },
         { name: pageTitle, url: canonicalUrl || 'https://ekosys.in/' }
       ]} />
-      {serviceName && <ServiceSchema service={{ name: serviceName, description: metaDescription, provider: businessInfo.name, areaServed: 'Bihar, India', url: canonicalUrl || 'https://ekosys.in/' }} />}
+      <ServiceSchema service={{ name: serviceName || pageTitle, description: metaDescription, provider: businessInfo.name, url: canonicalUrl || 'https://ekosys.in/' }} />
 
       {/* Hero Section */}
       <section className="seo-hero-section">

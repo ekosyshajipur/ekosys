@@ -1,6 +1,43 @@
+import { Helmet } from 'react-helmet-async';
+import { BreadcrumbSchema } from '../components/SchemaMarkup';
+
 export default function Subsidy() {
   return (
     <>
+      <Helmet>
+        <title>Solar Subsidy Bihar 2026 | PM Surya Ghar Yojana | Up to ₹78,000 | EKOSYS</title>
+        <meta name="description" content="Get up to ₹78,000 solar subsidy in Bihar under PM Surya Ghar Muft Bijli Yojana. EKOSYS handles complete application, approval & disbursement process. Call +91-8757686826." />
+        <meta name="keywords" content="solar subsidy Bihar, PM Surya Ghar Yojana, solar panel subsidy, government subsidy solar, free solar scheme Bihar, EKOSYS subsidy assistance, rooftop solar subsidy" />
+        <link rel="canonical" href="https://ekosys.in/subsidy" />
+        <meta property="og:title" content="Solar Subsidy Bihar 2026 | PM Surya Ghar Yojana | EKOSYS" />
+        <meta property="og:description" content="Get up to ₹78,000 solar subsidy in Bihar under PM Surya Ghar Muft Bijli Yojana. EKOSYS handles complete application, approval & disbursement process." />
+        <meta property="og:url" content="https://ekosys.in/subsidy" />
+        <meta property="og:image" content="https://ekosys.in/images/subsidy.webp" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Solar Subsidy Bihar 2026 | PM Surya Ghar Yojana" />
+        <meta name="twitter:description" content="Get up to ₹78,000 solar subsidy in Bihar under PM Surya Ghar Muft Bijli Yojana." />
+        <meta name="twitter:image" content="https://ekosys.in/images/subsidy.webp" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "GovernmentService",
+          "name": "PM Surya Ghar Muft Bijli Yojana Subsidy Assistance",
+          "description": "Assistance with application, approval, and disbursement of government solar subsidy in Bihar.",
+          "provider": {
+            "@type": "Organization",
+            "name": "EKOSYS",
+            "url": "https://ekosys.in"
+          },
+          "areaServed": {
+            "@type": "State",
+            "name": "Bihar"
+          }
+        })}</script>
+      </Helmet>
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: 'https://ekosys.in/' },
+        { name: 'Government Subsidy', url: 'https://ekosys.in/subsidy' }
+      ]} />
       <section className="page-header">
         <div className="container">
           <h1>

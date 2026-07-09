@@ -15,6 +15,16 @@ User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
 
+# Social Media & Crawlers (Facebook, Twitter, LinkedIn)
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
 # Google Image Bot
 User-agent: Googlebot-Image
 Allow: /images/

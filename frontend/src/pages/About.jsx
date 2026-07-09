@@ -1,8 +1,41 @@
 import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
+import { BreadcrumbSchema } from '../components/SchemaMarkup';
 
 export default function About() {
   return (
     <>
+      <Helmet>
+        <title>About EKOSYS | Solar EPC & Facade Engineering Company Bihar</title>
+        <meta name="description" content="EKOSYS is Bihar's trusted engineering company with 15+ years in Solar EPC and Architectural Facade Engineering. 1000+ projects, 100% customer satisfaction. Hajipur, Bihar." />
+        <meta name="keywords" content="about EKOSYS, solar company Bihar, facade engineering Bihar, EKOSYS Hajipur, solar EPC company, architectural facade company India" />
+        <link rel="canonical" href="https://ekosys.in/about" />
+        <meta property="og:title" content="About EKOSYS | Solar EPC & Facade Engineering Company" />
+        <meta property="og:description" content="Bihar's trusted engineering company — Solar EPC and Architectural Facade solutions. 15+ years, 1000+ projects." />
+        <meta property="og:url" content="https://ekosys.in/about" />
+        <meta property="og:image" content="https://ekosys.in/images/about.webp" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About EKOSYS | Solar EPC & Facade Engineering" />
+        <meta name="twitter:description" content="Bihar's trusted engineering company — Solar EPC and Architectural Facade solutions." />
+        <meta name="twitter:image" content="https://ekosys.in/images/about.webp" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "name": "About EKOSYS",
+          "description": "EKOSYS is Bihar's trusted engineering company with expertise in Solar EPC and Architectural Facade Engineering.",
+          "url": "https://ekosys.in/about",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "EKOSYS",
+            "url": "https://ekosys.in"
+          }
+        })}</script>
+      </Helmet>
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: 'https://ekosys.in/' },
+        { name: 'About Us', url: 'https://ekosys.in/about' }
+      ]} />
       <section className="page-header">
         <div className="container">
           <h1>

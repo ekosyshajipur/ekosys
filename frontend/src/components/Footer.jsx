@@ -7,7 +7,7 @@ export default function Footer() {
     <>
       <footer className="footer">
         <div className="container">
-          <div className="footer-grid">
+          <div className="footer-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' }}>
             <div className="footer-about">
               <img
                 src="/images/navLogo.png"
@@ -27,54 +27,54 @@ export default function Footer() {
                 solutions, helping homes, businesses, and institutions build
                 cleaner energy systems and stronger modern facades.
               </p>
-              <p>
-                📞 8757686826
-                <br />✉ corp.ekosys@gmail.com
-                <br />
-                📍Hajipur, Vaishali, Bihar
+            </div>
+            
+            <div className="footer-links">
+              <h4>Company</h4>
+              <Link to="/home">Home</Link>
+              <Link to="/about">About Us</Link>
+              <Link to="/blog">Blog & News</Link>
+              <Link to="/contact">Contact Us</Link>
+            </div>
+
+            <div className="footer-links">
+              <h4>Solar EPC</h4>
+              <Link to="/products">Solar Products</Link>
+              <Link to="/rooftop-solar-bihar">Rooftop Solar</Link>
+              <Link to="/industrial-solar-bihar">Industrial Solar</Link>
+              <Link to="/subsidy">Govt Subsidy Assistance</Link>
+              <Link to="/installation">Installation Guide</Link>
+              <p style={{ marginTop: "10px", color: "#f59e0b", fontStyle: "italic", fontSize: "0.85rem", lineHeight: 1.4 }}>
+                "PM सूर्य घर योजना के तहत ₹78,000 तक की सब्सिडी"
               </p>
             </div>
+
             <div className="footer-links">
-              <h4>Quick Links</h4>
-              <Link to="/">Home</Link>
-              <Link to="/about">About Us</Link>
-              <Link to="/products">Products</Link>
-              <Link to="/subsidy">Govt Subsidy</Link>
-              <Link to="/installation">Installation</Link>
-              <Link to="/contact">Contact Us</Link>
+              <h4>Facade Engineering</h4>
+              <Link to="/facade">Facade Hub</Link>
+              <Link to="/facade/structural-glazing">Structural Glazing</Link>
+              <Link to="/facade/curtain-walls">Curtain Walls</Link>
+              <Link to="/facade/acp-cladding">ACP Cladding</Link>
+              <Link to="/facade/glass-facade">Glass Facade</Link>
+              <Link to="/facade/aluminium-facade">Aluminium Facade</Link>
             </div>
+
             <div className="footer-links">
-              <h4>Our Products</h4>
-              <Link to="/products">On-Grid / Off-Grid / Hybrid</Link>
-              <Link to="/products">Solar Street Lights</Link>
-              <Link to="/products">Solar Water Heaters</Link>
-              <Link to="/products">Solar Water Pumps</Link>
-              <Link to="/products">Inverters & Batteries</Link>
-              <Link to="/products">UPS & Stabilizers</Link>
-            </div>
-            <div className="footer-links">
-              <h4>Support</h4>
-              <Link to="/contact">Contact Us</Link>
-              <Link to="/installation">Installation Guide</Link>
-              <Link to="/subsidy">Subsidy Information</Link>
-              <p
-                style={{
-                  marginTop: "20px",
-                  color: "#f59e0b",
-                  fontStyle: "italic",
-                  fontSize: "0.9rem",
-                }}
-              >
-                "PM सूर्य घर योजना के तहत ₹78,000 तक की सब्सिडी प्राप्त करें -
-                भारत सरकार"
+              <h4>Contact & Support</h4>
+              <p style={{ color: '#cbd5e1', fontSize: '0.9rem', marginBottom: '15px' }}>
+                📞 +91-8757686826
+                <br />✉ corp.ekosys@gmail.com
+                <br />
+                📍 Hajipur, Vaishali, Bihar
               </p>
               <a
                 href="https://biziverse.com/Index.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-login-btn"
+                style={{ display: 'inline-block' }}
               >
-                Login
+                Employee Login
               </a>
             </div>
           </div>
