@@ -15,9 +15,9 @@ export default function Footer() {
                 loading="lazy"
                 decoding="async"
                 width="240"
-                height="75"
+                height="90"
                 style={{
-                  height: "75px",
+                  height: "90px",
                   marginBottom: "20px",
                   objectFit: "contain",
                 }}

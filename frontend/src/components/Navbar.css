@@ -9,12 +9,12 @@
 .nav-main { background: #fff; border-bottom: 1px solid rgba(0,0,0,.06); }
 .nav-main-inner {
   max-width: 1280px; margin: 0 auto; padding: 0 24px;
-  display: flex; align-items: center; justify-content: space-between; height: 72px;
+  display: flex; align-items: center; justify-content: space-between; height: 80px;
 }
 
 /* Logo */
 .nav-logo-v2 { display: flex; align-items: center; text-decoration: none; gap: 12px; }
-.nav-logo-img-v2 { height: 46px; width: auto; object-fit: contain; display: block; border-radius: 6px; }
+.nav-logo-img-v2 { height: 50px; width: auto; object-fit: contain; display: block; border-radius: 6px; }
 .nav-logo-text-v2 { display: flex; flex-direction: column; justify-content: center; }
 .logo-title-v2 { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 800; color: #0f172a; line-height: 1.2; letter-spacing: -0.3px; }
 .logo-subtitle-v2 { font-size: 0.65rem; font-weight: 600; color: #64748b; letter-spacing: 0.6px; text-transform: uppercase; }
