@@ -152,7 +152,7 @@ export default function Navbar() {
             transition={{ type: "tween", duration: 0.3 }}
           >
             <div className="mobile-menu-header">
-              <img src="/images/navLogo.png" alt="EKOSYS" className="mobile-menu-logo" style={{ height: "45px", width: "auto", objectFit: "contain" }} />
+              <img src="/images/navLogo.png" alt="EKOSYS" className="mobile-menu-logo" style={{ height: "45px", width: "auto", maxWidth: "none", flexShrink: 0, objectFit: "contain" }} />
               <div className="mobile-header-actions">
                 <button className="mobile-close-btn" onClick={() => setOpen(false)} aria-label="Close menu">
                   <FiChevronLeft size={22} />

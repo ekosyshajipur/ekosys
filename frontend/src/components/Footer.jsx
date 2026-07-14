@@ -18,6 +18,9 @@ export default function Footer() {
                 height="90"
                 style={{
                   height: "90px",
+                  width: "auto",
+                  maxWidth: "none",
+                  flexShrink: 0,
                   marginBottom: "20px",
                   objectFit: "contain",
                 }}

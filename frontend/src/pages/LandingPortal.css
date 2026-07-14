@@ -49,6 +49,8 @@
 .landing-logo {
   height: 80px;
   width: auto;
+  max-width: none;
+  flex-shrink: 0;
   object-fit: contain;
 }
 
