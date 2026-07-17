@@ -109,7 +109,7 @@ export default function Contact() {
             <div className="contact-info-card">
               <h2 style={{ marginBottom: 24 }}>Get in Touch</h2>
               <div className="contact-info-item"><div className="icon">📞</div><div><h4>Phone</h4><p>8757686826</p></div></div>
-              <div className="contact-info-item"><div className="icon">✉</div><div><h4>Email</h4><p>corp.ekosys@gmail.com</p></div></div>
+              <div className="contact-info-item"><div className="icon">✉</div><div><h4>Email</h4><p>ekosys.corp@gmail.com</p></div></div>
               <div className="contact-info-item"><div className="icon">📍</div><div><h4>Address</h4><p>EKOSYS</p><p>Hajipur, Vaishali, Bihar</p></div></div>
               <div className="contact-info-item"><div className="icon">🕐</div><div><h4>Business Hours</h4><p>Mon - Sat: 9:00 AM - 7:00 PM</p><p>Sunday: Closed</p></div></div>
               <div style={{ background: 'rgba(245,158,11,.1)', borderRadius: 12, padding: 20, marginTop: 16 }}>

@@ -14,7 +14,7 @@ export const businessInfo = {
   description:
     "EKOSYS is Bihar's leading engineering company providing Solar EPC solutions (rooftop systems, industrial solar, subsidies) and premium Architectural Facade Engineering (structural glazing, curtain walls, ACP cladding) across Bihar.",
   phone: "+91-8757686826",
-  email: "corp.ekosys@gmail.com",
+  email: "ekosys.corp@gmail.com",
   address: {
     street: "Main Road, Hajipur",
     city: "Hajipur",

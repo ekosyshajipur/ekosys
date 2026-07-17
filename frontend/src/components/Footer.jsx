@@ -17,10 +17,9 @@ export default function Footer() {
                 width="240"
                 height="90"
                 style={{
-                  height: "90px",
-                  width: "auto",
-                  maxWidth: "none",
-                  flexShrink: 0,
+                  height: "auto",
+                  width: "100%",
+                  maxWidth: "240px",
                   marginBottom: "20px",
                   objectFit: "contain",
                 }}
@@ -64,9 +63,9 @@ export default function Footer() {
 
             <div className="footer-links">
               <h4>Contact & Support</h4>
-              <p style={{ color: '#cbd5e1', fontSize: '0.9rem', marginBottom: '15px' }}>
+              <p style={{ color: '#475569', fontSize: '0.9rem', marginBottom: '15px' }}>
                 📞 +91-8757686826
-                <br />✉ corp.ekosys@gmail.com
+                <br />✉ ekosys.corp@gmail.com
                 <br />
                 📍 Hajipur, Vaishali, Bihar
               </p>

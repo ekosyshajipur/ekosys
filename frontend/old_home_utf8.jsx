@@ -468,7 +468,7 @@ export default function Home() {
               <h3>EKOSYS Solar Energy</h3>
               <p><FiMapPin /> 1st Floor, Tulsi Singh Complex, Marai Road, In Front Of Aakash Ganga TVS, Hajipur - 844101 (Bihar) India</p>
               <p><FiPhone /> <a href="tel:+918757686826">+91 8757686826</a></p>
-              <p><FiMail /> <a href="mailto:corp.ekosys@gmail.com">corp.ekosys@gmail.com</a></p>
+              <p><FiMail /> <a href="mailto:ekosys.corp@gmail.com">ekosys.corp@gmail.com</a></p>
               <p>­ƒòÉ Mon - Sat: 9:00 AM - 7:00 PM</p>
               <button className="btn btn-primary" onClick={openPopup} style={{ marginTop: 16 }}>Get Free Consultation <FiArrowRight /></button>
             </div>
