@@ -239,7 +239,7 @@ export default function BestSolarCompanyInBihar() {
                 <div className="blog-step-num">1</div>
                 <div>
                   <h3>Contact Us</h3>
-                  <p>Call us at <strong>+91 8757686826</strong> or fill out our <Link to="/contact">online form</Link>. Share your monthly electricity bill and rooftop details.</p>
+                  <p>Call us at <strong>+91 7644868086</strong> or fill out our <Link to="/contact">online form</Link>. Share your monthly electricity bill and rooftop details.</p>
                 </div>
               </div>
               <div className="blog-step">

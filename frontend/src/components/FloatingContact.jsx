@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { FaWhatsapp, FaPhoneAlt } from 'react-icons/fa';
 
-const WHATSAPP_URL = 'https://wa.me/918757686826?text=Hi%20EKOSYS%2C%20I%27m%20interested%20in%20solar%20installation.%20Please%20share%20details.';
-const PHONE_URL = 'tel:+918757686826';
+const WHATSAPP_URL = 'https://wa.me/917644868086?text=Hi%20EKOSYS%2C%20I%27m%20interested%20in%20solar%20installation.%20Please%20share%20details.';
+const PHONE_URL = 'tel:+917644868086';
 
 const FloatingContact = () => {
   const [showTooltipWA, setShowTooltipWA] = useState(false);

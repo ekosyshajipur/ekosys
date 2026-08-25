@@ -64,7 +64,7 @@ export default function Footer() {
             <div className="footer-links">
               <h4>Contact & Support</h4>
               <p style={{ color: '#475569', fontSize: '0.9rem', marginBottom: '15px' }}>
-                📞 +91-8757686826
+                📞 +91-7644868086
                 <br />✉ ekosys.corp@gmail.com
                 <br />
                 📍 Hajipur, Vaishali, Bihar

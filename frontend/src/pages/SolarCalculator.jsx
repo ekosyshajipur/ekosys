@@ -583,7 +583,7 @@ export default function SolarCalculator() {
                   Get Exact Quote from Our Engineers <FiArrowRight />
                 </button>
                 <a
-                  href={`https://wa.me/918757686826?text=Hi%20EKOSYS%2C%20I%20want%20a%20${calculations.recommendedSize}kW%20${systemType}%20solar%20system%20quote%20for%20${city}`}
+                  href={`https://wa.me/917644868086?text=Hi%20EKOSYS%2C%20I%20want%20a%20${calculations.recommendedSize}kW%20${systemType}%20solar%20system%20quote%20for%20${city}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-outline"

@@ -45,7 +45,7 @@ const sendWelcomeEmail = async (email) => {
         </div>
         <div style="background: #0f172a; padding: 24px; text-align: center;">
           <p style="color: #f59e0b; font-weight: 700; margin: 0 0 8px; font-size: 1.1rem;">EKOSYS Solar</p>
-          <p style="color: #94a3b8; margin: 0; font-size: 0.85rem;">📞 8757686826 | ✉ corp.ekosys@gmail.com</p>
+          <p style="color: #94a3b8; margin: 0; font-size: 0.85rem;">📞 7644868086 | ✉ corp.ekosys@gmail.com</p>
           <p style="color: #94a3b8; margin: 4px 0 0; font-size: 0.85rem;">📍 Hajipur, Vaishali, Bihar</p>
         </div>
       </div>
@@ -117,7 +117,7 @@ router.get('/send-weekly', async (req, res) => {
         </div>
         <div style="background: #0f172a; padding: 24px; text-align: center;">
           <p style="color: #f59e0b; font-weight: 700; margin: 0 0 8px; font-size: 1.1rem;">EKOSYS Solar</p>
-          <p style="color: #94a3b8; margin: 0; font-size: 0.85rem;">📞 8757686826 | ✉ corp.ekosys@gmail.com</p>
+          <p style="color: #94a3b8; margin: 0; font-size: 0.85rem;">📞 7644868086 | ✉ corp.ekosys@gmail.com</p>
           <p style="color: #94a3b8; margin: 4px 0 0; font-size: 0.85rem;">📍 Hajipur, Vaishali, Bihar</p>
           <p style="color: #64748b; margin: 12px 0 0; font-size: 0.75rem;">You're receiving this because you subscribed to EKOSYS Solar updates.</p>
         </div>

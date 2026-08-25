@@ -25,7 +25,7 @@ export default function Subsidy() {
     <>
       <Helmet>
         <title>Solar Subsidy Bihar 2026 | PM Surya Ghar Yojana | Up to ₹78,000 | EKOSYS</title>
-        <meta name="description" content="Get up to ₹78,000 solar subsidy in Bihar under PM Surya Ghar Muft Bijli Yojana. EKOSYS handles complete application, approval & disbursement process. Call +91-8757686826." />
+        <meta name="description" content="Get up to ₹78,000 solar subsidy in Bihar under PM Surya Ghar Muft Bijli Yojana. EKOSYS handles complete application, approval & disbursement process. Call +91-7644868086." />
         <meta name="keywords" content="solar subsidy Bihar, PM Surya Ghar Yojana, solar panel subsidy, government subsidy solar, free solar scheme Bihar, EKOSYS subsidy assistance, rooftop solar subsidy" />
         <link rel="canonical" href="https://ekosys.in/subsidy" />
         <meta property="og:title" content="Solar Subsidy Bihar 2026 | PM Surya Ghar Yojana | EKOSYS" />

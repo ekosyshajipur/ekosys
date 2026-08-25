@@ -10,7 +10,7 @@ const test = async () => {
         const payload = {
             name: "Test User",
             email: "corp.ekosys@gmail.com",
-            phone: "8757686826",
+            phone: "7644868086",
             city: "Patna",
             enquiryType: "Solar Quote",
             requirement: "Need 5kW system",

@@ -326,7 +326,7 @@ export default function ProductPage() {
                   Get Best Quote <FiArrowRight />
                 </button>
                 <a
-                  href={`https://wa.me/918757686826?text=Hi%20EKOSYS%2C%20I%20am%20interested%20in%20${encodeURIComponent(product.name)}%20(${encodeURIComponent(product.capacity)}).%20Please%20share%20the%20best%20price.`}
+                  href={`https://wa.me/917644868086?text=Hi%20EKOSYS%2C%20I%20am%20interested%20in%20${encodeURIComponent(product.name)}%20(${encodeURIComponent(product.capacity)}).%20Please%20share%20the%20best%20price.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-outline"
@@ -492,7 +492,7 @@ export default function ProductPage() {
               Get Free Quote <FiArrowRight />
             </button>
             <a
-              href={`https://wa.me/918757686826?text=Hi%20EKOSYS%2C%20I%20want%20to%20buy%20${encodeURIComponent(product.name)}`}
+              href={`https://wa.me/917644868086?text=Hi%20EKOSYS%2C%20I%20want%20to%20buy%20${encodeURIComponent(product.name)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-outline"
@@ -505,7 +505,7 @@ export default function ProductPage() {
               className="btn btn-outline"
               style={{ borderColor: "#fff", color: "#fff" }}
             >
-              <FiPhone /> Call +91-8757686826
+              <FiPhone /> Call +91-7644868086
             </a>
           </div>
         </div>

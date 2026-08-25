@@ -7,13 +7,13 @@
 
 export const businessInfo = {
   name: "EKOSYS",
-  legalName: "Ekosys Solar Energy Solutions",
+  legalName: "Ekosys Corporation Solutions",
   url: "https://ekosys.in",
   logo: "https://ekosys.in/images/ekosys-logo.webp",
   image: "https://ekosys.in/images/hero-banner.webp",
   description:
     "EKOSYS is Bihar's leading engineering company providing Solar EPC solutions (rooftop systems, industrial solar, subsidies) and premium Architectural Facade Engineering (structural glazing, curtain walls, ACP cladding) across Bihar.",
-  phone: "+91-8757686826",
+  phone: "+91-7644868086",
   email: "ekosys.corp@gmail.com",
   address: {
     street: "Main Road, Hajipur",

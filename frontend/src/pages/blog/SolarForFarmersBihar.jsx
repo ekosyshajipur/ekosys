@@ -95,7 +95,7 @@ export default function SolarForFarmersBihar() {
 
             <h2 id="apply">How to Apply — Step by Step 📝</h2>
             <div className="blog-steps">
-              <div className="blog-step"><div className="blog-step-num">1</div><div><h3>Contact EKOSYS</h3><p>Call <strong>+91 8757686826</strong> or visit our <Link to="/contact">contact page</Link>. We assess your farm needs and recommend the right pump size.</p></div></div>
+              <div className="blog-step"><div className="blog-step-num">1</div><div><h3>Contact EKOSYS</h3><p>Call <strong>+91 7644868086</strong> or visit our <Link to="/contact">contact page</Link>. We assess your farm needs and recommend the right pump size.</p></div></div>
               <div className="blog-step"><div className="blog-step-num">2</div><div><h3>Document Collection</h3><p>We help you gather Aadhaar, land papers, electricity bill, bank details, and farm photographs.</p></div></div>
               <div className="blog-step"><div className="blog-step-num">3</div><div><h3>Application Filing</h3><p>EKOSYS files your PM KUSUM application on the official portal and coordinates with the agriculture department.</p></div></div>
               <div className="blog-step"><div className="blog-step-num">4</div><div><h3>Approval & Installation</h3><p>Once approved, our team installs the solar pump system at your farm within 2-3 days.</p></div></div>

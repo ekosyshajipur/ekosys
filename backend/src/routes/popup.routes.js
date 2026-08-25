@@ -104,7 +104,7 @@ router.post('/', async (req, res) => {
             <p style="color: #cbd5e1; margin: 0 0 16px; font-size: 1rem; font-style: italic;">Think | Innovate | Sustain</p>
             
             <div style="margin-top: 20px; border-top: 1px solid #334155; padding-top: 20px;">
-              <p style="color: #94a3b8; margin: 6px 0; font-size: 0.95rem;">📞 +91 8757686826</p>
+              <p style="color: #94a3b8; margin: 6px 0; font-size: 0.95rem;">📞 +91 7644868086</p>
               <p style="color: #94a3b8; margin: 6px 0; font-size: 0.95rem;">✉️ corp.ekosys@gmail.com</p>
               <p style="color: #94a3b8; margin: 6px 0; font-size: 0.95rem;">📍 Hajipur, Vaishali, Bihar - 844101</p>
             </div>

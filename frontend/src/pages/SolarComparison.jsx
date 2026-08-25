@@ -576,7 +576,7 @@ export default function SolarComparison() {
               Get Free Expert Consultation <FiArrowRight />
             </button>
             <a
-              href="https://wa.me/918757686826?text=Hi%20EKOSYS%2C%20I%20need%20help%20choosing%20the%20right%20solar%20system"
+              href="https://wa.me/917644868086?text=Hi%20EKOSYS%2C%20I%20need%20help%20choosing%20the%20right%20solar%20system"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-outline"

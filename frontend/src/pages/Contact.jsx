@@ -40,11 +40,11 @@ export default function Contact() {
     <>
       <Helmet>
         <title>Contact EKOSYS Solar | Get Free Solar Quote | Bihar</title>
-        <meta name="description" content="Contact EKOSYS Solar for free solar consultation, quotes, and support in Bihar. Call +91-8757686826 or visit our office in Hajipur, Vaishali. Get PM Surya Ghar Yojana assistance." />
+        <meta name="description" content="Contact EKOSYS Solar for free solar consultation, quotes, and support in Bihar. Call +91-7644868086 or visit our office in Hajipur, Vaishali. Get PM Surya Ghar Yojana assistance." />
         <meta name="keywords" content="contact EKOSYS solar, solar quote Bihar, solar consultation Hajipur, free solar quote, EKOSYS phone number, solar company contact Bihar" />
         <link rel="canonical" href="https://ekosys.in/contact" />
         <meta property="og:title" content="Contact EKOSYS Solar | Get Free Solar Quote | Bihar" />
-        <meta property="og:description" content="Get in touch with EKOSYS Solar for free consultation, quotes, and support across Bihar. Call +91-8757686826." />
+        <meta property="og:description" content="Get in touch with EKOSYS Solar for free consultation, quotes, and support across Bihar. Call +91-7644868086." />
         <meta property="og:url" content="https://ekosys.in/contact" />
         <meta property="og:image" content="https://ekosys.in/images/hero-banner.webp" />
         <meta property="og:type" content="website" />
@@ -108,7 +108,7 @@ export default function Contact() {
             </div>
             <div className="contact-info-card">
               <h2 style={{ marginBottom: 24 }}>Get in Touch</h2>
-              <div className="contact-info-item"><div className="icon">📞</div><div><h4>Phone</h4><p>8757686826</p></div></div>
+              <div className="contact-info-item"><div className="icon">📞</div><div><h4>Phone</h4><p>7644868086</p></div></div>
               <div className="contact-info-item"><div className="icon">✉</div><div><h4>Email</h4><p>ekosys.corp@gmail.com</p></div></div>
               <div className="contact-info-item"><div className="icon">📍</div><div><h4>Address</h4><p>EKOSYS</p><p>Hajipur, Vaishali, Bihar</p></div></div>
               <div className="contact-info-item"><div className="icon">🕐</div><div><h4>Business Hours</h4><p>Mon - Sat: 9:00 AM - 7:00 PM</p><p>Sunday: Closed</p></div></div>

@@ -121,11 +121,11 @@ export default function Home() {
     <>
       <Helmet>
         <title>Best Solar Installation Company in Bihar | EKOSYS Solar</title>
-        <meta name="description" content="EKOSYS is Bihar's #1 solar installation company offering rooftop solar panels, PM Surya Ghar Yojana subsidy assistance, solar EPC services for homes, businesses & industries. Get up to ₹78,000 government subsidy. Call +91-8757686826." />
+        <meta name="description" content="EKOSYS is Bihar's #1 solar installation company offering rooftop solar panels, PM Surya Ghar Yojana subsidy assistance, solar EPC services for homes, businesses & industries. Get up to ₹78,000 government subsidy. Call +91-7644868086." />
         <meta name="keywords" content="solar installation Bihar, solar company Bihar, solar panel Bihar, EKOSYS solar, rooftop solar Hajipur, PM Surya Ghar Yojana Bihar, solar EPC Bihar, best solar company Bihar, solar subsidy Bihar, solar panel installation near me" />
         <link rel="canonical" href="https://ekosys.in/" />
         <meta property="og:title" content="Best Solar Installation Company in Bihar | EKOSYS Solar" />
-        <meta property="og:description" content="EKOSYS is Bihar's #1 solar installation company. Rooftop solar panels, PM Surya Ghar Yojana subsidy, solar EPC for homes & industries. Call +91-8757686826." />
+        <meta property="og:description" content="EKOSYS is Bihar's #1 solar installation company. Rooftop solar panels, PM Surya Ghar Yojana subsidy, solar EPC for homes & industries. Call +91-7644868086." />
         <meta property="og:url" content="https://ekosys.in/" />
         <meta property="og:image" content="https://ekosys.in/images/hero-banner.webp" />
         <meta property="og:type" content="website" />
@@ -469,9 +469,9 @@ export default function Home() {
               />
             </div>
             <div className="map-contact-info">
-              <h3>EKOSYS Solar Energy</h3>
+              <h3>EKOSYS Corporation</h3>
               <p><FiMapPin /> 1st Floor, Tulsi Singh Complex, Marai Road, In Front Of Aakash Ganga TVS, Hajipur - 844101 (Bihar) India</p>
-              <p><FiPhone /> <a href="tel:+918757686826">+91 8757686826</a></p>
+              <p><FiPhone /> <a href="tel:+917644868086">+91 7644868086</a></p>
               <p><FiMail /> <a href="mailto:ekosys.corp@gmail.com">ekosys.corp@gmail.com</a></p>
               <p>🕐 Mon - Sat: 9:00 AM - 7:00 PM</p>
               <button className="btn btn-primary" onClick={openPopup} style={{ marginTop: 16 }}>Get Free Consultation <FiArrowRight /></button>
