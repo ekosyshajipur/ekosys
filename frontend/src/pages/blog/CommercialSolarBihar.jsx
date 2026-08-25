@@ -88,7 +88,7 @@ export default function CommercialSolarBihar() {
             <p>For a company in the 30% tax bracket, a ₹12 lakh solar system effectively costs just <strong>₹8.64 lakh</strong> after depreciation benefits.</p>
 
             <h2 id="case">Case Studies from Bihar 🌟</h2>
-            <div className="blog-testimonial"><p>"We installed a 50kW solar system at our rice mill in Muzaffarpur through EKOSYS. Our monthly electricity bill dropped from ₹78,000 to ₹8,000. The system will pay for itself in just 3 years!"</p><strong>— Rajesh Rice Industries, Muzaffarpur</strong></div>
+            <div className="blog-testimonial"><p>"We installed a 50kW solar system at our rice mill in Muzaffarpur through EKOSYS. Our monthly electricity bill dropped from ₹98,000 to ₹8,000. The system will pay for itself in just 3 years!"</p><strong>— Rajesh Rice Industries, Muzaffarpur</strong></div>
             <div className="blog-testimonial"><p>"As a cold storage owner, electricity is our biggest cost. EKOSYS designed a custom 30kW system that cut our power bill from ₹45,000 to ₹5,000. With accelerated depreciation, our effective cost was minimal."</p><strong>— Bihar Cold Storage Pvt Ltd, Patna</strong></div>
 
             <div className="blog-cta-inline">

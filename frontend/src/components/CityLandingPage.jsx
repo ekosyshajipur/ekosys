@@ -190,7 +190,7 @@ export default function CityLandingPage({ cityData }) {
             </div>
             <div className="service-card">
               <h3>Subsidy Support</h3>
-              <p>Get up to ₹78,000 subsidy under PM Surya Ghar Yojana with our end-to-end assistance.</p>
+              <p>Get up to ₹98,000 subsidy under PM Surya Ghar Yojana with our end-to-end assistance.</p>
             </div>
             <div className="service-card">
               <h3>Solar Maintenance</h3>

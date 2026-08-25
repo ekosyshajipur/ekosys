@@ -27,12 +27,12 @@ const solarSystemsDetailed = [
     img: "/images/ongrid.webp",
     desc: "An On-Grid Solar System is directly connected to the utility power grid. It is the most popular and cost-effective solar setup for homes and businesses. Solar panels generate DC electricity, which an inverter converts to AC. The system feeds excess power back to the grid through net metering, earning you credits and dramatically reducing your electricity bills.",
     extraDesc:
-      "On-Grid systems are ideal for urban and semi-urban areas where consistent grid power is available. With government subsidies under PM Surya Ghar Yojana, homeowners can save up to ₹78,000. These systems require minimal maintenance, have a lifespan of 25+ years, and offer the highest return on investment among all solar types.",
+      "On-Grid systems are ideal for urban and semi-urban areas where consistent grid power is available. With government subsidies under PM Surya Ghar Yojana, homeowners can save up to ₹98,000. These systems require minimal maintenance, have a lifespan of 25+ years, and offer the highest return on investment among all solar types.",
     features: [
       "No batteries required – lowest upfront cost",
       "Net metering benefits – sell excess power to grid",
       "Highest return on investment (ROI)",
-      "Government subsidy available up to ₹78,000",
+      "Government subsidy available up to ₹98,000",
       "Ideal for reducing electricity bills by 90%",
       "Low maintenance – 25+ year lifespan",
       "Best for homes, offices, and commercial buildings",
@@ -442,7 +442,7 @@ export default function Products() {
                       <span className="benefit-icon">🏛️</span>
                       <h4>Government Subsidy</h4>
                       <p>
-                        Get up to ₹78,000 subsidy under PM Surya Ghar Yojana. We
+                        Get up to ₹98,000 subsidy under PM Surya Ghar Yojana. We
                         handle all paperwork and approvals for you.
                       </p>
                     </div>
@@ -613,11 +613,11 @@ export default function Products() {
             <div className="subsidy-quote-content">
               <p className="subsidy-quote-hindi">
                 "प्रधानमंत्री सूर्य घर मुफ़्त बिजली योजना - अपने घर की छत पर
-                सोलर पैनल लगाएं और ₹78,000 तक की सब्सिडी पाएं।"
+                सोलर पैनल लगाएं और ₹98,000 तक की सब्सिडी पाएं।"
               </p>
               <p className="subsidy-quote-english">
                 PM Surya Ghar Free Electricity Scheme — Install solar panels on
-                your rooftop and get up to ₹78,000 subsidy from Government of
+                your rooftop and get up to ₹98,000 subsidy from Government of
                 India.
               </p>
               <button className="btn btn-primary" onClick={openPopup}>

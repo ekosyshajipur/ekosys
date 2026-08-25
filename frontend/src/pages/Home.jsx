@@ -71,7 +71,7 @@ const processSteps = [
 
 const testimonials = [
   { name: "Rajesh Kumar", loc: "Hajipur, Bihar", text: "EKOSYS installed a 5kW system on my rooftop. My electricity bill dropped from ₹4,500 to ₹200! The team was very professional and completed installation in just 2 days.", rating: 5 },
-  { name: "Priya Singh", loc: "Patna, Bihar", text: "I was confused about solar subsidy, but EKOSYS guided me through the entire PM Surya Ghar process. Got ₹78,000 subsidy credited to my account within 3 months!", rating: 5 },
+  { name: "Priya Singh", loc: "Patna, Bihar", text: "I was confused about solar subsidy, but EKOSYS guided me through the entire PM Surya Ghar process. Got ₹98,000 subsidy credited to my account within 3 months!", rating: 5 },
   { name: "Ashutosh Mishra", loc: "Muzaffarpur, Bihar", text: "Best solar company in Bihar! Their 3kW system is working perfectly. Very responsive customer support and excellent after-sales service.", rating: 5 },
   { name: "Sunita Devi", loc: "Vaishali, Bihar", text: "EKOSYS solar panels are of premium quality. Our 4kW system generates more power than expected. Very happy with the investment and team support.", rating: 5 },
   { name: "Manish Gupta", loc: "Bhagalpur, Bihar", text: "Got an industrial solar setup for my factory through EKOSYS. The 25kW system has reduced our electricity costs by 80%. Excellent ROI!", rating: 5 },
@@ -91,8 +91,8 @@ const partners = [
 ];
 
 const faqs = [
-  { q: "What is the cost of a solar system in Bihar?", a: "Residential systems cost ₹55,000 to ₹65,000 per kW before subsidy. With PM Surya Ghar Yojana, you can get ₹30,000-₹78,000 subsidy depending on system size." },
-  { q: "How does PM Surya Ghar Yojana work?", a: "Under this scheme, households get up to ₹78,000 subsidy for on-grid rooftop solar, credited directly to their bank account after installation and inspection." },
+  { q: "What is the cost of a solar system in Bihar?", a: "Residential systems cost ₹55,000 to ₹65,000 per kW before subsidy. With PM Surya Ghar Yojana, you can get ₹30,000-₹98,000 subsidy depending on system size." },
+  { q: "How does PM Surya Ghar Yojana work?", a: "Under this scheme, households get up to ₹98,000 subsidy for on-grid rooftop solar, credited directly to their bank account after installation and inspection." },
   { q: "How long does solar installation take?", a: "Typically 2-5 days for residential systems and 7-15 days for commercial setups, including all approvals and net metering." },
   { q: "What is the lifespan of solar panels?", a: "Our Tier-1 Mono PERC panels come with a 25-year performance warranty and can last 30+ years with proper maintenance." },
   { q: "Do solar panels work during monsoon/cloudy days?", a: "Yes! Modern panels generate 25-40% of their peak output even on cloudy days. Bihar receives excellent sunlight for 300+ days a year." },
@@ -121,7 +121,7 @@ export default function Home() {
     <>
       <Helmet>
         <title>Best Solar Installation Company in Bihar | EKOSYS Solar</title>
-        <meta name="description" content="EKOSYS is Bihar's #1 solar installation company offering rooftop solar panels, PM Surya Ghar Yojana subsidy assistance, solar EPC services for homes, businesses & industries. Get up to ₹78,000 government subsidy. Call +91-7644868086." />
+        <meta name="description" content="EKOSYS is Bihar's #1 solar installation company offering rooftop solar panels, PM Surya Ghar Yojana subsidy assistance, solar EPC services for homes, businesses & industries. Get up to ₹98,000 government subsidy. Call +91-7644868086." />
         <meta name="keywords" content="solar installation Bihar, solar company Bihar, solar panel Bihar, EKOSYS solar, rooftop solar Hajipur, PM Surya Ghar Yojana Bihar, solar EPC Bihar, best solar company Bihar, solar subsidy Bihar, solar panel installation near me" />
         <link rel="canonical" href="https://ekosys.in/" />
         <meta property="og:title" content="Best Solar Installation Company in Bihar | EKOSYS Solar" />
@@ -171,7 +171,7 @@ export default function Home() {
           <motion.div className="hero-v2-content" initial={{ opacity: 0, x: -60 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
             <div className="hero-badge-v2">☀️ Bihar's Most Trusted Solar Company</div>
             <h1>Powering Bihar With <span className="hero-highlight">Clean Solar Energy</span></h1>
-            <p>End-to-end solar EPC solutions for homes, businesses & industries. Get up to ₹78,000 government subsidy under PM Surya Ghar Yojana.</p>
+            <p>End-to-end solar EPC solutions for homes, businesses & industries. Get up to ₹98,000 government subsidy under PM Surya Ghar Yojana.</p>
             <div className="hero-stats-row">
               <div className="hero-stat-item"><strong>1000+</strong><span>Projects</span></div>
               <div className="hero-stat-divider" />

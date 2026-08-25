@@ -37,7 +37,7 @@ export default function BestSolarCompanyInBihar() {
             "@type": "FAQPage",
             "mainEntity": [
               { "@type": "Question", "name": "Which is the best solar company in Bihar?", "acceptedAnswer": { "@type": "Answer", "text": "EKOSYS is rated as the best solar company in Bihar with 4.9/5 rating. Based in Hajipur, Vaishali, EKOSYS provides end-to-end solar solutions including installation, subsidy processing, and 25-year maintenance support." } },
-              { "@type": "Question", "name": "How much does solar installation cost in Bihar?", "acceptedAnswer": { "@type": "Answer", "text": "Solar installation in Bihar costs ₹60,000-70,000 per kW. A 3kW system costs approximately ₹1,80,000-2,10,000 before subsidy. After PM Surya Ghar Yojana subsidy of ₹78,000, your net cost is around ₹1,02,000-1,32,000." } },
+              { "@type": "Question", "name": "How much does solar installation cost in Bihar?", "acceptedAnswer": { "@type": "Answer", "text": "Solar installation in Bihar costs ₹60,000-70,000 per kW. A 3kW system costs approximately ₹1,80,000-2,10,000 before subsidy. After PM Surya Ghar Yojana subsidy of ₹98,000, your net cost is around ₹1,02,000-1,32,000." } },
               { "@type": "Question", "name": "Does EKOSYS provide warranty on solar installation?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, EKOSYS provides 25-year performance warranty on solar panels, 5-10 year warranty on inverters, and 5-year workmanship warranty on installation. We also offer annual maintenance contracts for worry-free operation." } },
               { "@type": "Question", "name": "What areas does EKOSYS serve in Bihar?", "acceptedAnswer": { "@type": "Answer", "text": "EKOSYS serves all districts of Bihar including Hajipur, Vaishali, Patna, Muzaffarpur, Gaya, Bhagalpur, Darbhanga, Begusarai, Samastipur, and surrounding areas." } }
             ]
@@ -281,7 +281,7 @@ export default function BestSolarCompanyInBihar() {
               </div>
               <div className="blog-faq-item">
                 <h3>How much does solar installation cost in Bihar?</h3>
-                <p>Solar installation in Bihar costs approximately ₹60,000-70,000 per kW. A popular 3kW system costs ₹1,80,000-2,10,000 before subsidy. After PM Surya Ghar Yojana subsidy of ₹78,000, your net cost is around ₹1,02,000-1,32,000. EKOSYS provides transparent, all-inclusive pricing.</p>
+                <p>Solar installation in Bihar costs approximately ₹60,000-70,000 per kW. A popular 3kW system costs ₹1,80,000-2,10,000 before subsidy. After PM Surya Ghar Yojana subsidy of ₹98,000, your net cost is around ₹1,02,000-1,32,000. EKOSYS provides transparent, all-inclusive pricing.</p>
               </div>
               <div className="blog-faq-item">
                 <h3>Does EKOSYS provide warranty on solar installation?</h3>

@@ -28,7 +28,7 @@ function generateProductFAQs(product, categoryName) {
     },
     {
       q: `Can I get government subsidy on the ${product.name}?`,
-      a: `Subsidy eligibility depends on the system type and configuration. On-grid and hybrid systems using ${categoryName} are eligible for subsidy up to ₹78,000 under PM Surya Ghar Yojana. Contact EKOSYS for detailed subsidy guidance for your specific setup.`,
+      a: `Subsidy eligibility depends on the system type and configuration. On-grid and hybrid systems using ${categoryName} are eligible for subsidy up to ₹98,000 under PM Surya Ghar Yojana. Contact EKOSYS for detailed subsidy guidance for your specific setup.`,
     },
   ];
 }

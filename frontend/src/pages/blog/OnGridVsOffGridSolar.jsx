@@ -15,7 +15,7 @@ export default function OnGridVsOffGridSolar() {
         <meta property="og:type" content="article" />
         <meta property="og:image" content="https://ekosys.in/images/blog/solar-rooftop-home.webp" />
         <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"Article","headline":"On-Grid vs Off-Grid vs Hybrid Solar — Which is Best for You?","author":{"@type":"Organization","name":"EKOSYS Solar"},"publisher":{"@type":"Organization","name":"EKOSYS Solar","logo":{"@type":"ImageObject","url":"https://ekosys.in/images/ekosys-logo.webp"}},"datePublished":"2025-04-28","dateModified":"2025-05-18","image":"https://ekosys.in/images/blog/solar-rooftop-home.webp"}`}</script>
-        <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which is cheaper: on-grid or off-grid solar?","acceptedAnswer":{"@type":"Answer","text":"On-grid is 30-40% cheaper because it doesn't need batteries. A 3kW on-grid costs ₹1.8-2.1 lakh while off-grid costs ₹2.8-3.5 lakh due to battery costs."}},{"@type":"Question","name":"Can I switch from off-grid to on-grid later?","acceptedAnswer":{"@type":"Answer","text":"Yes, it's possible but requires changing the inverter and adding a net meter. It's more cost-effective to choose the right system from the start."}},{"@type":"Question","name":"Which solar system gets government subsidy?","acceptedAnswer":{"@type":"Answer","text":"Only on-grid (grid-connected) solar systems with net metering are eligible for PM Surya Ghar Yojana subsidy of up to ₹78,000. Off-grid and some hybrid systems are not eligible."}},{"@type":"Question","name":"What is the best solar system for Bihar?","acceptedAnswer":{"@type":"Answer","text":"For urban Bihar with decent grid: On-grid. For rural Bihar with frequent outages: Hybrid or Off-grid. For farms: Solar pump (PM KUSUM). Consult EKOSYS for personalized recommendation."}}]}`}</script>
+        <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which is cheaper: on-grid or off-grid solar?","acceptedAnswer":{"@type":"Answer","text":"On-grid is 30-40% cheaper because it doesn't need batteries. A 3kW on-grid costs ₹1.8-2.1 lakh while off-grid costs ₹2.8-3.5 lakh due to battery costs."}},{"@type":"Question","name":"Can I switch from off-grid to on-grid later?","acceptedAnswer":{"@type":"Answer","text":"Yes, it's possible but requires changing the inverter and adding a net meter. It's more cost-effective to choose the right system from the start."}},{"@type":"Question","name":"Which solar system gets government subsidy?","acceptedAnswer":{"@type":"Answer","text":"Only on-grid (grid-connected) solar systems with net metering are eligible for PM Surya Ghar Yojana subsidy of up to ₹98,000. Off-grid and some hybrid systems are not eligible."}},{"@type":"Question","name":"What is the best solar system for Bihar?","acceptedAnswer":{"@type":"Answer","text":"For urban Bihar with decent grid: On-grid. For rural Bihar with frequent outages: Hybrid or Off-grid. For farms: Solar pump (PM KUSUM). Consult EKOSYS for personalized recommendation."}}]}`}</script>
       </Helmet>
 
       <section className="page-header blog-header">
@@ -70,7 +70,7 @@ export default function OnGridVsOffGridSolar() {
             <ul className="blog-list">
               <li>Lowest cost — no expensive batteries</li>
               <li>Maximum ROI through net metering</li>
-              <li>Eligible for ₹78,000 government subsidy</li>
+              <li>Eligible for ₹98,000 government subsidy</li>
               <li>Minimal maintenance</li>
               <li>Fastest payback period (2-4 years)</li>
             </ul>
@@ -147,7 +147,7 @@ export default function OnGridVsOffGridSolar() {
               <tr><td>Mounting & Wiring</td><td>₹30,000</td><td>₹35,000</td><td>₹35,000</td></tr>
               <tr><td>Installation</td><td>₹25,000</td><td>₹30,000</td><td>₹35,000</td></tr>
               <tr><td><strong>Total Cost</strong></td><td><strong>₹1,80,000</strong></td><td><strong>₹2,75,000</strong></td><td><strong>₹3,00,000</strong></td></tr>
-              <tr><td>Subsidy</td><td>- ₹78,000</td><td>₹0</td><td>- ₹78,000*</td></tr>
+              <tr><td>Subsidy</td><td>- ₹98,000</td><td>₹0</td><td>- ₹98,000*</td></tr>
               <tr><td><strong>Your Cost</strong></td><td><strong>₹1,02,000</strong></td><td><strong>₹2,75,000</strong></td><td><strong>₹2,22,000</strong></td></tr>
             </tbody></table></div>
             <p><em>* Hybrid subsidy depends on DISCOM approval and system configuration.</em></p>
@@ -171,7 +171,7 @@ export default function OnGridVsOffGridSolar() {
             <h2 id="faq">Frequently Asked Questions</h2>
             <div className="blog-faq">
               <div className="blog-faq-item"><h3>Which is cheaper: on-grid or off-grid?</h3><p>On-grid is 30-40% cheaper because it doesn't need batteries. A 3kW on-grid costs ₹1.8-2.1 lakh while off-grid costs ₹2.8-3.5 lakh.</p></div>
-              <div className="blog-faq-item"><h3>Which system gets government subsidy?</h3><p>Only on-grid systems with net metering are eligible for PM Surya Ghar Yojana subsidy (up to ₹78,000). Some hybrid configurations may also qualify.</p></div>
+              <div className="blog-faq-item"><h3>Which system gets government subsidy?</h3><p>Only on-grid systems with net metering are eligible for PM Surya Ghar Yojana subsidy (up to ₹98,000). Some hybrid configurations may also qualify.</p></div>
               <div className="blog-faq-item"><h3>What is the best solar system for Bihar?</h3><p>Urban Bihar (Patna, Hajipur, Muzaffarpur): On-grid for max savings. Rural Bihar with frequent outages: Hybrid or Off-grid. Farms: Solar pump under PM KUSUM.</p></div>
               <div className="blog-faq-item"><h3>Can I upgrade from on-grid to hybrid later?</h3><p>Yes! You can add batteries and upgrade your inverter to convert an on-grid system to hybrid. EKOSYS can handle this upgrade easily.</p></div>
             </div>

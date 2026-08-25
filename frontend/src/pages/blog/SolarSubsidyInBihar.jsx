@@ -6,11 +6,11 @@ export default function SolarSubsidyInBihar() {
     <>
       <Helmet>
         <title>Solar Subsidy in Bihar 2025 — PM Surya Ghar Yojana Complete Guide | EKOSYS</title>
-        <meta name="description" content="Complete guide to solar subsidy in Bihar 2025. Learn about PM Surya Ghar Muft Bijli Yojana, get up to ₹78,000 subsidy. Step-by-step application process by EKOSYS." />
+        <meta name="description" content="Complete guide to solar subsidy in Bihar 2025. Learn about PM Surya Ghar Muft Bijli Yojana, get up to ₹98,000 subsidy. Step-by-step application process by EKOSYS." />
         <meta name="keywords" content="solar subsidy Bihar, government solar subsidy, PM Surya Ghar Yojana, solar subsidy Bihar 2025, PM KUSUM scheme, rooftop solar subsidy, solar panel subsidy India" />
         <link rel="canonical" href="https://ekosys.in/blog/solar-subsidy-in-bihar" />
         <meta property="og:title" content="Solar Subsidy in Bihar 2025 — PM Surya Ghar Yojana Guide | EKOSYS" />
-        <meta property="og:description" content="Get up to ₹78,000 subsidy on rooftop solar in Bihar. Complete step-by-step guide to PM Surya Ghar Muft Bijli Yojana." />
+        <meta property="og:description" content="Get up to ₹98,000 subsidy on rooftop solar in Bihar. Complete step-by-step guide to PM Surya Ghar Muft Bijli Yojana." />
         <meta property="og:url" content="https://ekosys.in/blog/solar-subsidy-in-bihar" />
         <meta property="og:type" content="article" />
         <meta property="og:image" content="https://ekosys.in/images/subsidy.webp" />
@@ -33,7 +33,7 @@ export default function SolarSubsidyInBihar() {
             "@context": "https://schema.org",
             "@type": "FAQPage",
             "mainEntity": [
-              { "@type": "Question", "name": "How much solar subsidy can I get in Bihar?", "acceptedAnswer": { "@type": "Answer", "text": "Under PM Surya Ghar Yojana, you can get ₹30,000 for 1kW, ₹60,000 for 2kW, and ₹78,000 for 3kW and above rooftop solar systems in Bihar." } },
+              { "@type": "Question", "name": "How much solar subsidy can I get in Bihar?", "acceptedAnswer": { "@type": "Answer", "text": "Under PM Surya Ghar Yojana, you can get ₹30,000 for 1kW, ₹60,000 for 2kW, and ₹98,000 for 3kW and above rooftop solar systems in Bihar." } },
               { "@type": "Question", "name": "Who is eligible for PM Surya Ghar Yojana?", "acceptedAnswer": { "@type": "Answer", "text": "Any Indian citizen with a residential electricity connection and a suitable rooftop is eligible. The subsidy is available for residential installations only, not commercial or industrial." } },
               { "@type": "Question", "name": "How long does it take to get the solar subsidy?", "acceptedAnswer": { "@type": "Answer", "text": "After installation and inspection by DISCOM, the subsidy amount is typically credited to your bank account within 30-60 days through DBT (Direct Benefit Transfer)." } },
               { "@type": "Question", "name": "Can I get subsidy on off-grid solar systems?", "acceptedAnswer": { "@type": "Answer", "text": "No, PM Surya Ghar Yojana subsidy is only for on-grid (grid-connected) rooftop solar systems with net metering. Off-grid systems are not covered under this scheme." } },
@@ -64,7 +64,7 @@ export default function SolarSubsidyInBihar() {
             <img src="/images/blog/bihar-village-solar.webp" alt="Solar subsidy in Bihar - PM Surya Ghar Yojana" className="blog-hero-img" loading="lazy" />
 
             <p className="blog-intro">
-              The Indian government is on a mission to make every household energy-independent through rooftop solar. Under the <strong>PM Surya Ghar Muft Bijli Yojana</strong>, families in Bihar can receive subsidies of up to <strong>₹78,000</strong> for installing rooftop solar panels. This comprehensive guide covers everything you need to know about claiming your solar subsidy in Bihar — eligibility, application process, subsidy amounts, and how <strong>EKOSYS</strong> can handle the entire process for you.
+              The Indian government is on a mission to make every household energy-independent through rooftop solar. Under the <strong>PM Surya Ghar Muft Bijli Yojana</strong>, families in Bihar can receive subsidies of up to <strong>₹98,000</strong> for installing rooftop solar panels. This comprehensive guide covers everything you need to know about claiming your solar subsidy in Bihar — eligibility, application process, subsidy amounts, and how <strong>EKOSYS</strong> can handle the entire process for you.
             </p>
 
             <div className="blog-toc">
@@ -119,25 +119,25 @@ export default function SolarSubsidyInBihar() {
                   </tr>
                   <tr>
                     <td>3 kW</td>
-                    <td><strong>₹78,000</strong></td>
+                    <td><strong>₹98,000</strong></td>
                     <td>₹1,80,000 - 2,10,000</td>
                     <td>₹1,02,000 - 1,32,000</td>
                   </tr>
                   <tr>
                     <td>4 kW</td>
-                    <td><strong>₹78,000</strong></td>
+                    <td><strong>₹98,000</strong></td>
                     <td>₹2,40,000 - 2,80,000</td>
                     <td>₹1,62,000 - 2,02,000</td>
                   </tr>
                   <tr>
                     <td>5 kW</td>
-                    <td><strong>₹78,000</strong></td>
+                    <td><strong>₹98,000</strong></td>
                     <td>₹3,00,000 - 3,50,000</td>
                     <td>₹2,22,000 - 2,72,000</td>
                   </tr>
                   <tr>
                     <td>10 kW</td>
-                    <td><strong>₹78,000</strong></td>
+                    <td><strong>₹98,000</strong></td>
                     <td>₹6,00,000 - 7,00,000</td>
                     <td>₹5,22,000 - 6,22,000</td>
                   </tr>
@@ -145,7 +145,7 @@ export default function SolarSubsidyInBihar() {
               </table>
             </div>
             <div className="blog-highlight-box">
-              <strong>💡 Important:</strong> The maximum subsidy is capped at ₹78,000 regardless of system size above 3kW. For maximum benefit, a 3kW system offers the best subsidy-to-cost ratio for typical households.
+              <strong>💡 Important:</strong> The maximum subsidy is capped at ₹98,000 regardless of system size above 3kW. For maximum benefit, a 3kW system offers the best subsidy-to-cost ratio for typical households.
             </div>
 
             <h2 id="eligibility">Eligibility Criteria ✅</h2>
@@ -280,7 +280,7 @@ export default function SolarSubsidyInBihar() {
             </ul>
 
             <div className="blog-cta-inline">
-              <h3>Claim Your ₹78,000 Solar Subsidy Today</h3>
+              <h3>Claim Your ₹98,000 Solar Subsidy Today</h3>
               <p>
                 EKOSYS handles everything — from application to installation to subsidy disbursement. Based in Hajipur, Vaishali, we serve all of Bihar.
               </p>
@@ -291,7 +291,7 @@ export default function SolarSubsidyInBihar() {
             <div className="blog-faq">
               <div className="blog-faq-item">
                 <h3>How much solar subsidy can I get in Bihar?</h3>
-                <p>Under PM Surya Ghar Yojana, you can get ₹30,000 for 1kW, ₹60,000 for 2kW, and ₹78,000 for 3kW and above rooftop solar systems in Bihar. The maximum subsidy is ₹78,000 per household.</p>
+                <p>Under PM Surya Ghar Yojana, you can get ₹30,000 for 1kW, ₹60,000 for 2kW, and ₹98,000 for 3kW and above rooftop solar systems in Bihar. The maximum subsidy is ₹98,000 per household.</p>
               </div>
               <div className="blog-faq-item">
                 <h3>Who is eligible for PM Surya Ghar Yojana?</h3>

@@ -35,7 +35,7 @@ const blogPosts = [
   {
     slug: "solar-subsidy-in-bihar",
     title: "Complete Guide to Solar Subsidy in Bihar 2025 — PM Surya Ghar Yojana Explained",
-    excerpt: "Everything you need to know about government solar subsidies in Bihar. Learn how to claim up to ₹78,000 under PM Surya Ghar Muft Bijli Yojana.",
+    excerpt: "Everything you need to know about government solar subsidies in Bihar. Learn how to claim up to ₹98,000 under PM Surya Ghar Muft Bijli Yojana.",
     date: "May 16, 2025",
     readTime: "10 min read",
     category: "Subsidy Guide",

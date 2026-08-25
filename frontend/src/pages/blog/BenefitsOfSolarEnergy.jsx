@@ -39,7 +39,7 @@ export default function BenefitsOfSolarEnergy() {
             "@context": "https://schema.org",
             "@type": "FAQPage",
             "mainEntity": [
-              { "@type": "Question", "name": "What are the main benefits of solar energy?", "acceptedAnswer": { "@type": "Answer", "text": "The main benefits include reduced electricity bills (up to 90% savings), government subsidies up to ₹78,000, increased property value, zero carbon emissions, low maintenance costs, and energy independence for 25+ years." } },
+              { "@type": "Question", "name": "What are the main benefits of solar energy?", "acceptedAnswer": { "@type": "Answer", "text": "The main benefits include reduced electricity bills (up to 90% savings), government subsidies up to ₹98,000, increased property value, zero carbon emissions, low maintenance costs, and energy independence for 25+ years." } },
               { "@type": "Question", "name": "Is solar energy beneficial in Bihar?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, Bihar receives excellent sunlight (4.5-5.5 kWh/m²/day), making it ideal for solar. Combined with PM Surya Ghar Yojana subsidies, Bihar residents can save significantly on electricity while contributing to clean energy." } },
               { "@type": "Question", "name": "How long do solar panels last?", "acceptedAnswer": { "@type": "Answer", "text": "High-quality solar panels last 25-30 years with minimal degradation. Most manufacturers offer 25-year performance warranties, ensuring long-term energy savings." } },
               { "@type": "Question", "name": "Do solar panels work during cloudy days?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, solar panels still generate electricity on cloudy days, though at reduced efficiency (10-25% of peak output). Modern panels are designed to capture diffused light effectively." } },
@@ -109,7 +109,7 @@ export default function BenefitsOfSolarEnergy() {
             <ul className="blog-list">
               <li><strong>₹30,000 subsidy</strong> for 1kW solar systems</li>
               <li><strong>₹60,000 subsidy</strong> for 2kW solar systems</li>
-              <li><strong>₹78,000 subsidy</strong> for 3kW and above systems</li>
+              <li><strong>₹98,000 subsidy</strong> for 3kW and above systems</li>
             </ul>
             <p>
               This dramatically reduces the upfront cost of installation, making solar accessible to middle-class families. Additionally, the <strong>PM-KUSUM scheme</strong> offers up to 90% subsidy for agricultural solar pumps, benefiting farmers across Bihar.
@@ -225,7 +225,7 @@ export default function BenefitsOfSolarEnergy() {
             <div className="blog-faq">
               <div className="blog-faq-item">
                 <h3>What are the main benefits of solar energy?</h3>
-                <p>The main benefits include reduced electricity bills (up to 90% savings), government subsidies up to ₹78,000, increased property value, zero carbon emissions, low maintenance costs, and energy independence for 25+ years.</p>
+                <p>The main benefits include reduced electricity bills (up to 90% savings), government subsidies up to ₹98,000, increased property value, zero carbon emissions, low maintenance costs, and energy independence for 25+ years.</p>
               </div>
               <div className="blog-faq-item">
                 <h3>Is solar energy beneficial in Bihar?</h3>

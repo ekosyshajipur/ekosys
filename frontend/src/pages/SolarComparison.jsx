@@ -12,7 +12,7 @@ const comparisonRows = [
   { label: "Battery Required", onGrid: "No", offGrid: "Yes", hybrid: "Yes", best: "onGrid" },
   { label: "Works During Power Cuts", onGrid: "No", offGrid: "Yes", hybrid: "Yes", best: "hybrid" },
   { label: "Net Metering", onGrid: "Yes", offGrid: "No", hybrid: "Yes", best: "hybrid" },
-  { label: "Government Subsidy", onGrid: "Up to ₹78,000", offGrid: "No", hybrid: "Up to ₹78,000", best: "onGrid" },
+  { label: "Government Subsidy", onGrid: "Up to ₹98,000", offGrid: "No", hybrid: "Up to ₹98,000", best: "onGrid" },
   { label: "Best For", onGrid: "Urban homes", offGrid: "Remote areas", hybrid: "Areas with power cuts", best: "hybrid" },
   { label: "Price Range", onGrid: "₹55,000–65,000/kW", offGrid: "₹85,000–95,000/kW", hybrid: "₹95,000–1,15,000/kW", best: "onGrid" },
   { label: "ROI Period", onGrid: "3–4 years", offGrid: "5–6 years", hybrid: "4–5 years", best: "onGrid" },
@@ -29,7 +29,7 @@ const systemDetails = [
       "Lowest upfront cost — no batteries required",
       "Net metering benefits — sell excess power to grid",
       "Fastest ROI — payback in 3-4 years",
-      "Government subsidy up to ₹78,000",
+      "Government subsidy up to ₹98,000",
       "Minimal maintenance — no battery upkeep",
       "Highest efficiency — direct grid feed",
     ],
@@ -67,7 +67,7 @@ const systemDetails = [
       "Works during power cuts with battery",
       "Net metering benefits + energy storage",
       "Automatic seamless switchover (<10ms)",
-      "Government subsidy up to ₹78,000",
+      "Government subsidy up to ₹98,000",
       "Future-proof — expandable battery storage",
     ],
     cons: [
@@ -102,11 +102,11 @@ const inverterComparison = [
 const faqs = [
   {
     q: "Which solar system is best for homes in Bihar?",
-    a: "For most homes in Bihar, an on-grid solar system is the best choice because it offers the lowest cost, fastest ROI (3-4 years), and government subsidy up to ₹78,000. However, if your area has frequent power cuts, a hybrid system provides both net metering benefits and battery backup.",
+    a: "For most homes in Bihar, an on-grid solar system is the best choice because it offers the lowest cost, fastest ROI (3-4 years), and government subsidy up to ₹98,000. However, if your area has frequent power cuts, a hybrid system provides both net metering benefits and battery backup.",
   },
   {
     q: "Can I get government subsidy on all types of solar systems?",
-    a: "Government subsidy under PM Surya Ghar Muft Bijli Yojana is available only for on-grid and hybrid solar systems (up to ₹78,000). Off-grid systems are not eligible for this subsidy. However, solar water pumps may qualify for up to 90% subsidy under the PM-KUSUM scheme.",
+    a: "Government subsidy under PM Surya Ghar Muft Bijli Yojana is available only for on-grid and hybrid solar systems (up to ₹98,000). Off-grid systems are not eligible for this subsidy. However, solar water pumps may qualify for up to 90% subsidy under the PM-KUSUM scheme.",
   },
   {
     q: "What is the price difference between on-grid and hybrid solar systems?",

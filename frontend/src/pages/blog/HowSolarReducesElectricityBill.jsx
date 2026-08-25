@@ -154,7 +154,7 @@ export default function HowSolarReducesElectricityBill() {
                     <td>5 kW</td>
                     <td>₹500</td>
                     <td><strong>₹6,500</strong></td>
-                    <td><strong>₹78,000</strong></td>
+                    <td><strong>₹98,000</strong></td>
                   </tr>
                   <tr>
                     <td>Villa / Bungalow</td>
@@ -182,7 +182,7 @@ export default function HowSolarReducesElectricityBill() {
                 </thead>
                 <tbody>
                   <tr><td>System Cost</td><td>₹1,95,000</td></tr>
-                  <tr><td>Government Subsidy</td><td>- ₹78,000</td></tr>
+                  <tr><td>Government Subsidy</td><td>- ₹98,000</td></tr>
                   <tr><td><strong>Your Net Investment</strong></td><td><strong>₹1,17,000</strong></td></tr>
                   <tr><td>Monthly Savings</td><td>₹4,150</td></tr>
                   <tr><td>Annual Savings</td><td>₹49,800</td></tr>

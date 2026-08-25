@@ -229,9 +229,9 @@ export default function RooftopSolarGuide() {
                 <tbody>
                   <tr><td>1 kW</td><td>₹65,000</td><td>₹30,000</td><td><strong>₹35,000</strong></td><td>~2 years</td></tr>
                   <tr><td>2 kW</td><td>₹1,30,000</td><td>₹60,000</td><td><strong>₹70,000</strong></td><td>~2.5 years</td></tr>
-                  <tr><td>3 kW</td><td>₹1,95,000</td><td>₹78,000</td><td><strong>₹1,17,000</strong></td><td>~2.5 years</td></tr>
-                  <tr><td>5 kW</td><td>₹3,25,000</td><td>₹78,000</td><td><strong>₹2,47,000</strong></td><td>~3.5 years</td></tr>
-                  <tr><td>10 kW</td><td>₹6,50,000</td><td>₹78,000</td><td><strong>₹5,72,000</strong></td><td>~4 years</td></tr>
+                  <tr><td>3 kW</td><td>₹1,95,000</td><td>₹98,000</td><td><strong>₹1,17,000</strong></td><td>~2.5 years</td></tr>
+                  <tr><td>5 kW</td><td>₹3,25,000</td><td>₹98,000</td><td><strong>₹2,47,000</strong></td><td>~3.5 years</td></tr>
+                  <tr><td>10 kW</td><td>₹6,50,000</td><td>₹98,000</td><td><strong>₹5,72,000</strong></td><td>~4 years</td></tr>
                 </tbody>
               </table>
             </div>
@@ -325,7 +325,7 @@ export default function RooftopSolarGuide() {
               <li><strong>Oversizing or undersizing:</strong> An incorrectly sized system either wastes money or leaves savings on the table. Always get a professional assessment.</li>
               <li><strong>Ignoring shading:</strong> Even partial shading on one panel can reduce the output of the entire string by 30-50%.</li>
               <li><strong>Skipping net metering:</strong> Without net metering, you lose the financial benefit of exporting excess electricity.</li>
-              <li><strong>Not claiming subsidy:</strong> Many people miss out on ₹78,000 in government subsidy simply because they don't know about it or their vendor doesn't process it.</li>
+              <li><strong>Not claiming subsidy:</strong> Many people miss out on ₹98,000 in government subsidy simply because they don't know about it or their vendor doesn't process it.</li>
               <li><strong>DIY installation:</strong> Solar installation involves high-voltage DC electricity. Always use certified professionals to avoid safety hazards and warranty voidance.</li>
             </ul>
 
@@ -353,7 +353,7 @@ export default function RooftopSolarGuide() {
               </div>
               <div className="blog-faq-item">
                 <h3>How much does a rooftop solar system cost in Bihar?</h3>
-                <p>A rooftop solar system costs ₹60,000-70,000 per kW in Bihar. A 3kW system costs approximately ₹1,95,000. After PM Surya Ghar subsidy of ₹78,000, your net investment is around ₹1,17,000.</p>
+                <p>A rooftop solar system costs ₹60,000-70,000 per kW in Bihar. A 3kW system costs approximately ₹1,95,000. After PM Surya Ghar subsidy of ₹98,000, your net investment is around ₹1,17,000.</p>
               </div>
               <div className="blog-faq-item">
                 <h3>Do I need to clean solar panels regularly?</h3>

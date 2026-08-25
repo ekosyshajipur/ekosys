@@ -97,7 +97,7 @@ router.get('/send-weekly', async (req, res) => {
           <div style="background: #f8fafc; border-radius: 12px; padding: 20px; margin-bottom: 20px;">
             <h3 style="color: #334155; margin-bottom: 12px;">☀️ This Week's Highlights</h3>
             <p style="color: #475569; line-height: 1.8;">
-              • <strong>PM Surya Ghar Yojana</strong> — Get up to ₹78,000 subsidy on rooftop solar. Limited time offer!<br/>
+              • <strong>PM Surya Ghar Yojana</strong> — Get up to ₹98,000 subsidy on rooftop solar. Limited time offer!<br/>
               • <strong>New Solar Water Pumps</strong> — PM-KUSUM scheme offers up to 90% subsidy for farmers.<br/>
               • <strong>Energy Saving Tip:</strong> A 5kW solar system can save ₹8,000-12,000/month on electricity bills.
             </p>

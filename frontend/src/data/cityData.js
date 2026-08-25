@@ -38,7 +38,7 @@ export const cities = [
       {
         name: "Amit Kumar",
         area: "Kankarbagh, Patna",
-        text: "We were skeptical about solar but EKOSYS explained every detail clearly. They helped us claim ₹78,000 subsidy under PM Surya Ghar Yojana. Our 3kW system has been running flawlessly for over a year. Highly recommended for anyone in Patna looking for solar panels.",
+        text: "We were skeptical about solar but EKOSYS explained every detail clearly. They helped us claim ₹98,000 subsidy under PM Surya Ghar Yojana. Our 3kW system has been running flawlessly for over a year. Highly recommended for anyone in Patna looking for solar panels.",
         rating: 5
       }
     ],
@@ -53,7 +53,7 @@ export const cities = [
       },
       {
         q: "Is government subsidy available for solar panels in Patna?",
-        a: "Yes, Patna residents are eligible for subsidy under PM Surya Ghar Muft Bijli Yojana — up to ₹78,000 for a 3kW system. EKOSYS handles the complete subsidy application process including documentation, portal registration, and follow-up with BSPHCL."
+        a: "Yes, Patna residents are eligible for subsidy under PM Surya Ghar Muft Bijli Yojana — up to ₹98,000 for a 3kW system. EKOSYS handles the complete subsidy application process including documentation, portal registration, and follow-up with BSPHCL."
       },
       {
         q: "How long does solar installation take in Patna?",
@@ -252,7 +252,7 @@ export const cities = [
       },
       {
         q: "What is the solar panel price in Muzaffarpur?",
-        a: "Solar panel prices in Muzaffarpur range from ₹55,000–₹75,000 per kW for complete installations (panels + inverter + mounting + wiring). With government subsidy of up to ₹78,000 on a 3kW system, the effective cost becomes very affordable. Contact EKOSYS for an exact quote."
+        a: "Solar panel prices in Muzaffarpur range from ₹55,000–₹75,000 per kW for complete installations (panels + inverter + mounting + wiring). With government subsidy of up to ₹98,000 on a 3kW system, the effective cost becomes very affordable. Contact EKOSYS for an exact quote."
       },
       {
         q: "How does net metering work in Muzaffarpur?",
@@ -370,7 +370,7 @@ export const cities = [
     faqs: [
       {
         q: "What is the cost of a 5kW solar system in Begusarai?",
-        a: "A 5kW on-grid solar system in Begusarai costs approximately ₹2.75–3.75 lakh before subsidy. After availing the PM Surya Ghar Yojana subsidy of up to ₹78,000, the effective cost reduces significantly. EKOSYS provides detailed quotations with transparent pricing — no hidden charges."
+        a: "A 5kW on-grid solar system in Begusarai costs approximately ₹2.75–3.75 lakh before subsidy. After availing the PM Surya Ghar Yojana subsidy of up to ₹98,000, the effective cost reduces significantly. EKOSYS provides detailed quotations with transparent pricing — no hidden charges."
       },
       {
         q: "Can EKOSYS install solar for factories in Begusarai Industrial Area?",
@@ -646,7 +646,7 @@ export const cities = [
       },
       {
         q: "How much does a 3kW solar system cost in Nalanda?",
-        a: "A 3kW solar system in Nalanda costs approximately ₹1.65–2.25 lakh before government subsidy. After PM Surya Ghar Yojana subsidy of up to ₹78,000, the effective cost reduces to around ₹87,000–1.47 lakh. EKOSYS provides transparent pricing with no hidden charges and flexible payment options."
+        a: "A 3kW solar system in Nalanda costs approximately ₹1.65–2.25 lakh before government subsidy. After PM Surya Ghar Yojana subsidy of up to ₹98,000, the effective cost reduces to around ₹87,000–1.47 lakh. EKOSYS provides transparent pricing with no hidden charges and flexible payment options."
       }
     ],
     uniqueContent: [

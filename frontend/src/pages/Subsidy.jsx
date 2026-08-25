@@ -24,18 +24,18 @@ export default function Subsidy() {
   return (
     <>
       <Helmet>
-        <title>Solar Subsidy Bihar 2026 | PM Surya Ghar Yojana | Up to ₹78,000 | EKOSYS</title>
-        <meta name="description" content="Get up to ₹78,000 solar subsidy in Bihar under PM Surya Ghar Muft Bijli Yojana. EKOSYS handles complete application, approval & disbursement process. Call +91-7644868086." />
+        <title>Solar Subsidy Bihar 2026 | PM Surya Ghar Yojana | Up to ₹98,000 | EKOSYS</title>
+        <meta name="description" content="Get up to ₹98,000 solar subsidy in Bihar under PM Surya Ghar Muft Bijli Yojana. EKOSYS handles complete application, approval & disbursement process. Call +91-7644868086." />
         <meta name="keywords" content="solar subsidy Bihar, PM Surya Ghar Yojana, solar panel subsidy, government subsidy solar, free solar scheme Bihar, EKOSYS subsidy assistance, rooftop solar subsidy" />
         <link rel="canonical" href="https://ekosys.in/subsidy" />
         <meta property="og:title" content="Solar Subsidy Bihar 2026 | PM Surya Ghar Yojana | EKOSYS" />
-        <meta property="og:description" content="Get up to ₹78,000 solar subsidy in Bihar under PM Surya Ghar Muft Bijli Yojana. EKOSYS handles complete application, approval & disbursement process." />
+        <meta property="og:description" content="Get up to ₹98,000 solar subsidy in Bihar under PM Surya Ghar Muft Bijli Yojana. EKOSYS handles complete application, approval & disbursement process." />
         <meta property="og:url" content="https://ekosys.in/subsidy" />
         <meta property="og:image" content="https://ekosys.in/images/subsidy.webp" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Solar Subsidy Bihar 2026 | PM Surya Ghar Yojana" />
-        <meta name="twitter:description" content="Get up to ₹78,000 solar subsidy in Bihar under PM Surya Ghar Muft Bijli Yojana." />
+        <meta name="twitter:description" content="Get up to ₹98,000 solar subsidy in Bihar under PM Surya Ghar Muft Bijli Yojana." />
         <meta name="twitter:image" content="https://ekosys.in/images/subsidy.webp" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
@@ -68,7 +68,7 @@ export default function Subsidy() {
           variants={fadeUp}
         >
           <div className="subsidy-badge">🇮🇳 PM Surya Ghar Muft Bijli Yojana</div>
-          <h1>Unlock Up To <span className="highlight">₹78,000</span> Solar Subsidy</h1>
+          <h1>Unlock Up To <span className="highlight">₹98,000</span> Solar Subsidy</h1>
           <p>
             Transform your roof into a power plant. The Government of India is offering massive subsidies transferred directly to your bank account via DBT. EKOSYS handles 100% of the paperwork.
           </p>
@@ -102,7 +102,7 @@ export default function Subsidy() {
               </p>
               <div className="quote-box">
                 <p>
-                  "पीएम सूर्य घर योजना - हर महीने 300 यूनिट तक मुफ़्त बिजली और ₹78,000 तक की डायरेक्ट बैंक ट्रांसफर (DBT) सब्सिडी!"
+                  "पीएम सूर्य घर योजना - हर महीने 300 यूनिट तक मुफ़्त बिजली और ₹98,000 तक की डायरेक्ट बैंक ट्रांसफर (DBT) सब्सिडी!"
                 </p>
               </div>
             </motion.div>
@@ -148,7 +148,7 @@ export default function Subsidy() {
             <motion.div className="tier-card popular" variants={fadeUp}>
               <div className="popular-badge">Most Popular</div>
               <div className="tier-capacity">Exactly 3 kW System</div>
-              <div className="tier-subsidy">₹78,000 <span>Maximum Scheme Subsidy</span></div>
+              <div className="tier-subsidy">₹98,000 <span>Maximum Scheme Subsidy</span></div>
               <ul className="tier-features">
                 <li><FiCheckCircle /> Ideal for medium homes (3-4 BHK)</li>
                 <li><FiCheckCircle /> Powers 1-2 ACs easily during day</li>
@@ -160,7 +160,7 @@ export default function Subsidy() {
             {/* Tier 3 */}
             <motion.div className="tier-card" variants={fadeUp}>
               <div className="tier-capacity">Above 3 kW System</div>
-              <div className="tier-subsidy">₹78,000 <span>Capped Maximum Subsidy</span></div>
+              <div className="tier-subsidy">₹98,000 <span>Capped Maximum Subsidy</span></div>
               <ul className="tier-features">
                 <li><FiCheckCircle /> Ideal for large homes / villas</li>
                 <li><FiCheckCircle /> Heavy load handling (3+ ACs)</li>

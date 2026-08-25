@@ -81,7 +81,7 @@ router.post('/', async (req, res) => {
               <h3 style="color: #0f172a; font-size: 1.2rem; margin-bottom: 16px;">Why Partner with EKOSYS? 🌟</h3>
               <ul style="padding-left: 20px; color: #334155; line-height: 1.8; font-size: 1.05rem;">
                 <li style="margin-bottom: 10px;"><strong>Expert Assessment:</strong> Free, no-obligation site visits and detailed energy audits.</li>
-                <li style="margin-bottom: 10px;"><strong>Government Subsidy:</strong> Complete end-to-end assistance for PM Surya Ghar Yojana (Up to ₹78,000 Subsidy).</li>
+                <li style="margin-bottom: 10px;"><strong>Government Subsidy:</strong> Complete end-to-end assistance for PM Surya Ghar Yojana (Up to ₹98,000 Subsidy).</li>
                 <li style="margin-bottom: 10px;"><strong>Premium Quality:</strong> MNRE approved, Tier-1 Mono PERC Bifacial panels with a 25-Year Performance Warranty.</li>
                 <li style="margin-bottom: 10px;"><strong>Peace of Mind:</strong> Seamless installation by certified engineers and dedicated 24/7 post-sales support.</li>
               </ul>

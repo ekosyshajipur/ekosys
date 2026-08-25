@@ -47,7 +47,7 @@ export default function Footer() {
               <Link to="/subsidy">Govt Subsidy Assistance</Link>
               <Link to="/installation">Installation Guide</Link>
               <p style={{ marginTop: "10px", color: "#f59e0b", fontStyle: "italic", fontSize: "0.85rem", lineHeight: 1.4 }}>
-                "PM सूर्य घर योजना के तहत ₹78,000 तक की सब्सिडी"
+                "PM सूर्य घर योजना के तहत ₹98,000 तक की सब्सिडी"
               </p>
             </div>
 

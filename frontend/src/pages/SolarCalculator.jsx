@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     q: "What government subsidy is available for solar in Bihar?",
-    a: "Under the PM Surya Ghar Muft Bijli Yojana, residential on-grid and hybrid solar systems are eligible for subsidy. For 1-2 kW systems, the subsidy is ₹30,000 per kW (up to ₹60,000). For 3 kW and above, the total subsidy is ₹78,000. Off-grid systems are not eligible for this subsidy.",
+    a: "Under the PM Surya Ghar Muft Bijli Yojana, residential on-grid and hybrid solar systems are eligible for subsidy. For 1-2 kW systems, the subsidy is ₹30,000 per kW (up to ₹60,000). For 3 kW and above, the total subsidy is ₹98,000. Off-grid systems are not eligible for this subsidy.",
   },
   {
     q: "How long does it take to recover the solar investment?",
@@ -357,7 +357,7 @@ export default function SolarCalculator() {
         <title>Solar Calculator Bihar | Calculate Solar Savings & ROI | EKOSYS</title>
         <meta
           name="description"
-          content="Free solar ROI calculator for Bihar. Calculate recommended solar system size, monthly savings, government subsidy (up to ₹78,000), payback period, and 25-year savings. Get instant results from EKOSYS."
+          content="Free solar ROI calculator for Bihar. Calculate recommended solar system size, monthly savings, government subsidy (up to ₹98,000), payback period, and 25-year savings. Get instant results from EKOSYS."
         />
         <meta
           name="keywords"
