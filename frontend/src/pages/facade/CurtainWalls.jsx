@@ -57,7 +57,7 @@ function CurtainWalls() {
         "Our curtain wall solutions are designed to accommodate structural deflections, wind loads, and thermal expansion while maintaining superior air and water tightness. We incorporate advanced thermal breaks and high-performance glazing to optimize the building's energy efficiency.",
         "Partner with Ekosys for reliable, precision-engineered curtain wall installations that elevate the visual appeal and sustainability of your commercial property."
       ]}
-      heroImage="/images/facade.webp"
+      heroImage="/images/facade.png"
       benefits={benefits}
       reasons={reasons}
       processSteps={processSteps}

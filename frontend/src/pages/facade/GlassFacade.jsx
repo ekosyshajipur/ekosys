@@ -57,7 +57,7 @@ function GlassFacade() {
         "Beyond aesthetics, we prioritize performance and safety. We work with high-performance glass types—such as Low-E, double-glazed units (DGU), and laminated safety glass—to ensure optimal thermal insulation, acoustic control, and structural integrity against wind and impact loads.",
         "From intricate structural calculations to the delicate hoisting and precise fixing of massive glass panels, the Ekosys engineering team handles every aspect of your custom glass facade project with unmatched expertise."
       ]}
-      heroImage="/images/facade.webp"
+      heroImage="/images/facade.png"
       benefits={benefits}
       reasons={reasons}
       processSteps={processSteps}

@@ -58,7 +58,7 @@ function StructuralGlazing() {
         "Our expert facade engineering team ensures that every structural glazing project is meticulously planned and executed. We conduct rigorous wind load and structural analyses to guarantee the safety, durability, and weather resistance of the facade under all environmental conditions.",
         "Ideal for office complexes, shopping malls, and high-rise commercial buildings, our structural glazing solutions provide unmatched architectural elegance, energy efficiency, and long-term performance."
       ]}
-      heroImage="/images/facade.webp"
+      heroImage="/images/facade.png"
       benefits={benefits}
       reasons={reasons}
       processSteps={processSteps}

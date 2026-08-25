@@ -61,7 +61,7 @@ function FacadeHub() {
         "From initial architectural consultation and structural analysis to custom fabrication and precise on-site installation, Ekosys offers end-to-end facade solutions. We use premium materials and modern engineering techniques to deliver flawless exteriors that stand the test of time.",
         "Whether you are constructing a new high-rise office or renovating an existing commercial building, our facade engineering services provide the perfect blend of architectural beauty and structural integrity."
       ]}
-      heroImage="/images/facade.webp"
+      heroImage="/images/facade.png"
       benefits={benefits}
       reasons={reasons}
       processSteps={processSteps}

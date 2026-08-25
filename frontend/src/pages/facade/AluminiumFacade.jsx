@@ -58,7 +58,7 @@ function AluminiumFacade() {
         "To maximize energy efficiency, we integrate advanced thermal break technology into our aluminium systems. By insulating the interior framing from the exterior elements, we prevent thermal bridging, reducing heating and cooling costs and improving interior comfort.",
         "Available in a vast array of powder-coated and anodized finishes, our aluminium facades offer architects and developers the freedom to create striking, sustainable, and high-performance building envelopes."
       ]}
-      heroImage="/images/facade.webp"
+      heroImage="/images/facade.png"
       benefits={benefits}
       reasons={reasons}
       processSteps={processSteps}

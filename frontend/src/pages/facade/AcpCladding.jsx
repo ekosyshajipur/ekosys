@@ -58,7 +58,7 @@ function AcpCladding() {
         "Our team ensures precision at every step, from the installation of the sturdy aluminium substructure to the flawless routing and fixing of the ACP panels. We offer a vast array of colors, metallic finishes, and wood or stone textures, allowing you to achieve the exact aesthetic you desire for your brand's physical presence.",
         "For safety and compliance, Ekosys strongly advocates for the use of Fire-Retardant (FR) grade ACP panels in commercial applications, ensuring your building looks spectacular while prioritizing occupant safety."
       ]}
-      heroImage="/images/facade.webp"
+      heroImage="/images/facade.png"
       benefits={benefits}
       reasons={reasons}
       processSteps={processSteps}
