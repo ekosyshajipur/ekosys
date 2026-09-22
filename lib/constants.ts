@@ -14,6 +14,10 @@ export const SITE_CONFIG = {
   phone: "+91 76 44 86 80 86",
   phoneClean: "+917644868086",
   whatsappUrl: "https://wa.me/917644868086",
+  hours: {
+    weekdays: "Monday – Saturday",
+    time: "9:00 AM – 7:00 PM",
+  },
   address: {
     line1: "Opposite to Municipal Office",
     city: "Hajipur",

@@ -50,7 +50,7 @@ export function organizationSchema() {
     department: DIVISIONS.map((d) => ({
       "@type": "Organization",
       name: d.brand,
-      url: `${SITE_CONFIG.url}${d.path}`,
+      url: d.link,
       description: d.description,
     })),
   };
