@@ -38,9 +38,9 @@ export const metadata: Metadata = {
     description: SITE_CONFIG.description,
     images: [
       {
-        url: "/images/solar/Homepage-Hero-Image.webp",
-        width: 1200,
-        height: 630,
+        url: "/images/webLogo.webp",
+        width: 512,
+        height: 512,
         alt: `${SITE_CONFIG.name} — Engineering the Future`,
       },
     ],
@@ -49,11 +49,11 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${SITE_CONFIG.name} — ${SITE_CONFIG.tagline}`,
     description: SITE_CONFIG.description,
-    images: ["/images/solar/Homepage-Hero-Image.webp"],
+    images: ["/images/webLogo.webp"],
   },
   icons: {
-    icon: "/images/Logo.png",
-    apple: "/images/Logo.png",
+    icon: "/images/webLogo.webp",
+    apple: "/images/webLogo.webp",
   },
 };
 

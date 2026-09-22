@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { X, Sun, Building2, HeartPulse, Compass, Monitor, Phone, Mail, ArrowRight } from "lucide-react";
+import { X, Sun, Building2, HeartPulse, Compass, Monitor, Phone, Mail, ArrowRight, MessageCircle } from "lucide-react";
 import Button from "@/components/ui/Button";
 import { NAV_LINKS, DIVISIONS, SITE_CONFIG } from "@/lib/constants";
 
@@ -133,17 +133,24 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
             </a>
           </div>
 
-          {/* CTA */}
-          <div className="mt-6">
-            <Button
-              href="/contact"
-              variant="primary"
-              size="lg"
-              className="w-full"
-              arrow
+          {/* CTAs */}
+          <div className="mt-6 flex flex-col gap-2.5">
+            <a
+              href={`tel:${SITE_CONFIG.phoneClean}`}
+              className="flex items-center justify-center gap-2.5 w-full py-3 px-5 rounded-full text-sm font-semibold text-white bg-[#0A192F] hover:bg-[#152a4a] shadow-sm transition-all"
             >
-              Talk to an Expert
-            </Button>
+              <Phone className="w-4 h-4 text-white" />
+              <span>Call now ({SITE_CONFIG.phone})</span>
+            </a>
+            <a
+              href={SITE_CONFIG.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2.5 w-full py-3 px-5 rounded-full text-sm font-bold text-white bg-[#25D366] hover:bg-[#20bd5a] shadow-md transition-all"
+            >
+              <MessageCircle className="w-4 h-4 fill-white" />
+              <span>Chat on WhatsApp</span>
+            </a>
           </div>
         </div>
       </div>

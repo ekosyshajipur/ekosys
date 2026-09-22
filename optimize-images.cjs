@@ -2,9 +2,9 @@ const fs = require("fs");
 const path = require("path");
 const sharp = require("sharp");
 
-const IMAGE_DIR = path.join(process.cwd(), "public", "images");
+const IMAGE_DIR = path.join(process.cwd(), "public", "web");
 
-const supported = [".png", ".jpg", ".jpeg"];
+const supported = [".png", ".jpg", ".jpeg", ".webp"];
 
 function getFiles(dir) {
   const entries = fs.readdirSync(dir, { withFileTypes: true });

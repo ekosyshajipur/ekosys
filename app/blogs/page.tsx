@@ -20,17 +20,17 @@ export default function BlogsPage() {
   return (
     <div className="py-12 lg:py-16">
       {/* Header */}
-      <section className="bg-navy-950 text-white py-20 lg:py-28 relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid-light opacity-20 pointer-events-none" />
+      <section className="bg-[#F4F7F9] text-navy-900 py-20 lg:py-28 relative overflow-hidden border-b border-navy-200">
+        <div className="absolute inset-0 bg-grid opacity-15 pointer-events-none" />
         <Container className="relative">
           <div className="max-w-3xl">
-            <span className="text-xs font-bold uppercase tracking-widest text-green-400 font-heading">
+            <span className="text-xs font-bold uppercase tracking-widest text-green-700 font-heading">
               KNOWLEDGE HUB
             </span>
-            <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading tracking-tight leading-tight">
-              Engineering Insights & <span className="text-green-400">Industry Perspectives</span>
+            <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading tracking-tight leading-tight text-navy-900">
+              Engineering Insights & <span className="text-green-700">Industry Perspectives</span>
             </h1>
-            <p className="mt-6 text-base sm:text-lg text-gray-300 leading-relaxed">
+            <p className="mt-6 text-base sm:text-lg text-navy-700 leading-relaxed">
               In-depth research, architectural guides, regulatory standards, and technology reviews authored by EKOSYS engineering leads.
             </p>
           </div>

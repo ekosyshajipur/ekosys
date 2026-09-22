@@ -5,12 +5,17 @@ import { MessageCircle, Phone, ArrowUp } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/constants";
 
 export default function FloatingActions() {
+  const [mounted, setMounted] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
+
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 400);
     };
+
+    handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -19,8 +24,15 @@ export default function FloatingActions() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  if (!mounted) {
+    return null;
+  }
+
   return (
-    <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3 pointer-events-none">
+    <div
+      suppressHydrationWarning
+      className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3 pointer-events-none"
+    >
       {/* WhatsApp Action */}
       <a
         href={SITE_CONFIG.whatsappUrl}

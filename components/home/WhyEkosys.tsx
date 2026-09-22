@@ -28,12 +28,12 @@ export default function WhyEkosys() {
             return (
               <div
                 key={item.title}
-                className="p-8 rounded-3xl border border-gray-100 bg-white shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group"
+                className="divi-card p-8 group divi-blurb"
               >
-                <div className="w-14 h-14 rounded-2xl bg-green-50 text-green-700 flex items-center justify-center mb-6 group-hover:bg-green-700 group-hover:text-white transition-colors">
+                <div className="w-14 h-14 rounded-2xl bg-green-50 text-green-700 flex items-center justify-center mb-6 group-hover:bg-green-700 group-hover:text-white transition-all duration-300 divi-blurb-icon shadow-xs">
                   <Icon className="w-7 h-7" />
                 </div>
-                <h3 className="text-xl font-bold text-navy-900 mb-3 font-heading">
+                <h3 className="text-xl font-bold text-navy-900 mb-3 font-heading group-hover:text-green-700 transition-colors">
                   {item.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">

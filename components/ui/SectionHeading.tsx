@@ -22,12 +22,12 @@ export default function SectionHeading({
       }`}
     >
       {tag && (
-        <span className="section-number mb-3 inline-block">
+        <span className="divi-badge mb-3">
           {tag}
         </span>
       )}
       <HeadingTag
-        className={`text-3xl sm:text-4xl lg:text-[2.75rem] font-bold leading-tight tracking-tight ${
+        className={`text-3xl sm:text-4xl lg:text-[2.75rem] font-extrabold leading-tight tracking-tight ${
           light ? "text-white" : "text-navy-900"
         }`}
         style={{ fontFamily: "var(--font-heading)" }}
@@ -44,7 +44,7 @@ export default function SectionHeading({
         </p>
       )}
       <div
-        className={`divider-accent mt-6 ${
+        className={`divi-divider mt-6 ${
           align === "center" ? "mx-auto" : ""
         }`}
       />

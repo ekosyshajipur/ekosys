@@ -71,9 +71,9 @@ export default function Introduction() {
               return (
                 <div
                   key={cap.title}
-                  className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+                  className="divi-card p-6 divi-blurb"
                 >
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${cap.color}`}>
+                  <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-4 ${cap.color} divi-blurb-icon transition-transform`}>
                     <Icon className="w-6 h-6" />
                   </div>
                   <h3 className="text-base font-bold text-navy-900 mb-2 font-heading">
@@ -85,26 +85,6 @@ export default function Introduction() {
                 </div>
               );
             })}
-          </div>
-        </div>
-
-        {/* Corporate Metrics Bar */}
-        <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-6 p-8 bg-navy-950 rounded-3xl text-white">
-          <div className="text-center">
-            <div className="text-3xl sm:text-4xl font-extrabold text-green-400 font-heading">5</div>
-            <div className="mt-1 text-xs sm:text-sm text-gray-400 font-medium">Core Divisions</div>
-          </div>
-          <div className="text-center border-l border-navy-800">
-            <div className="text-3xl sm:text-4xl font-extrabold text-gold-400 font-heading">25+ Yrs</div>
-            <div className="mt-1 text-xs sm:text-sm text-gray-400 font-medium">Solar Warranty Performance</div>
-          </div>
-          <div className="text-center border-l border-navy-800">
-            <div className="text-3xl sm:text-4xl font-extrabold text-white font-heading">100%</div>
-            <div className="mt-1 text-xs sm:text-sm text-gray-400 font-medium">Turnkey Responsibility</div>
-          </div>
-          <div className="text-center border-l border-navy-800">
-            <div className="text-3xl sm:text-4xl font-extrabold text-green-400 font-heading">Pan-India</div>
-            <div className="mt-1 text-xs sm:text-sm text-gray-400 font-medium">Project Delivery Network</div>
           </div>
         </div>
       </Container>

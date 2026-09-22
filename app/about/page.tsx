@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
-import { ShieldCheck, Target, Eye, Award, CheckCircle2, ArrowRight, Users, Sparkles } from "lucide-react";
+import { Target, Eye, Award, CheckCircle2 } from "lucide-react";
 import Container from "@/components/ui/Container";
-import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
-import { SITE_CONFIG, DIVISIONS } from "@/lib/constants";
+import Introduction from "@/components/home/Introduction";
+import SolutionSelector from "@/components/home/SolutionSelector";
+import WhyEkosys from "@/components/home/WhyEkosys";
 import { generatePageMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = generatePageMetadata({
@@ -17,54 +17,54 @@ export const metadata: Metadata = generatePageMetadata({
 
 export default function AboutPage() {
   return (
-    <div className="py-12 lg:py-16">
-      {/* Hero Header */}
-      <section className="relative overflow-hidden bg-navy-950 text-white py-20 lg:py-28">
-        <div className="absolute inset-0 bg-grid-light opacity-20 pointer-events-none" />
+    <div className="py-6 lg:py-10">
+      {/* 01. Hero Header */}
+      <section className="relative overflow-hidden bg-[#F4F7F9] text-navy-900 py-20 lg:py-28 border-b border-navy-200">
+        <div className="absolute inset-0 bg-grid opacity-15 pointer-events-none" />
         <Container className="relative">
           <div className="max-w-3xl">
-            <span className="text-xs font-bold uppercase tracking-widest text-green-400 font-heading">
+            <span className="divi-badge text-green-700 border-green-500/25 bg-green-50 mb-4">
               ABOUT OUR ENTERPRISE
             </span>
-            <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading tracking-tight leading-tight">
-              Engineering Built on <span className="text-green-400">Integrity, Precision</span> & Future Vision.
+            <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading tracking-tight leading-tight text-navy-900">
+              Engineering Built on <span className="text-green-700">Integrity, Precision</span> & Future Vision.
             </h1>
-            <p className="mt-6 text-base sm:text-lg text-gray-300 leading-relaxed">
-              EKOSYS Corporation was founded to solve a fundamental challenge in the infrastructure and technology industry: fragmented engineering execution. By consolidating five mission-critical engineering disciplines under one governance, we deliver unmatched quality and accountability.
+            <p className="mt-6 text-base sm:text-lg text-navy-700 leading-relaxed">
+              EKOSYS Corporation was founded to solve a fundamental challenge in the infrastructure and technology industry: fragmented engineering execution. By consolidating five mission-critical engineering disciplines under one corporate governance, we deliver unmatched quality and accountability.
             </p>
           </div>
         </Container>
       </section>
 
-      {/* Corporate Narrative */}
+      {/* 02. Corporate Narrative */}
       <section className="py-20 bg-white">
         <Container>
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-6 text-gray-700 leading-relaxed">
-              <span className="text-xs font-bold uppercase tracking-widest text-green-700">
+              <span className="divi-badge">
                 OUR ORIGIN & PURPOSE
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-navy-900 font-heading tracking-tight">
                 From Hajipur to Nationwide Impact
               </h2>
               <p>
-                Headquartered opposite to the Municipal Office in Hajipur, Bihar, EKOSYS Corporation was established with a clear mandate: to bring Tier-1 global engineering practices, rigorous quality controls, and transparent project management to regional and national markets.
+                Headquartered opposite to the Municipal Office in Hajipur, Bihar, EKOSYS Corporation was established with a clear mandate: to bring Tier-1 global engineering practices, rigorous quality controls, and transparent project management to regional and national infrastructure projects.
               </p>
               <p>
-                Over the years, we have scaled our operations across solar energy EPC, high-rise architectural facades, turnkey hospital installations, modern architectural planning, and enterprise digital infrastructure.
+                Over the years, we have scaled our operations across solar energy EPC, high-rise architectural facades, turnkey hospital medical technology installations, modern residential and commercial architecture, and enterprise digital infrastructure.
               </p>
               <p>
-                Our clients include industrial corporations, commercial developers, government bodies, healthcare institutions, and discerning homeowners who require long-term durability rather than short-term shortcuts.
+                Our clients include industrial corporations, commercial developers, government bodies, healthcare institutions, and discerning property owners who prioritize long-term durability and engineering excellence.
               </p>
 
               <div className="pt-4 grid grid-cols-2 gap-4">
-                <div className="p-4 rounded-xl bg-gray-50 border border-gray-100">
+                <div className="divi-card p-5">
                   <div className="text-2xl font-bold text-navy-900 font-heading">5 Divisions</div>
-                  <div className="text-xs text-gray-500 mt-1">Unified Under One Brand</div>
+                  <div className="text-xs text-gray-500 mt-1">Unified Under One Governance</div>
                 </div>
-                <div className="p-4 rounded-xl bg-gray-50 border border-gray-100">
+                <div className="divi-card p-5">
                   <div className="text-2xl font-bold text-green-700 font-heading">100% Quality</div>
-                  <div className="text-xs text-gray-500 mt-1">Guaranteed Handover</div>
+                  <div className="text-xs text-gray-500 mt-1">Guaranteed Project Handover</div>
                 </div>
               </div>
             </div>
@@ -72,14 +72,14 @@ export default function AboutPage() {
             <div className="lg:col-span-6 relative">
               <div className="relative rounded-3xl overflow-hidden shadow-xl aspect-[4/3] border border-gray-100">
                 <Image
-                  src="/images/facade/Facade Engineering Team.webp"
-                  alt="EKOSYS Engineering Team"
+                  src="/images/facade/about_company.png"
+                  alt="EKOSYS Corporate Infrastructure & Engineering"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hidden sm:block">
+              <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 hidden sm:block">
                 <div className="flex items-center gap-3">
                   <Award className="w-8 h-8 text-gold-500" />
                   <div>
@@ -93,13 +93,13 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* Mission & Vision */}
+      {/* 03. Mission & Vision */}
       <section className="py-20 bg-gray-50/80 border-y border-gray-100">
         <Container>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="p-8 sm:p-10 rounded-3xl bg-white border border-gray-100 shadow-sm flex flex-col justify-between">
+            <div className="divi-card p-8 sm:p-10 flex flex-col justify-between">
               <div>
-                <div className="w-12 h-12 rounded-xl bg-green-50 text-green-700 flex items-center justify-center mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-green-50 text-green-700 flex items-center justify-center mb-6 shadow-xs">
                   <Target className="w-6 h-6" />
                 </div>
                 <h3 className="text-2xl font-bold text-navy-900 font-heading mb-4">
@@ -115,9 +115,9 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="p-8 sm:p-10 rounded-3xl bg-white border border-gray-100 shadow-sm flex flex-col justify-between">
+            <div className="divi-card p-8 sm:p-10 flex flex-col justify-between">
               <div>
-                <div className="w-12 h-12 rounded-xl bg-navy-50 text-navy-800 flex items-center justify-center mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-navy-50 text-navy-800 flex items-center justify-center mb-6 shadow-xs">
                   <Eye className="w-6 h-6" />
                 </div>
                 <h3 className="text-2xl font-bold text-navy-900 font-heading mb-4">
@@ -136,57 +136,31 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* Five Core Pillars */}
-      <section className="py-20 lg:py-28 bg-white">
-        <Container>
-          <SectionHeading
-            tag="CORPORATE ARCHITECTURE"
-            title="The Five Pillars of EKOSYS"
-            description="Our specialized divisions provide dedicated domain focus backed by shared corporate governance."
-          />
+      {/* 04. Moved Section 1: An Integrated Ecosystem of Engineering & Innovation */}
+      <Introduction />
 
-          <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {DIVISIONS.map((div) => (
-              <div
-                key={div.id}
-                className="p-8 rounded-3xl border border-gray-100 bg-white shadow-xs hover:shadow-lg transition-all"
-              >
-                <div className="text-xs font-bold text-green-700 tracking-wider uppercase mb-2">
-                  Division {div.number}
-                </div>
-                <h3 className="text-xl font-bold text-navy-900 font-heading mb-3">
-                  {div.brand}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  {div.description}
-                </p>
-                <a
-                  href={div.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs font-bold text-navy-900 hover:text-green-700 transition-colors inline-flex items-center gap-1.5"
-                >
-                  Visit Portal
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </a>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
+      {/* 05. Moved Section 2: Explore Our Engineering Capabilities */}
+      <SolutionSelector />
 
-      {/* Leadership & CTA */}
-      <section className="py-16 bg-navy-950 text-white">
-        <Container>
+      {/* 06. Moved Section 3: Why Leading Enterprises & Institutions Choose EKOSYS */}
+      <WhyEkosys />
+
+      {/* 07. Leadership & CTA */}
+      <section className="py-20 bg-[#F4F7F9] text-navy-900 relative overflow-hidden border-t border-navy-200">
+        <div className="absolute inset-0 bg-grid opacity-15 pointer-events-none" />
+        <Container className="relative">
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl font-extrabold font-heading">
+            <span className="divi-badge text-gold-700 border-gold-500/25 bg-gold-50 mb-4">
+              COLLABORATE WITH EKOSYS
+            </span>
+            <h2 className="mt-2 text-3xl sm:text-4xl font-extrabold font-heading text-navy-900">
               Partner with an Engineering Powerhouse
             </h2>
-            <p className="mt-4 text-gray-300 text-sm sm:text-base">
+            <p className="mt-4 text-navy-700 text-sm sm:text-base leading-relaxed">
               Whether you are planning an industrial solar installation, modern commercial facade, hospital medical wing, or IT upgrade, our directors are available for consultation.
             </p>
             <div className="mt-8 flex justify-center gap-4">
-              <Button href="/contact" variant="accent" size="lg">
+              <Button href="/contact" variant="accent" size="lg" arrow>
                 Contact Corporate Office
               </Button>
             </div>

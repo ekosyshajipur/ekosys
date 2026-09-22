@@ -1,57 +1,126 @@
-import { SITE_CONFIG } from "@/lib/constants";
+import { SITE_CONFIG, DIVISIONS } from "@/lib/constants";
+
+const logoUrl = `${SITE_CONFIG.url}/images/Logo.webp`;
+const postalAddress = {
+  "@type": "PostalAddress" as const,
+  streetAddress: SITE_CONFIG.address.line1,
+  addressLocality: SITE_CONFIG.address.city,
+  addressRegion: SITE_CONFIG.address.state,
+  postalCode: SITE_CONFIG.address.pin,
+  addressCountry: "IN",
+};
 
 export function organizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: SITE_CONFIG.name,
+    legalName: SITE_CONFIG.name,
     url: SITE_CONFIG.url,
-    logo: `${SITE_CONFIG.url}/images/Logo.png`,
+    logo: {
+      "@type": "ImageObject",
+      url: logoUrl,
+    },
+    image: logoUrl,
     description: SITE_CONFIG.description,
+    email: SITE_CONFIG.email,
+    telephone: SITE_CONFIG.phoneClean,
+    address: postalAddress,
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: SITE_CONFIG.phone,
+      telephone: SITE_CONFIG.phoneClean,
       contactType: "customer service",
       email: SITE_CONFIG.email,
       areaServed: "IN",
       availableLanguage: ["English", "Hindi"],
+      hoursAvailable: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ],
+        opens: "09:00",
+        closes: "19:00",
+      },
     },
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: SITE_CONFIG.address.line1,
-      addressLocality: SITE_CONFIG.address.city,
-      addressRegion: SITE_CONFIG.address.state,
-      postalCode: SITE_CONFIG.address.pin,
-      addressCountry: "IN",
-    },
-    sameAs: [],
+    department: DIVISIONS.map((d) => ({
+      "@type": "Organization",
+      name: d.brand,
+      url: `${SITE_CONFIG.url}${d.path}`,
+      description: d.description,
+    })),
   };
 }
 
 export function localBusinessSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["ProfessionalService", "LocalBusiness"],
     name: SITE_CONFIG.name,
     description: SITE_CONFIG.description,
     url: SITE_CONFIG.url,
-    telephone: SITE_CONFIG.phone,
+    telephone: SITE_CONFIG.phoneClean,
     email: SITE_CONFIG.email,
-    image: `${SITE_CONFIG.url}/images/Logo.png`,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: SITE_CONFIG.address.line1,
-      addressLocality: SITE_CONFIG.address.city,
-      addressRegion: SITE_CONFIG.address.state,
-      postalCode: SITE_CONFIG.address.pin,
-      addressCountry: "IN",
+    image: logoUrl,
+    address: postalAddress,
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ],
+      opens: "09:00",
+      closes: "19:00",
     },
     areaServed: [
       { "@type": "City", name: "Hajipur" },
+      { "@type": "AdministrativeArea", name: "Vaishali" },
       { "@type": "City", name: "Patna" },
       { "@type": "State", name: "Bihar" },
+      { "@type": "Country", name: "India" },
     ],
-    priceRange: "$$",
+  };
+}
+
+export function websiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE_CONFIG.name,
+    url: SITE_CONFIG.url,
+    inLanguage: "en-IN",
+    publisher: {
+      "@type": "Organization",
+      name: SITE_CONFIG.name,
+      url: SITE_CONFIG.url,
+    },
+  };
+}
+
+export function webPageSchema(page: { name: string; description: string; url: string }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: page.name,
+    description: page.description,
+    url: page.url,
+    isPartOf: {
+      "@type": "WebSite",
+      url: SITE_CONFIG.url,
+      name: SITE_CONFIG.name,
+    },
+    about: {
+      "@type": "Organization",
+      name: SITE_CONFIG.name,
+    },
   };
 }
 
@@ -67,10 +136,12 @@ export function serviceSchema(name: string, description: string, url: string) {
       name: SITE_CONFIG.name,
       url: SITE_CONFIG.url,
     },
-    areaServed: {
-      "@type": "Country",
-      name: "India",
-    },
+    areaServed: [
+      { "@type": "City", name: "Hajipur" },
+      { "@type": "City", name: "Patna" },
+      { "@type": "State", name: "Bihar" },
+      { "@type": "Country", name: "India" },
+    ],
   };
 }
 
@@ -92,24 +163,24 @@ export function articleSchema(article: {
     image: article.image,
     datePublished: article.datePublished,
     dateModified: article.dateModified,
+    inLanguage: "en-IN",
     author: {
-      "@type": "Person",
-      name: article.author,
+      "@type": "Organization",
+      name: article.author.includes("EKOSYS") ? SITE_CONFIG.name : article.author,
     },
     publisher: {
       "@type": "Organization",
       name: SITE_CONFIG.name,
       logo: {
         "@type": "ImageObject",
-        url: `${SITE_CONFIG.url}/images/Logo.png`,
+        url: logoUrl,
       },
     },
+    mainEntityOfPage: article.url,
   };
 }
 
-export function breadcrumbSchema(
-  items: { name: string; url: string }[]
-) {
+export function breadcrumbSchema(items: { name: string; url: string }[]) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",

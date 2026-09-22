@@ -228,3 +228,69 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(27, 122, 61, 0.15);
   color: var(--color-navy-900);
 }
+
+/* ═══════════════════════════════════════════════════════════
+   DIVI (ELEGANT THEMES) SIGNATURE STYLES
+   ═══════════════════════════════════════════════════════════ */
+
+.divi-card {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 10px 30px -5px rgba(10, 22, 40, 0.05), 0 4px 12px -2px rgba(10, 22, 40, 0.02);
+  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.divi-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -10px rgba(10, 22, 40, 0.12), 0 8px 16px -4px rgba(10, 22, 40, 0.04);
+  border-color: rgba(27, 122, 61, 0.3);
+}
+
+.divi-blurb {
+  transition: all 0.3s ease-in-out;
+}
+
+.divi-blurb:hover .divi-blurb-icon {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px -5px rgba(27, 122, 61, 0.25);
+}
+
+.divi-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 9999px;
+  background: rgba(27, 122, 61, 0.08);
+  color: #1b7a3d;
+  border: 1px solid rgba(27, 122, 61, 0.2);
+}
+
+.divi-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.divi-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -3px rgba(10, 22, 40, 0.15);
+}
+
+.divi-divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #1b7a3d 0%, #c8962e 100%);
+  border-radius: 9999px;
+}
+
+

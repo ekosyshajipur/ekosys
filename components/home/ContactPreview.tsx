@@ -11,7 +11,7 @@ export default function ContactPreview() {
     name: "",
     phone: "",
     email: "",
-    city: "Hajipur",
+    city: "",
     enquiryType: "General Enquiry",
     requirements: "",
   });
@@ -48,7 +48,7 @@ export default function ContactPreview() {
         name: "",
         phone: "",
         email: "",
-        city: "Hajipur",
+        city: "",
         enquiryType: "General Enquiry",
         requirements: "",
       });

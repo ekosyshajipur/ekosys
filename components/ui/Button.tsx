@@ -3,7 +3,7 @@ import { ArrowRight, Loader2 } from "lucide-react";
 
 interface ButtonProps {
   children: ReactNode;
-  variant?: "primary" | "secondary" | "outline" | "ghost" | "accent";
+  variant?: "primary" | "secondary" | "outline" | "ghost" | "accent" | "whatsapp";
   size?: "sm" | "md" | "lg";
   href?: string;
   onClick?: () => void;
@@ -35,21 +35,23 @@ export default function Button({
 
   const variants = {
     primary:
-      "bg-navy-900 text-white hover:bg-navy-800 active:bg-navy-950 shadow-sm hover:shadow-md",
+      "bg-navy-900 text-white hover:bg-navy-800 active:bg-navy-950 shadow-sm hover:shadow-lg hover:-translate-y-0.5",
     secondary:
-      "bg-green-700 text-white hover:bg-green-600 active:bg-green-800 shadow-sm hover:shadow-md",
+      "bg-green-700 text-white hover:bg-green-600 active:bg-green-800 shadow-sm hover:shadow-lg hover:-translate-y-0.5",
     outline:
-      "border-2 border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white",
+      "border-2 border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white hover:-translate-y-0.5",
     ghost:
       "text-navy-900 hover:bg-navy-50 active:bg-navy-100",
     accent:
-      "bg-gold-500 text-navy-900 hover:bg-gold-400 active:bg-gold-600 shadow-sm hover:shadow-md font-bold",
+      "bg-gold-500 text-navy-900 hover:bg-gold-400 active:bg-gold-600 shadow-sm hover:shadow-lg hover:-translate-y-0.5 font-bold",
+    whatsapp:
+      "bg-[#25D366] text-white hover:bg-[#20bd5a] shadow-md hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 font-bold",
   };
 
   const sizes = {
-    sm: "px-4 py-2 text-sm rounded-[10px] gap-1.5",
-    md: "px-6 py-3 text-sm rounded-[12px] gap-2",
-    lg: "px-8 py-4 text-base rounded-[14px] gap-2.5",
+    sm: "px-5 py-2.5 text-sm rounded-full gap-1.5",
+    md: "px-7 py-3 text-sm rounded-full gap-2",
+    lg: "px-8 py-3.5 text-base rounded-full gap-2.5",
   };
 
   const classes = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`;

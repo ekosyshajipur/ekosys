@@ -7,7 +7,7 @@ import Container from "@/components/ui/Container";
 import { blogPosts } from "@/lib/blog/data";
 import { SITE_CONFIG } from "@/lib/constants";
 import { generatePageMetadata } from "@/lib/seo/metadata";
-import { articleSchema, breadcrumbSchema } from "@/lib/seo/schemas";
+import { articleSchema, breadcrumbSchema, faqSchema } from "@/lib/seo/schemas";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -66,6 +66,8 @@ export default async function BlogPostPage({ params }: PageProps) {
     { name: post.title, url: `${SITE_CONFIG.url}/blogs/${post.slug}` },
   ]);
 
+  const faqJsonLd = post.faqs && post.faqs.length > 0 ? faqSchema(post.faqs) : null;
+
   return (
     <article className="py-12 lg:py-16">
       <script
@@ -76,6 +78,12 @@ export default async function BlogPostPage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
 
       {/* Header Container */}
       <Container className="max-w-4xl">
@@ -196,12 +204,12 @@ export default async function BlogPostPage({ params }: PageProps) {
         </div>
 
         {/* Consultation Callout in Article */}
-        <div className="mt-12 p-8 sm:p-10 rounded-3xl bg-navy-950 text-white flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="mt-12 p-8 sm:p-10 rounded-3xl bg-[#F4F7F9] text-navy-900 border border-navy-200 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
-            <h3 className="text-xl font-bold font-heading mb-2">
+            <h3 className="text-xl font-bold font-heading mb-2 text-navy-900">
               Plan Your Project with EKOSYS Engineers
             </h3>
-            <p className="text-xs sm:text-sm text-gray-300">
+            <p className="text-xs sm:text-sm text-navy-700">
               Get direct advice, site assessments, and accurate project proposals.
             </p>
           </div>

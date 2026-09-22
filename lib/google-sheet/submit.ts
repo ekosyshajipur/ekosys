@@ -19,21 +19,44 @@ export async function submitToGoogleSheet(data: SheetData): Promise<boolean> {
   }
 
   try {
+    // CRITICAL FIX:
+    // Google Apps Script's doPost(e) reads e.parameter — which ONLY works
+    // when the request body is application/x-www-form-urlencoded (NOT JSON).
+    // Sending JSON body causes e.parameter to be empty → all cells blank.
+    // Fix: send as URL-encoded form data instead.
+    const params = new URLSearchParams({
+      timestamp: data.timestamp,
+      date: data.timestamp,
+      name: data.name,
+      phone: data.phone,
+      email: data.email,
+      city: data.city,
+      enquiryType: data.enquiryType,
+      service: data.enquiryType,
+      requirement: data.requirements || "",
+      requirements: data.requirements || "",
+      message: data.requirements || "",
+      details: data.requirements || "",
+      calledStatus: "",
+      thought: "",
+      source: data.source,
+      page: data.page,
+    });
+
     const response = await fetch(sheetUrl, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/x-www-form-urlencoded",
       },
-      body: JSON.stringify(data),
+      body: params.toString(),
+      redirect: "follow",
     });
 
-    if (!response.ok) {
-      // Google Apps Script returns 302 redirect on success
-      // so we also accept redirect responses
-      if (response.status !== 302) {
-        console.error("Google Sheet submission failed:", response.status);
-        return false;
-      }
+    // Google Apps Script web app returns 200 after redirect on success.
+    // We accept 200 or 302 as valid responses.
+    if (!response.ok && response.status !== 302) {
+      console.error("Google Sheet submission failed:", response.status);
+      return false;
     }
 
     return true;

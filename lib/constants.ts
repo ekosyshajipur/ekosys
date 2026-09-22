@@ -36,7 +36,6 @@ export const NAV_LINKS: readonly NavLinkItem[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Solutions", href: "#", isMega: true },
-  { label: "Projects", href: "/projects" },
   { label: "Blogs", href: "/blogs" },
   { label: "Contact", href: "/contact" },
 ];
@@ -70,13 +69,13 @@ export const DIVISIONS: Division[] = [
     cta: "Explore Solar Services",
     link: "https://solar.ekosys.in",
     subdomain: "solar.ekosys.in",
-    mainImage: "/images/solar/Solar-Main-Image.webp",
+    mainImage: "/images/solar/modern-solar-rooftop.webp",
     images: [
-      "/images/solar/Solar-Main-Image.webp",
-      "/images/solar/Solar-Installation.webp",
+      "/images/solar/modern-solar-rooftop.webp",
+      "/images/solar/solar-rooftop-banner.webp",
+      "/images/solar/residential-solar.webp",
+      "/images/solar/solar-home-hero.webp",
       "/images/solar/Solar-Industrial-Image.webp",
-      "/images/solar/Solar-Residential-Image.webp",
-      "/images/solar/Homepage-Hero-Image.webp",
     ],
     services: [
       "Solar EPC",
@@ -104,13 +103,13 @@ export const DIVISIONS: Division[] = [
     cta: "Explore Facade Services",
     link: "https://facade.ekosys.in",
     subdomain: "facade.ekosys.in",
-    mainImage: "/images/facade/Facade-Main-Image.webp",
+    mainImage: "/images/facade/CP-Facade-Image.webp",
     images: [
-      "/images/facade/Facade-Main-Image.webp",
-      "/images/facade/Curtain-Wall-Image.webp",
-      "/images/facade/Structural-Glazing-Image.webp",
-      "/images/facade/CP-Facade-Image.webp",
-      "/images/facade/Facade Engineering Team.webp",
+      "/images/facade/hero_facade.webp",
+      "/images/facade/service_structural_glazing.webp",
+      "/images/facade/service_acp_cladding.webp",
+      "/images/facade/service_spider_glazing.webp",
+      "/images/facade/service_curtain_wall.webp",
     ],
     services: [
       "Curtain Wall",
@@ -141,9 +140,9 @@ export const DIVISIONS: Division[] = [
     mainImage: "/images/medTech/MedTech-Main-Image.webp",
     images: [
       "/images/medTech/MedTech-Main-Image.webp",
+      "/images/medTech/Operation-Theatre-Image.webp",
       "/images/medTech/Hospital-Equipment-Image.webp",
       "/images/medTech/Laboratory-Equipment-Image.webp",
-      "/images/medTech/Operation-Theatre-Image.webp",
       "/images/medTech/Medical Technology Engineer Image.webp",
     ],
     services: [
@@ -172,13 +171,13 @@ export const DIVISIONS: Division[] = [
     cta: "Explore Architecture",
     link: "https://designlab.ekosys.in",
     subdomain: "designlab.ekosys.in",
-    mainImage: "/images/DesignLab/Architecture-Main-Image.webp",
+    mainImage: "/images/DesignLab/hero_main.webp",
     images: [
-      "/images/DesignLab/Architecture-Main-Image.webp",
-      "/images/DesignLab/Villa-Design-Image.webp",
-      "/images/DesignLab/Residential-Society-Image.webp",
-      "/images/DesignLab/3D-Architectural-Visualization.webp",
-      "/images/DesignLab/Architectural-Floor-Plan.webp",
+      "/images/DesignLab/hero_main.webp",
+      "/images/DesignLab/commercial.webp",
+      "/images/DesignLab/living_room.webp",
+      "/images/DesignLab/bedroom.webp",
+      "/images/DesignLab/kitchen.webp",
     ],
     services: [
       "House Design",
@@ -211,10 +210,10 @@ export const DIVISIONS: Division[] = [
     mainImage: "/images/ITSolutions/IT-Solutions-Main-Image.webp",
     images: [
       "/images/ITSolutions/IT-Solutions-Main-Image.webp",
-      "/images/ITSolutions/Computer-Laptop-Image.webp",
-      "/images/ITSolutions/Computer-Accessories-Image.webp",
       "/images/ITSolutions/Networking-Solutions-Image.webp",
+      "/images/ITSolutions/Computer-Laptop-Image.webp",
       "/images/ITSolutions/IT-Support-Engineer.webp",
+      "/images/ITSolutions/Computer-Accessories-Image.webp",
     ],
     services: [
       "Desktop Computers",
@@ -334,45 +333,3 @@ export const ENQUIRY_TYPES = [
   "Other",
 ] as const;
 
-export const FEATURED_PROJECTS = [
-  {
-    title: "Commercial Solar Installation",
-    category: "Solar",
-    location: "Bihar, India",
-    description: "Rooftop solar power system engineered for commercial energy optimization.",
-    image: "/images/solar/Solar-Industrial-Image.webp",
-    type: "Project Showcase",
-  },
-  {
-    title: "Corporate Facade System",
-    category: "Facade",
-    location: "India",
-    description: "Unitized curtain wall system with structural glazing for a modern corporate tower.",
-    image: "/images/facade/Curtain-Wall-Image.webp",
-    type: "Featured Concept",
-  },
-  {
-    title: "Modern Villa Design",
-    category: "Architecture",
-    location: "Bihar, India",
-    description: "Contemporary residential villa with intelligent spatial planning and premium finishes.",
-    image: "/images/DesignLab/Villa-Design-Image.webp",
-    type: "Project Showcase",
-  },
-  {
-    title: "Hospital Equipment Setup",
-    category: "Healthcare",
-    location: "Bihar, India",
-    description: "Complete hospital equipment procurement, installation and commissioning.",
-    image: "/images/medTech/Hospital-Equipment-Image.webp",
-    type: "Project Showcase",
-  },
-  {
-    title: "Enterprise IT Infrastructure",
-    category: "IT Infrastructure",
-    location: "Bihar, India",
-    description: "End-to-end IT infrastructure setup with networking, hardware and support.",
-    image: "/images/ITSolutions/Networking-Solutions-Image.webp",
-    type: "Featured Concept",
-  },
-] as const;

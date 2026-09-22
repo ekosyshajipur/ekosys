@@ -30,7 +30,7 @@ export default function SolutionSelector() {
         />
 
         {/* Tab Navigation */}
-        <div className="mt-12 flex items-center justify-start sm:justify-center overflow-x-auto pb-4 gap-2 no-scrollbar">
+        <div className="mt-12 flex items-center justify-start sm:justify-center overflow-x-auto pb-4 gap-3 no-scrollbar">
           {DIVISIONS.map((div) => {
             const Icon = ICON_MAP[div.id as keyof typeof ICON_MAP] || Sun;
             const isActive = div.id === activeTab;
@@ -38,10 +38,10 @@ export default function SolutionSelector() {
               <button
                 key={div.id}
                 onClick={() => setActiveTab(div.id)}
-                className={`flex items-center gap-2.5 px-5 py-3 rounded-2xl text-sm font-semibold whitespace-nowrap transition-all duration-200 border ${
+                className={`flex items-center gap-2.5 px-6 py-3 rounded-full text-sm font-bold whitespace-nowrap transition-all duration-200 border ${
                   isActive
-                    ? "bg-navy-900 text-white border-navy-900 shadow-md scale-[1.02]"
-                    : "bg-white text-gray-600 border-gray-200 hover:border-gray-300 hover:text-navy-900"
+                    ? "bg-navy-900 text-white border-navy-900 shadow-lg scale-[1.02]"
+                    : "bg-white text-gray-600 border-gray-200 hover:border-gray-300 hover:text-navy-900 shadow-xs"
                 }`}
               >
                 <Icon className={`w-4 h-4 ${isActive ? "text-green-400" : "text-gray-400"}`} />
@@ -52,12 +52,12 @@ export default function SolutionSelector() {
         </div>
 
         {/* Tab Content Panel */}
-        <div className="mt-8 bg-white rounded-3xl p-6 sm:p-10 lg:p-12 border border-gray-200/80 shadow-sm">
+        <div className="mt-8 bg-white rounded-3xl p-6 sm:p-10 lg:p-12 border border-gray-200/80 shadow-md">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-start">
             {/* Left Info */}
             <div className="lg:col-span-5 flex flex-col justify-between h-full space-y-6">
               <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-green-50 text-green-700 text-xs font-bold rounded-lg uppercase tracking-wider mb-4">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-green-50 text-green-700 text-xs font-bold rounded-full uppercase tracking-wider mb-4 border border-green-200">
                   <ActiveIcon className="w-3.5 h-3.5" />
                   {activeDivision.category}
                 </div>
@@ -88,7 +88,7 @@ export default function SolutionSelector() {
                   href={activeDivision.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-green-700 hover:bg-green-800 text-white rounded-xl font-semibold text-sm transition-all shadow-sm"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 bg-green-700 hover:bg-green-800 text-white rounded-full font-bold text-sm transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5"
                 >
                   <span>Visit {activeDivision.brand} Portal</span>
                   <ArrowUpRight className="w-4 h-4" />
